@@ -1,86 +1,70 @@
 # 🤖 RoboHunter AI
 
-> Production-grade AI-powered internship monitoring and application management platform.
+> **A production-grade, fully automated AI-powered internship monitoring and application management platform.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green)](https://fastapi.tiangolo.com/)
 [![Python](https://img.shields.io/badge/Python-3.12-blue)](https://www.python.org/)
 
----
+RoboHunter AI is an autonomous agent that continuously scours the internet for internship and new-grad openings across deep-tech industries (Robotics, AI, Embedded Systems, Computer Vision, Autonomous Vehicles, and IoT). 
 
-## Overview
-
-RoboHunter AI continuously monitors internship openings across Robotics, AI, Embedded Systems, Computer Vision, Autonomous Vehicles, Drones, IoT, Research Labs, and more. It detects new openings, matches them against your active resume with AI, sends instant notifications, and tracks your entire application lifecycle.
+It automatically detects new positions, uses **Natural Language Processing (NLP)** to score the job description against your active resume, and beams a high-priority alert directly to your phone (via Telegram and Email) if it detects a strong match. Never manually hunt for a job board again.
 
 ---
 
-## Features
+## ✨ Key Features
 
-- 🔍 **24×7 Monitoring** — GitHub Actions crawls companies every hour
-- 🤖 **AI Resume Matching** — Sentence Transformers cosine similarity scoring
-- 📬 **Instant Notifications** — Telegram + Gmail SMTP
-- 🗂️ **Application Tracking** — Full lifecycle with status history
-- 📄 **Resume Manager** — Upload, activate, extract text
-- 🏢 **Company Database** — CSV import/export, ATS-aware crawling
-- 🎯 **ATS Handlers** — Greenhouse, Lever, Ashby, SmartRecruiters, Workable, and more
-- 🖥️ **Application Assistant** — Playwright-assisted form filling (never auto-submits)
+- **🌐 24×7 Cloud Automation** — Fully headless Playwright crawler runs on GitHub Actions every 2 hours.
+- **🧠 AI Resume Matching** — Uses `SentenceTransformers` and cosine similarity to dynamically calculate how well your resume matches the job description.
+- **🎯 ATS-Aware Crawling** — Intelligently parses specific ATS layouts (Greenhouse, Lever, Workable, etc.) to extract clean data.
+- **📬 Instant Mobile Alerts** — Real-time push notifications delivered via Telegram Bot API and Gmail SMTP.
+- **📊 Beautiful Dashboard** — Manage companies, track applications, and view cloud logs in a sleek Next.js dark-mode UI.
+- **📂 Bulk Management** — Drag-and-drop CSV uploads to track hundreds of target companies instantly.
 
 ---
 
-## Tech Stack
+## 🛠️ Architecture Stack
 
 | Layer | Technology |
 |-------|-----------|
-| Frontend | Next.js 15, TypeScript, Tailwind CSS |
-| Backend | FastAPI, SQLAlchemy, Alembic, Pydantic |
-| Database | Supabase PostgreSQL |
-| Storage | Supabase Storage |
-| AI | Sentence Transformers |
-| Crawler | Playwright, BeautifulSoup |
-| Notifications | Telegram Bot API, Gmail SMTP |
-| Scheduler | GitHub Actions (hourly) |
-| Deployment | Vercel (frontend), Railway/Fly.io (backend) |
+| **Frontend UI** | Next.js 15, React, TypeScript, Tailwind CSS, Lucide Icons |
+| **Backend API** | FastAPI, SQLAlchemy (Async), Alembic, Pydantic |
+| **Database** | PostgreSQL hosted on Supabase |
+| **AI / NLP** | `all-MiniLM-L6-v2` via SentenceTransformers |
+| **Web Crawler** | Playwright (Headless Chromium), BeautifulSoup4 |
+| **CI / CD Pipeline**| GitHub Actions (Cron Scheduling & Automation) |
+
+### System Flow
+1. **GitHub Actions** wakes up every 2 hours and boots the Python orchestrator (`scripts/monitor.py`).
+2. **Playwright** crawls all active companies in the Supabase DB to find new URLs.
+3. The **AI Matcher** compares new job descriptions against your active Resume text.
+4. If the `match_score` exceeds the 15% threshold, the **Notifier** pushes a Telegram & Email alert.
+5. The **Next.js Dashboard** fetches the latest data from the FastAPI backend for manual review.
 
 ---
 
-## Project Structure
+## 🚀 Setup & Installation
 
-```
-robot-hunter-ai/
-├── frontend/          # Next.js App Router dashboard
-├── backend/           # FastAPI REST API
-├── playwright/        # Crawler + Application Assistant
-├── scheduler/         # Orchestration entry points
-├── docs/              # Architecture & API documentation
-├── docker/            # Dockerfiles and compose
-├── .github/           # GitHub Actions workflows
-└── scripts/           # Utility and migration scripts
-```
-
----
-
-## Quick Start
-
-### Prerequisites
-
+### 1. Prerequisites
 - Node.js 20+
 - Python 3.12+
-- Supabase account
-- Telegram Bot (from @BotFather)
-- Gmail App Password
+- A [Supabase](https://supabase.com/) account (Free tier)
+- A Telegram Bot Token (from `@BotFather`)
+- A Gmail App Password
 
-### 1. Clone & Configure
-
+### 2. Clone the Repository
 ```bash
-git clone https://github.com/yourname/robot-hunter-ai.git
-cd robot-hunter-ai
+git clone https://github.com/SahishnuS/scrapesend.git
+cd scrapesend/robot-hunter-ai
 cp .env.example .env
-# Fill in your secrets in .env
 ```
 
-### 2. Start Backend
+### 3. Local Development (Backend & Frontend)
 
+To run the Next.js Dashboard locally:
+
+**Terminal 1 (Backend):**
 ```bash
 cd backend
 python -m venv .venv
@@ -90,95 +74,35 @@ alembic upgrade head
 uvicorn app.main:app --reload --port 8000
 ```
 
-### 3. Start Frontend
-
+**Terminal 2 (Frontend):**
 ```bash
 cd frontend
 npm install
 npm run dev
-# Visit http://localhost:3000
 ```
-
-### 4. Run Crawler Manually
-
-```bash
-cd scheduler
-source ../.venv/bin/activate
-python run_scheduler.py
-```
+Visit `http://localhost:3000/dashboard` in your browser.
 
 ---
 
-## Environment Variables
+## ☁️ Cloud Automation Deployment
 
-Copy `.env.example` to `.env` and fill in:
+RoboHunter AI is designed to run in the background forever without keeping your laptop open. 
 
-| Variable | Description |
-|----------|-------------|
-| `SUPABASE_URL` | Your Supabase project URL |
-| `SUPABASE_KEY` | Supabase service role key |
-| `TELEGRAM_BOT_TOKEN` | Telegram bot token |
-| `TELEGRAM_CHAT_ID` | Your Telegram chat/channel ID |
-| `SMTP_EMAIL` | Gmail address |
-| `SMTP_APP_PASSWORD` | Gmail App Password (not your Gmail password) |
-| `NEXT_PUBLIC_API_URL` | Backend API base URL |
+1. Push this code to your GitHub Repository.
+2. Go to your repository on GitHub -> **Settings** -> **Secrets and variables** -> **Actions**.
+3. Add the following 7 Repository Secrets (values found in your `.env`):
+   - `SUPABASE_URL`
+   - `SUPABASE_KEY`
+   - `DATABASE_URL`
+   - `TELEGRAM_BOT_TOKEN`
+   - `TELEGRAM_CHAT_ID`
+   - `SMTP_EMAIL`
+   - `SMTP_APP_PASSWORD`
+4. Go to the **Actions** tab on GitHub, click **"RoboHunter AI Automated Monitor"**, and click **Run workflow**.
 
----
-
-## Architecture
-
-```
-GitHub Actions (hourly)
-    │
-    ▼
-Playwright Crawlers
-    │
-    ▼
-ATS Detection & Job Extraction
-    │
-    ▼
-Duplicate Detection (job_hash)
-    │
-    ▼
-Supabase PostgreSQL
-    │
-    ▼
-AI Matching (Sentence Transformers)
-    │
-    ▼
-Notifications (Telegram + Gmail)
-    │
-    ▼
-Next.js Dashboard
-```
+The cloud system will now autonomously scrape and notify you of high-matching jobs every 2 hours!
 
 ---
 
-## Development Roadmap
-
-- [x] Phase 1: Project Scaffolding
-- [x] Phase 2: Database schema & migrations
-- [x] Phase 3: Backend API
-- [x] Phase 4: Frontend dashboard
-- [x] Phase 5: Resume Manager
-- [x] Phase 6: Categories & Companies
-- [x] Phase 7: Crawler framework
-- [x] Phase 8: ATS handlers
-- [x] Phase 9: AI Matching
-- [x] Phase 10: Notifications
-- [x] Phase 11: GitHub Actions
-- [x] Phase 12: Local Application Assistant
-- [x] Phase 13: Testing
-- [x] Phase 14: Documentation
-
----
-
-## Contributing
-
-See [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
-
----
-
-## License
-
-MIT © RoboHunter AI
+## 📝 License
+This project is licensed under the MIT License.
