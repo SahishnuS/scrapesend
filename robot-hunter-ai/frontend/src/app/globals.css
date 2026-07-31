@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Custom Properties ────────────────────────────────────────────────── */
+:root {
+  --bg-primary: hsl(222, 24%, 8%);
+  --bg-secondary: hsl(222, 20%, 13%);
+  --bg-tertiary: hsl(222, 18%, 18%);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.1);
+  --text-primary: hsl(220, 20%, 95%);
+  --text-secondary: hsl(220, 14%, 65%);
+  --text-muted: hsl(220, 12%, 45%);
+  --brand: hsl(221, 80%, 55%);
+  --brand-glow: hsl(221, 80%, 55%, 0.3);
+}
+
+/* ── Base Reset ───────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Inter", system-ui, sans-serif;
+  min-height: 100dvh;
+}
+
+/* ── Scrollbar Styling ────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(222, 18%, 28%);
+}
+
+/* ── Component Layer ──────────────────────────────────────────────────────── */
+@layer components {
+  /* Glass card */
+  .card {
+    @apply rounded-xl border border-white/[0.06] bg-surface-800 shadow-glass backdrop-blur-sm;
+  }
+
+  .card-hover {
+    @apply card transition-all duration-200 hover:border-white/[0.12] hover:bg-surface-700/80;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-surface-900 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-500 text-white hover:bg-brand-400 focus:ring-brand-500 shadow-glow-brand hover:shadow-glow-brand;
+  }
+
+  .btn-secondary {
+    @apply btn border border-white/10 bg-surface-700 text-surface-100 hover:bg-surface-600 hover:border-white/20 focus:ring-white/20;
+  }
+
+  .btn-danger {
+    @apply btn bg-danger/10 text-red-400 border border-red-500/20 hover:bg-danger/20 focus:ring-red-500;
+  }
+
+  .btn-ghost {
+    @apply btn text-surface-200 hover:bg-white/5 focus:ring-white/10;
+  }
+
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs;
+  }
+
+  .btn-lg {
+    @apply px-6 py-3 text-base;
+  }
+
+  /* Inputs */
+  .input {
+    @apply w-full rounded-lg border border-white/10 bg-surface-700 px-3 py-2 text-sm text-surface-50 placeholder-surface-200/40 outline-none transition-colors focus:border-brand-500/60 focus:ring-1 focus:ring-brand-500/30;
+  }
+
+  .label {
+    @apply mb-1.5 block text-xs font-medium uppercase tracking-wider text-surface-200;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply badge bg-success/15 text-green-400;
+  }
+
+  .badge-warning {
+    @apply badge bg-warning/15 text-amber-400;
+  }
+
+  .badge-danger {
+    @apply badge bg-danger/15 text-red-400;
+  }
+
+  .badge-info {
+    @apply badge bg-info/15 text-sky-400;
+  }
+
+  .badge-neutral {
+    @apply badge bg-surface-700 text-surface-200;
+  }
+
+  /* Status dot */
+  .dot-online {
+    @apply h-2 w-2 rounded-full bg-success shadow-glow-success animate-pulse-slow;
+  }
+
+  /* Skeleton loader */
+  .skeleton {
+    @apply animate-shimmer rounded bg-gradient-to-r from-surface-700 via-surface-600 to-surface-700 bg-[length:200%_100%];
+  }
+
+  /* Table */
+  .data-table {
+    @apply w-full text-sm;
+  }
+
+  .data-table thead tr {
+    @apply border-b border-white/[0.06];
+  }
+
+  .data-table thead th {
+    @apply py-3 px-4 text-left text-xs font-medium uppercase tracking-wider text-surface-200;
+  }
+
+  .data-table tbody tr {
+    @apply border-b border-white/[0.04] transition-colors hover:bg-white/[0.02];
+  }
+
+  .data-table tbody td {
+    @apply py-3 px-4 text-surface-100;
+  }
+}
+
+/* ── Utility Layer ────────────────────────────────────────────────────────── */
+@layer utilities {
+  .text-gradient-brand {
+    @apply bg-gradient-brand bg-clip-text text-transparent;
+  }
+
+  .glow-brand {
+    box-shadow: 0 0 30px var(--brand-glow);
+  }
+
+  .glass {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.02)
+    );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}

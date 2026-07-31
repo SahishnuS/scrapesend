@@ -1,0 +1,70 @@
+name: "🤖 RoboHunter — Hourly Crawler"
+
+on:
+  schedule:
+    # Every hour, every day
+    - cron: "0 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (crawl but do not notify)"
+        required: false
+        default: "false"
+
+concurrency:
+  group: crawler
+  cancel-in-progress: false  # Never cancel a running crawl
+
+jobs:
+  crawl:
+    name: Crawl & Match
+    runs-on: ubuntu-latest
+    timeout-minutes: 55  # Stay under the 60-min Actions limit
+
+    steps:
+      # ── Checkout ──────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── Python setup ──────────────────────────────────────────────────────
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r backend/requirements.txt
+
+      # ── Playwright browsers ───────────────────────────────────────────────
+      - name: Install Playwright browsers
+        run: |
+          playwright install chromium --with-deps
+
+      # ── Run scheduler ─────────────────────────────────────────────────────
+      - name: Run crawler scheduler
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SMTP_EMAIL: ${{ secrets.SMTP_EMAIL }}
+          SMTP_APP_PASSWORD: ${{ secrets.SMTP_APP_PASSWORD }}
+          EMBEDDING_MODEL: "all-MiniLM-L6-v2"
+          CRAWLER_HEADLESS: "true"
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+        run: |
+          cd scheduler
+          python run_scheduler.py
+
+      # ── Upload logs ───────────────────────────────────────────────────────
+      - name: Upload crawler logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: crawler-logs-${{ github.run_id }}
+          path: scheduler/logs/
+          retention-days: 7
