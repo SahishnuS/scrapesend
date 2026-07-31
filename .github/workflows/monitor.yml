@@ -52,6 +52,9 @@ jobs:
           # AI Matcher
           EMBEDDING_MODEL: all-MiniLM-L6-v2
           
+          # Backend config (Crawler doesn't use it, but Pydantic requires it)
+          SECRET_KEY: dummy-secret-key-for-crawler-script-123456
+          
         run: |
           export PYTHONPATH=$(pwd)/backend
           python scripts/monitor.py
