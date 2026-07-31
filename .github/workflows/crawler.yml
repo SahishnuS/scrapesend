@@ -21,6 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 55  # Stay under the 60-min Actions limit
 
+    defaults:
+      run:
+        working-directory: internhunt
+
     steps:
       # ── Checkout ──────────────────────────────────────────────────────────
       - name: Checkout repository
@@ -66,5 +70,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: crawler-logs-${{ github.run_id }}
-          path: scheduler/logs/
+          path: internhunt/scheduler/logs/
           retention-days: 7
