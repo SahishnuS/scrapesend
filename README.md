@@ -1,4 +1,4 @@
-# 🤖 RoboHunter AI
+# 🤖 InternHunt
 
 > **A production-grade, fully automated AI-powered internship monitoring and application management platform.**
 
@@ -7,7 +7,7 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green)](https://fastapi.tiangolo.com/)
 [![Python](https://img.shields.io/badge/Python-3.12-blue)](https://www.python.org/)
 
-RoboHunter AI is an autonomous agent that continuously scours the internet for internship and new-grad openings across deep-tech industries (Robotics, AI, Embedded Systems, Computer Vision, Autonomous Vehicles, and IoT). 
+InternHunt is an autonomous agent that continuously scours the internet for internship and new-grad openings across deep-tech industries (Robotics, AI, Embedded Systems, Computer Vision, Autonomous Vehicles, and IoT). 
 
 It automatically detects new positions, uses **Natural Language Processing (NLP)** to score the job description against your active resume, and beams a high-priority alert directly to your phone (via Telegram and Email) if it detects a strong match. Never manually hunt for a job board again.
 
@@ -56,7 +56,7 @@ It automatically detects new positions, uses **Natural Language Processing (NLP)
 ### 2. Clone the Repository
 ```bash
 git clone https://github.com/SahishnuS/scrapesend.git
-cd scrapesend/robot-hunter-ai
+cd scrapesend/InternHunt
 cp .env.example .env
 ```
 
@@ -86,7 +86,7 @@ Visit `http://localhost:3000/dashboard` in your browser.
 
 ## ☁️ Cloud Automation Deployment
 
-RoboHunter AI is designed to run in the background forever without keeping your laptop open. 
+InternHunt is designed to run in the background forever without keeping your laptop open. 
 
 1. Push this code to your GitHub Repository.
 2. Go to your repository on GitHub -> **Settings** -> **Secrets and variables** -> **Actions**.
@@ -98,7 +98,7 @@ RoboHunter AI is designed to run in the background forever without keeping your 
    - `TELEGRAM_CHAT_ID`
    - `SMTP_EMAIL`
    - `SMTP_APP_PASSWORD`
-4. Go to the **Actions** tab on GitHub, click **"RoboHunter AI Automated Monitor"**, and click **Run workflow**.
+4. Go to the **Actions** tab on GitHub, click **"InternHunt Automated Monitor"**, and click **Run workflow**.
 
 The cloud system will now autonomously scrape and notify you of high-matching jobs every 2 hours!
 

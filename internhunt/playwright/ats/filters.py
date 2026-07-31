@@ -1,5 +1,5 @@
 """
-Job relevance filter for RoboHunter AI.
+Job relevance filter for InternHunt.
 
 Filters job listings to only keep internship/trainee roles in the
 target technical domains:

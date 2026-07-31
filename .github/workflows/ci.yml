@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main]
 
+defaults:
+  run:
+    working-directory: internhunt
+
 jobs:
   backend-lint:
     name: Backend Lint & Type Check

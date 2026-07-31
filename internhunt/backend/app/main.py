@@ -1,5 +1,5 @@
 """
-RoboHunter AI — FastAPI Application Entry Point
+InternHunt — FastAPI Application Entry Point
 
 This module bootstraps the FastAPI application, registers all routers,
 configures middleware, and wires up the OpenAPI documentation.
@@ -26,18 +26,18 @@ async def lifespan(app: FastAPI):
     """Application lifespan: startup and shutdown hooks."""
     configure_logging()
     log.info(
-        "RoboHunter AI starting",
+        "InternHunt starting",
         environment=settings.ENVIRONMENT,
         version=settings.APP_VERSION,
     )
     yield
-    log.info("RoboHunter AI shutting down")
+    log.info("InternHunt shutting down")
 
 
 def create_application() -> FastAPI:
     """Application factory — returns a fully configured FastAPI instance."""
     app = FastAPI(
-        title="RoboHunter AI",
+        title="InternHunt",
         description=(
             "AI-powered internship monitoring and application management platform. "
             "Monitors companies 24×7, matches jobs against your resume, sends "

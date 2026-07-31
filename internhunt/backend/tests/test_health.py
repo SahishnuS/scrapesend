@@ -18,4 +18,4 @@ async def test_openapi_docs(async_client: AsyncClient):
     response = await async_client.get("/openapi.json")
     assert response.status_code == 200
     schema = response.json()
-    assert schema["info"]["title"] == "RoboHunter AI"
+    assert schema["info"]["title"] == "InternHunt"

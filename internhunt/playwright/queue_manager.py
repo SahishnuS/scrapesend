@@ -1,5 +1,5 @@
 """
-Queue Manager for the RoboHunter AI crawler.
+Queue Manager for the InternHunt crawler.
 
 Orchestrates the full crawl pipeline:
   1. Fetch all active companies from the database.

@@ -3,8 +3,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "RoboHunter AI — Internship Monitor",
-    template: "%s | RoboHunter AI",
+    default: "InternHunt — Internship Monitor",
+    template: "%s | InternHunt",
   },
   description:
     "AI-powered internship monitoring and application management platform for Robotics, AI, Embedded Systems, Computer Vision, and more.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "application tracker",
     "resume matching",
   ],
-  authors: [{ name: "RoboHunter AI" }],
+  authors: [{ name: "InternHunt" }],
   robots: "noindex, nofollow", // Private dashboard — do not index
 };
 

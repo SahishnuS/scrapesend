@@ -45,7 +45,7 @@ export default function Sidebar() {
         </div>
         {!collapsed && (
           <span className="text-gradient-brand text-lg font-bold tracking-tight whitespace-nowrap">
-            RoboHunter AI
+            InternHunt
           </span>
         )}
       </div>

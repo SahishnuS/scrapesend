@@ -56,7 +56,7 @@ async def run_notification_pipeline():
 
             # Format Telegram Message (Markdown)
             telegram_msg = (
-                f"RoboHunter AI Alert\n\n"
+                f"InternHunt Alert\n\n"
                 f"Company: {company.name}\n"
                 f"Role: {job.title}\n"
                 f"Location: {job.location or 'Remote'}\n"
@@ -66,9 +66,9 @@ async def run_notification_pipeline():
             )
 
             # Format Email Subject & Body
-            email_subject = f"RoboHunter Match: {job.title} at {company.name} ({match_pct}%)"
+            email_subject = f"InternHunt Match: {job.title} at {company.name} ({match_pct}%)"
             email_body = (
-                f"RoboHunter AI discovered a matching internship.\n\n"
+                f"InternHunt discovered a matching internship.\n\n"
                 f"Company: {company.name}\n"
                 f"Role: {job.title}\n"
                 f"Location: {job.location or 'Remote'}\n"

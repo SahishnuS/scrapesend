@@ -13,7 +13,7 @@ jobs:
     
     defaults:
       run:
-        working-directory: robot-hunter-ai
+        working-directory: internhunt
 
     steps:
       - name: Check out repository

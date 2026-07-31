@@ -1,5 +1,5 @@
 """
-RoboHunter AI — Main Scheduler Entry Point
+InternHunt — Main Scheduler Entry Point
 
 Orchestrates the full pipeline:
   1. Fetch enabled companies from DB
@@ -25,7 +25,7 @@ log = logging.getLogger(__name__)
 
 async def run_pipeline() -> None:
     """Main pipeline coroutine — implemented fully in Phase 7 (Crawler)."""
-    log.info("RoboHunter scheduler starting...")
+    log.info("InternHunt scheduler starting...")
 
     # TODO Phase 7: Load enabled companies from DB
     # TODO Phase 7: Run ATS-aware crawlers concurrently

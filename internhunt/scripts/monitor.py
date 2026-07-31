@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Master Pipeline Script for RoboHunter AI.
+Master Pipeline Script for InternHunt.
 Executes the entire monitoring pipeline sequentially:
 1. Crawler (playwright/queue_manager.py)
 2. AI Matcher (scripts/run_matcher.py)
@@ -28,7 +28,7 @@ async def run_full_pipeline():
     start_time = time.time()
     
     print("\n" + "="*50)
-    print("🚀 STARTING ROBOHUNTER AI MONITORING PIPELINE")
+    print("🚀 STARTING InternHunt MONITORING PIPELINE")
     print("="*50 + "\n")
 
     # Step 1: Run Crawler

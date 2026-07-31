@@ -77,7 +77,7 @@ class NotificationService:
 
         msg = email.mime.multipart.MIMEMultipart("alternative")
         msg["Subject"] = subject
-        msg["From"] = f"RoboHunter AI <{self.smtp_email}>"
+        msg["From"] = f"InternHunt <{self.smtp_email}>"
         msg["To"] = target
 
         msg.attach(email.mime.text.MIMEText(body_text, "plain"))

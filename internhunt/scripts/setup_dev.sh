@@ -9,7 +9,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
 echo ""
-echo "🤖 RoboHunter AI — Dev Environment Setup"
+echo "🤖 InternHunt — Dev Environment Setup"
 echo "========================================="
 
 # ── Check prerequisites ────────────────────────────────────────────────────
