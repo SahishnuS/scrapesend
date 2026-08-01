@@ -54,7 +54,6 @@ class GenericHandler(BaseATSHandler):
         listings: list[JobListing] = []
 
         for tag in soup.find_all("a", href=True):
-            title = tag.get_text(separator=" ", strip=True)
             href = tag["href"]
 
             # Resolve relative URLs
@@ -66,12 +65,28 @@ class GenericHandler(BaseATSHandler):
                 continue
             if href in seen_urls:
                 continue
-            if not (5 <= len(title) <= 200):
+
+            full_text = tag.get_text(separator=" ", strip=True)
+            if not full_text:
                 continue
 
             # Must match at least one relevant keyword in the link text
-            if not LINK_KEYWORDS.search(title):
+            if not LINK_KEYWORDS.search(full_text):
                 continue
+
+            # Phenom/Eightfold often make the entire job card an <a> tag.
+            # Try to find a header for the title, else fallback to the first distinct line.
+            title_elem = tag.find(["h1", "h2", "h3", "h4", "h5", "strong"])
+            if title_elem:
+                title = title_elem.get_text(separator=" ", strip=True)
+            else:
+                lines = [line.strip() for line in tag.get_text(separator="\n", strip=True).split("\n") if line.strip()]
+                title = lines[0] if lines else full_text
+
+            if not (5 <= len(title) <= 200):
+                # If the heuristic failed and title is still too long, truncate it
+                # to prevent database schema errors, but we still extracted the job!
+                title = title[:197] + "..."
 
             seen_urls.add(href)
             location = self._find_nearby_location(tag)
