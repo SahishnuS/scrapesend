@@ -55,16 +55,71 @@ class BaseCrawler:
         page = await context.new_page()
         return page
 
+    # Button text patterns that trigger loading more job results
+    _LOAD_MORE_TEXTS = [
+        "load more", "show more", "see more", "more jobs", "more results",
+        "view more", "load more jobs", "show more jobs", "next page",
+        "more openings", "show all", "load all",
+    ]
+
+    # Maximum number of "load more" clicks per page to avoid infinite loops
+    _MAX_PAGINATION_CLICKS = 5
+
     async def fetch_html(self, url: str) -> str:
-        """Navigate to a URL and return the rendered HTML."""
+        """
+        Navigate to a URL, expand paginated/infinite-scroll content, and
+        return the fully rendered HTML.
+
+        Strategy:
+          1. Wait for the page to reach network idle (JS fully executed).
+          2. Scroll to the bottom to trigger any infinite-scroll loaders.
+          3. Look for common "Load More" / "Show More" buttons and click them.
+          4. Repeat steps 2-3 up to _MAX_PAGINATION_CLICKS times.
+          5. Return the expanded HTML for the ATS handler to parse.
+        """
         page = await self.get_page()
         try:
             log.info(f"Navigating to {url}")
-            await page.goto(url, wait_until="domcontentloaded", timeout=30000)
-            
-            # Wait a short random time to allow lazy-loaded elements
-            await asyncio.sleep(2) 
-            
+            await page.goto(url, wait_until="networkidle", timeout=45000)
+            await asyncio.sleep(3)
+
+            for click_num in range(self._MAX_PAGINATION_CLICKS):
+                # ── Step 1: Scroll to bottom to trigger infinite scroll ────────
+                await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+                await asyncio.sleep(2)
+
+                # ── Step 2: Look for a "Load More" style button ───────────────
+                clicked = False
+                for text in self._LOAD_MORE_TEXTS:
+                    # Try exact case-insensitive text match first
+                    btn = page.get_by_role("button", name=text, exact=False)
+                    try:
+                        if await btn.first.is_visible(timeout=1500):
+                            await btn.first.scroll_into_view_if_needed()
+                            await btn.first.click()
+                            log.info(
+                                "Clicked pagination button",
+                                url=url,
+                                button_text=text,
+                                click_num=click_num + 1,
+                            )
+                            # Wait for new content to load
+                            await page.wait_for_load_state("networkidle", timeout=15000)
+                            await asyncio.sleep(2)
+                            clicked = True
+                            break
+                    except Exception:
+                        continue
+
+                # If no button was found and clicked, the page is fully loaded
+                if not clicked:
+                    log.info(
+                        "No more pagination buttons found, page fully loaded",
+                        url=url,
+                        pages_loaded=click_num + 1,
+                    )
+                    break
+
             html = await page.content()
             return html
         except Exception as e:
@@ -72,3 +127,4 @@ class BaseCrawler:
             return ""
         finally:
             await page.close()
+

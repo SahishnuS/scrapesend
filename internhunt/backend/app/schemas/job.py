@@ -37,3 +37,4 @@ class JobRead(JobBase):
     discovered_at: datetime
     created_at: datetime
     updated_at: datetime
+    company_name: str | None = None

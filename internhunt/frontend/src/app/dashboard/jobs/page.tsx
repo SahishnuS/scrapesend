@@ -1,6 +1,6 @@
 "use client";
 
-import { Briefcase, ExternalLink, MapPin, Calendar, X, Search } from "lucide-react";
+import { Briefcase, ExternalLink, MapPin, Calendar, X, Search, Building2 } from "lucide-react";
 import { useJobs, useUpdateJob } from "@/lib/hooks";
 import { timeAgo, statusBadgeClass, capitalize } from "@/lib/utils";
 import { useState } from "react";
@@ -129,6 +129,12 @@ export default function JobsPage() {
               </div>
 
               <div className="mt-3 space-y-2 text-xs text-surface-200/60">
+                {job.company_name && (
+                  <div className="flex items-center gap-1.5">
+                    <Building2 size={12} />
+                    <span className="font-medium text-surface-200/80">{job.company_name}</span>
+                  </div>
+                )}
                 <div className="flex items-center gap-1.5">
                   <MapPin size={12} />
                   <span>{job.location ?? "Remote"}</span>

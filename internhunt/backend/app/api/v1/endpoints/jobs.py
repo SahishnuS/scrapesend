@@ -7,6 +7,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.session import get_db
+from app.models.company import Company
 from app.models.job import Job
 from app.schemas.job import JobCreate, JobRead, JobUpdate
 
@@ -22,7 +23,13 @@ async def list_jobs(
     limit: int = Query(50, ge=1, le=200),
     db: AsyncSession = Depends(get_db),
 ):
-    stmt = select(Job).order_by(Job.discovered_at.desc()).offset(skip).limit(limit)
+    stmt = (
+        select(Job, Company.name.label("company_name"))
+        .join(Company, Job.company_id == Company.id, isouter=True)
+        .order_by(Job.discovered_at.desc())
+        .offset(skip)
+        .limit(limit)
+    )
     if status:
         stmt = stmt.where(Job.status == status)
     if company_id:
@@ -30,7 +37,13 @@ async def list_jobs(
     if category_id:
         stmt = stmt.where(Job.category_id == category_id)
     result = await db.execute(stmt)
-    return result.scalars().all()
+    rows = result.all()
+    jobs_out = []
+    for job, company_name in rows:
+        job_data = JobRead.model_validate(job)
+        job_data.company_name = company_name
+        jobs_out.append(job_data)
+    return jobs_out
 
 
 @router.post("/", response_model=JobRead, status_code=201, summary="Create a job")

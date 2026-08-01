@@ -28,6 +28,7 @@ export interface Company {
 export interface Job {
   id: string;
   company_id: string;
+  company_name: string | null;
   category_id: string | null;
   title: string;
   job_url: string;
