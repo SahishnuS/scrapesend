@@ -1196,6 +1196,2573 @@
         "https://rockwellautomation.wd1.myworkdayjobs.com/External_Rockwell_Automation",
         "https://www.rockwellautomation.com/en-us/company/careers.html"
       ]
+    },
+    {
+      "name": "Siemens",
+      "careers_url": "https://jobs.siemens.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.siemens.com/global/en/company/jobs.html"
+      ]
+    },
+    {
+      "name": "Honeywell Robotics",
+      "careers_url": "https://www.honeywell.com/us/en/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://careers.honeywell.com/us/en"
+      ]
+    },
+    {
+      "name": "GreyOrange",
+      "careers_url": "https://www.greyorange.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.greyorange.com/careers",
+        "https://greyorange.com/careers/"
+      ]
+    },
+    {
+      "name": "6 River Systems",
+      "careers_url": "https://www.ocadogroup.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [],
+      "note": "Acquired by Ocado Group after Shopify; 6river.com is gone, hiring runs through Ocado."
+    },
+    {
+      "name": "Vecna Robotics",
+      "careers_url": "https://www.vecnarobotics.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.vecnarobotics.com/careers",
+        "https://vecnarobotics.com/careers/"
+      ]
+    },
+    {
+      "name": "Symbotic",
+      "careers_url": "https://www.symbotic.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://careers.symbotic.com/",
+        "https://www.symbotic.com/about-us/careers/"
+      ]
+    },
+    {
+      "name": "Google DeepMind Robotics",
+      "careers_url": "https://deepmind.google/about/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://boards.greenhouse.io/deepmind",
+        "https://deepmind.google/careers/"
+      ]
+    },
+    {
+      "name": "STMicroelectronics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "st.com returns ERR_HTTP2_PROTOCOL_ERROR to headless Chromium on every careers path."
+    },
+    {
+      "name": "Infineon Technologies",
+      "careers_url": "https://www.infineon.com/cms/en/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.infineon.com/careers",
+        "https://jobs.infineon.com/"
+      ]
+    },
+    {
+      "name": "Microchip Technology",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "careers.microchip.com and microchip.com/about/careers both return 403 to headless browsers."
+    },
+    {
+      "name": "Broadcom",
+      "careers_url": "https://www.broadcom.com/company/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.broadcom.com/company/careers/working-here",
+        "https://jobs.broadcom.com/"
+      ]
+    },
+    {
+      "name": "Analog Devices",
+      "careers_url": "https://www.analog.com/en/about-adi/careers.html",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://careers.analog.com/",
+        "https://www.analog.com/en/careers.html"
+      ]
+    },
+    {
+      "name": "AMD",
+      "careers_url": "https://careers.amd.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.amd.com/en/corporate/careers.html",
+        "https://jobs.amd.com/"
+      ]
+    },
+    {
+      "name": "Bosch",
+      "careers_url": "https://www.bosch.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.bosch.com/careers",
+        "https://jobs.bosch.com/"
+      ]
+    },
+    {
+      "name": "Aptiv",
+      "careers_url": "https://www.aptiv.com/en/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://careers.aptiv.com/",
+        "https://www.aptiv.com/careers"
+      ]
+    },
+    {
+      "name": "Valeo",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "valeo.com/join-us returns 403 and jobs.valeo.com fails TLS negotiation."
+    },
+    {
+      "name": "Marvell Technology",
+      "careers_url": "https://www.marvell.com/company/careers.html",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://careers.marvell.com/",
+        "https://www.marvell.com/careers.html"
+      ]
+    },
+    {
+      "name": "Silicon Labs",
+      "careers_url": "https://www.silabs.com/about-us/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://careers.silabs.com/",
+        "https://www.silabs.com/careers"
+      ]
+    },
+    {
+      "name": "Lattice Semiconductor",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "latticesemi.com careers returns 403 and the Workday board returns HTTP 500."
+    },
+    {
+      "name": "Toshiba",
+      "careers_url": "https://www.global.toshiba/ww/recruit/corporate.html",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://careers.toshiba.eu/"
+      ]
+    },
+    {
+      "name": "Rohm Semiconductor",
+      "careers_url": "https://www.rohm.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.rohm.com/recruit",
+        "https://www.rohm.com/company/careers"
+      ]
+    },
+    {
+      "name": "Nordic Semiconductor",
+      "careers_url": "https://www.nordicsemi.com/About-us/Career",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.nordicsemi.com/About-us/Careers",
+        "https://nordicsemi.recruitee.com/"
+      ]
+    },
+    {
+      "name": "MediaTek",
+      "careers_url": "https://careers.mediatek.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.mediatek.com/careers",
+        "https://www.mediatek.com/careers/join-us"
+      ]
+    },
+    {
+      "name": "Figure AI",
+      "careers_url": "https://www.figure.ai/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://figure.ai/careers",
+        "https://www.figure.ai/careers/"
+      ]
+    },
+    {
+      "name": "Tesla (Optimus)",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "tesla.com/careers returns 403 to every headless browser request."
+    },
+    {
+      "name": "Agility Robotics",
+      "careers_url": "https://agilityrobotics.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.agilityrobotics.com/careers",
+        "https://agilityrobotics.com/careers/"
+      ]
+    },
+    {
+      "name": "Apptronik",
+      "careers_url": "https://job-boards.greenhouse.io/apptronik",
+      "ats_provider": "greenhouse",
+      "fallback_urls": [
+        "https://apptronik.com/careers"
+      ],
+      "note": "apptronik.com/careers 404s; the live board is Greenhouse."
+    },
+    {
+      "name": "Unitree Robotics",
+      "careers_url": "https://www.unitree.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.unitree.com/",
+        "https://m.unitree.com/careers"
+      ]
+    },
+    {
+      "name": "Sanctuary AI",
+      "careers_url": "https://www.sanctuary.ai/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://sanctuary.ai/careers",
+        "https://www.sanctuary.ai/company/careers"
+      ]
+    },
+    {
+      "name": "1X Technologies",
+      "careers_url": "https://www.1x.tech/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://1x.tech/careers",
+        "https://www.1x.tech/open-positions"
+      ]
+    },
+    {
+      "name": "UBTECH Robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "ubtrobot.com has no careers page; the global host returns 503."
+    },
+    {
+      "name": "AgiBot",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "agibot.com / zhiyuan-robot.com have no careers page reachable in English or Chinese nav."
+    },
+    {
+      "name": "EngineAI",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "engineai.com.cn has no careers page."
+    },
+    {
+      "name": "XPeng Robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "xpeng.com has no careers page; the global careers host fails TLS."
+    },
+    {
+      "name": "Fourier Intelligence",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "fourierintelligence.com has no careers page and the www host returns 526."
+    },
+    {
+      "name": "PAL Robotics",
+      "careers_url": "https://pal-robotics.com/who-we-are/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://pal-robotics.com/careers/",
+        "https://pal-robotics.com/jobs/"
+      ]
+    },
+    {
+      "name": "Neura Robotics",
+      "careers_url": "https://neura-robotics.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://neura-robotics.com/career",
+        "https://neura-robotics.com/jobs"
+      ]
+    },
+    {
+      "name": "Galbot",
+      "careers_url": "https://www.galbot.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.galbot.com/",
+        "https://galbot.com/en/careers"
+      ]
+    },
+    {
+      "name": "Astribot",
+      "careers_url": "https://astribot.com/en",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.astribot.com/careers",
+        "https://www.astribot.com/"
+      ]
+    },
+    {
+      "name": "RobotEra",
+      "careers_url": "https://robotera.com/en",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.robotera.com/careers",
+        "https://www.robotera.com/"
+      ]
+    },
+    {
+      "name": "LimX Dynamics",
+      "careers_url": "https://www.limxdynamics.com/en",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.limxdynamics.com/careers",
+        "https://www.limxdynamics.com/"
+      ]
+    },
+    {
+      "name": "Noetix Robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "noetixrobotics.com has no careers page; /careers returns 502 and noetix.cn fails TLS."
+    },
+    {
+      "name": "Addverb Technologies",
+      "careers_url": "https://addverb.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://addverb.com/career/",
+        "https://www.addverb.com/careers"
+      ]
+    },
+    {
+      "name": "Orangewood Labs",
+      "careers_url": "https://www.orangewood.co/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://orangewood.co/careers",
+        "https://www.orangewood.co/"
+      ]
+    },
+    {
+      "name": "Alphadroid",
+      "careers_url": "https://www.alphadroid.co.in/",
+      "ats_provider": "other",
+      "fallback_urls": []
+    },
+    {
+      "name": "Ottonomy.io",
+      "careers_url": "https://ottonomy.io/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://ottonomy.io/careers/",
+        "https://www.ottonomy.io/"
+      ]
+    },
+    {
+      "name": "Greenleap Robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "greenleaprobotics.com has no careers page."
+    },
+    {
+      "name": "Black Coffee Robotics",
+      "careers_url": "https://www.blackcoffeerobotics.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://blackcoffeerobotics.com/careers",
+        "https://www.blackcoffeerobotics.com/"
+      ]
+    },
+    {
+      "name": "SSI Innovations",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "ssiinnovations.com has no careers page."
+    },
+    {
+      "name": "Sarang Shakti",
+      "careers_url": "https://sharangshakti.com/",
+      "ats_provider": "other",
+      "fallback_urls": [],
+      "note": "Trades as Sharang Shakti; acquired by LAT Aerospace in Feb 2026."
+    },
+    {
+      "name": "Novus Hitech",
+      "careers_url": "https://www.novushitech.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://novushitech.com/careers",
+        "https://novushitech.in/careers"
+      ]
+    },
+    {
+      "name": "Xterra Robotics",
+      "careers_url": "https://xterrarobotics.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.xterrarobotics.com/",
+        "https://xterra.in/careers"
+      ]
+    },
+    {
+      "name": "Gridbot Technologies",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Trades as Gridbots (gridbots.com); the site has no careers page."
+    },
+    {
+      "name": "AB6 Robotics",
+      "careers_url": "https://ab6robotics.in/",
+      "ats_provider": "other",
+      "fallback_urls": []
+    },
+    {
+      "name": "Miko",
+      "careers_url": "https://miko.ai/pages/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://miko.ai/careers",
+        "https://www.miko.ai/careers"
+      ]
+    },
+    {
+      "name": "Vanar Robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "vanarrobotics.com has no careers page."
+    },
+    {
+      "name": "Wipro PARI",
+      "careers_url": "https://www.wipropari.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.wipropari.com/career",
+        "https://www.wipropari.com/"
+      ]
+    },
+    {
+      "name": "Sakar Robotics",
+      "careers_url": "https://sakarrobotics.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.sakarrobotics.com/",
+        "https://sakarrobotics.com/career"
+      ]
+    },
+    {
+      "name": "Rigbetel Labs",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "rigbetellabs.com has no careers page; /careers and /pages/careers 404."
+    },
+    {
+      "name": "Peppermint Robotics",
+      "careers_url": "https://peppermintrobotics.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.peppermintrobotics.com/careers",
+        "https://peppermintrobotics.com/"
+      ]
+    },
+    {
+      "name": "Combat Robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "combatrobotics.in and combatroboticsindia.com have no careers page."
+    },
+    {
+      "name": "Simpliforge Creations",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "simpliforge.co.in has no careers page."
+    },
+    {
+      "name": "Acceleration Robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "accelerationrobotics.com has no careers page; /careers.php 404s."
+    },
+    {
+      "name": "Muks Robotics",
+      "careers_url": "https://www.muksrobotics.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://muksrobotics.com/careers",
+        "https://muksrobotics.ai/careers"
+      ]
+    },
+    {
+      "name": "Kikobot Robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "kikobot.com has no careers page."
+    },
+    {
+      "name": "Inker Robotics",
+      "careers_url": "https://www.inkerrobotics.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://inkerrobotics.com/careers",
+        "https://inker.in/careers"
+      ]
+    },
+    {
+      "name": "Runtime Robotics",
+      "careers_url": "https://www.runtimerobotics.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://runtimerobotics.com/careers",
+        "https://runtimerobotics.in/careers"
+      ]
+    },
+    {
+      "name": "Eyetov Technologies",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "eyetov.com has no careers page."
+    },
+    {
+      "name": "Asimov Robotics",
+      "careers_url": "https://www.asimovrobotics.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://asimovrobotics.com/careers",
+        "https://asimovrobotics.com/career"
+      ]
+    },
+    {
+      "name": "iHub Robotics",
+      "careers_url": "https://ihubrobotics.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.ihubrobotics.com/",
+        "https://ihubrobotics.in/careers"
+      ]
+    },
+    {
+      "name": "Sastra GBI",
+      "careers_url": "https://sgbi.us/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://sastragbi.com/careers",
+        "https://www.sastragbi.com/"
+      ]
+    },
+    {
+      "name": "Rosh AI",
+      "careers_url": "https://www.rosh.ai/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://rosh.ai/careers",
+        "https://roshai.com/careers"
+      ]
+    },
+    {
+      "name": "Autobonics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "autobonics.com has no careers page; /career/ 404s."
+    },
+    {
+      "name": "Goat Robotics",
+      "careers_url": "https://goat-robotics.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": []
+    },
+    {
+      "name": "Robomiracle",
+      "careers_url": "https://www.robomiracle.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://robomiracle.com/careers",
+        "https://robomiracle.in/careers"
+      ]
+    },
+    {
+      "name": "Genrobotics",
+      "careers_url": "https://genrobotics.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.genrobotics.org/"
+      ]
+    },
+    {
+      "name": "Swaayatt Robotics",
+      "careers_url": "https://www.swaayatt.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.swaayatt.com/careers",
+        "https://swaayatt.com/careers/"
+      ]
+    },
+    {
+      "name": "Coratia Technologies",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "coratia.com times out on every request from this network."
+    },
+    {
+      "name": "Svaya Robotics",
+      "careers_url": "https://www.svayarobotics.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://svaya.ai/careers",
+        "https://svayarobotics.com/"
+      ]
+    },
+    {
+      "name": "Harvested Robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "harvestedrobotics.com has no careers page; /career/ renders without careers wording."
+    },
+    {
+      "name": "Perceptyne",
+      "careers_url": "https://www.perceptyne.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://perceptyne.com/careers",
+        "https://perceptyne.ai/careers"
+      ]
+    },
+    {
+      "name": "Prospero Dynamics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "prosperodynamics.com has no careers page; /careers and /career 404."
+    },
+    {
+      "name": "Farmboro Technologies",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "No website found under any farmboro domain variant."
+    },
+    {
+      "name": "Plansys Technologies",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "No website found; likely a misspelling of Planys Technologies, which is already tracked in this registry."
+    },
+    {
+      "name": "Doozy Robotics",
+      "careers_url": "https://www.doozyrobotics.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://doozy.co.in/careers",
+        "https://doozyrobotics.com/careers"
+      ]
+    },
+    {
+      "name": "Propeller Technologies",
+      "careers_url": "https://propellertechnologies.in/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://propellertech.in/careers",
+        "https://www.propellertechnologies.com/"
+      ]
+    },
+    {
+      "name": "Neural Zone",
+      "careers_url": "https://neuralzome.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://neuralzome.com/"
+      ],
+      "note": "Trades as Neuralzome Cybernetics (neuralzome.com)."
+    },
+    {
+      "name": "Epicure Robotics",
+      "careers_url": "https://www.epicurerobotics.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://epicurerobotics.com/careers",
+        "https://epicurerobotics.in/careers"
+      ]
+    },
+    {
+      "name": "Accio Robotics",
+      "careers_url": "https://acciorobotics.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.acciorobotics.com/",
+        "https://acciorobotics.in/careers"
+      ]
+    },
+    {
+      "name": "Nosh",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "nosh.bot has no careers page; /careers and /pages/careers 404."
+    },
+    {
+      "name": "Qualcomm",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Same careers portal as the 'Qualcomm India' entry - tracked there to avoid crawling it twice."
+    },
+    {
+      "name": "Texas Instruments",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Same careers portal as the 'Texas Instruments India' entry - tracked there to avoid crawling it twice."
+    },
+    {
+      "name": "NXP Semiconductors",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Same careers portal as the 'NXP India' entry - tracked there to avoid crawling it twice."
+    },
+    {
+      "name": "Renesas Electronics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Same careers portal as the 'Renesas India' entry - tracked there to avoid crawling it twice."
+    },
+    {
+      "name": "Arm Holdings",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Same careers portal as the 'Arm India' entry - tracked there to avoid crawling it twice."
+    },
+    {
+      "name": "Intel",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Same careers portal as the 'Intel India' entry - tracked there to avoid crawling it twice."
+    },
+    {
+      "name": "Continental AG",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Same careers portal as the 'Continental India' entry - tracked there to avoid crawling it twice."
+    },
+    {
+      "name": "Cypress Semiconductor (Infineon)",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Same careers portal as the 'Infineon Technologies' entry - tracked there to avoid crawling it twice."
+    },
+    {
+      "name": "Sagar defence",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Same careers portal as the 'Sagar Defence Engineering' entry - tracked there to avoid crawling it twice."
+    },
+    {
+      "name": "Unbox robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Same careers portal as the 'Unbox Robotics' entry - tracked there to avoid crawling it twice."
+    },
+    {
+      "name": "Articulus Surgicals",
+      "careers_url": "https://www.articulussurgical.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.articulussurgical.com/careers",
+        "https://articulussurgical.com/careers/"
+      ]
+    },
+    {
+      "name": "Mojito Robotics",
+      "careers_url": "https://www.mowito.in/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://mowito.in/careers",
+        "https://mojitorobotics.com/careers"
+      ],
+      "note": "Trades as Mowito Robotic Systems (mowito.in)."
+    },
+    {
+      "name": "Armatrix",
+      "careers_url": "https://armatrix.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://armatrix.in/careers/",
+        "https://armatrix.com/"
+      ]
+    },
+    {
+      "name": "Pace Robotics",
+      "careers_url": "https://www.pacerobotics.net/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.pacerobotics.net/",
+        "https://pacerobotics.net/careers"
+      ]
+    },
+    {
+      "name": "Niqo Robotics",
+      "careers_url": "https://niqorobotics.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://niqorobotics.zohorecruit.in/jobs/Careers",
+        "https://niqorobotics.com/"
+      ]
+    },
+    {
+      "name": "Frontal",
+      "careers_url": "https://frontal.io/careers",
+      "ats_provider": "other",
+      "fallback_urls": []
+    },
+    {
+      "name": "Origin",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "No matching company site found; originrobotics.com has no careers page."
+    },
+    {
+      "name": "Apricot Robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "apricotrobotics.com times out on every request. apricot.us/careers exists but could not be confirmed as the same company, so it is deliberately not used here."
+    },
+    {
+      "name": "Control Robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "controlrobotics.com has no careers page; the .in variants fail TLS."
+    },
+    {
+      "name": "Sirena Technologies",
+      "careers_url": "https://sirenatech.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://sirenatech.com/",
+        "https://www.sirenatech.com/careers/"
+      ]
+    },
+    {
+      "name": "General Autonomy",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "generalautonomy.ai has no careers page."
+    },
+    {
+      "name": "Virya Autonomous Tech",
+      "careers_url": "https://www.virya.ai/s-projects-side-by-side",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.virya.ai/careers",
+        "https://www.virya.ai/"
+      ]
+    },
+    {
+      "name": "Doosan Robotics",
+      "careers_url": "https://www.doosanrobotics.com/en/about/recruit",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.doosanrobotics.com/en/careers",
+        "https://www.doosanrobotics.com/en/"
+      ]
+    },
+    {
+      "name": "Techman Robot",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "tm-robot.com has no careers page; every careers path returns 404."
+    },
+    {
+      "name": "Hanwha Robotics",
+      "careers_url": "https://www.hanwha.com/en/careers.html",
+      "ats_provider": "other",
+      "fallback_urls": [],
+      "note": "hanwharobotics.com has no careers page; hiring runs through the Hanwha group portal."
+    },
+    {
+      "name": "JAKA Robotics",
+      "careers_url": "https://www.jaka.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.jaka.com/careers",
+        "https://www.jaka.com/en/careers"
+      ]
+    },
+    {
+      "name": "Elephant Robotics",
+      "careers_url": "https://www.elephantrobotics.com/en/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.elephantrobotics.com/en/",
+        "https://shop.elephantrobotics.com/pages/careers"
+      ]
+    },
+    {
+      "name": "Franka Emika",
+      "careers_url": "https://franka.de/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.franka.de/career",
+        "https://franka.de/"
+      ]
+    },
+    {
+      "name": "Kinova Robotics",
+      "careers_url": "https://www.kinovarobotics.com/career",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.kinovarobotics.com/careers",
+        "https://www.kinovarobotics.com/"
+      ]
+    },
+    {
+      "name": "Clearpath Robotics",
+      "careers_url": "https://clearpathrobotics.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.clearpathrobotics.com/careers/",
+        "https://clearpathrobotics.com/"
+      ]
+    },
+    {
+      "name": "Mobile Industrial Robots (MiR)",
+      "careers_url": "https://www.mobile-industrial-robots.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.mobile-industrial-robots.com/careers/",
+        "https://www.mobile-industrial-robots.com/about-us/careers/"
+      ]
+    },
+    {
+      "name": "Geek+",
+      "careers_url": "https://www.geekplus.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.geekplus.com/careers",
+        "https://www.geekplus.com/en/careers"
+      ]
+    },
+    {
+      "name": "Hai Robotics",
+      "careers_url": "https://www.hairobotics.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.hairobotics.com/careers",
+        "https://www.hairobotics.com/about/join-us"
+      ]
+    },
+    {
+      "name": "Exotec",
+      "careers_url": "https://www.exotec.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.exotec.com/join-us/",
+        "https://www.exotec.com/"
+      ]
+    },
+    {
+      "name": "AutoStore",
+      "careers_url": "https://www.autostoresystem.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.autostoresystem.com/about/careers",
+        "https://www.autostoresystem.com/"
+      ]
+    },
+    {
+      "name": "Berkshire Grey",
+      "careers_url": "https://www.berkshiregrey.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.berkshiregrey.com/about/careers/",
+        "https://www.berkshiregrey.com/"
+      ]
+    },
+    {
+      "name": "RightHand Robotics",
+      "careers_url": "https://www.righthandrobotics.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.righthandrobotics.com/company/careers",
+        "https://www.righthandrobotics.com/"
+      ]
+    },
+    {
+      "name": "Plus One Robotics",
+      "careers_url": "https://www.plusonerobotics.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.plusonerobotics.com/careers/",
+        "https://www.plusonerobotics.com/"
+      ]
+    },
+    {
+      "name": "Covariant",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "covariant.ai has no careers page; the team was largely absorbed by Amazon in 2024."
+    },
+    {
+      "name": "Dexterity Inc",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "dexterity.ai/careers and its Greenhouse boards all return 404."
+    },
+    {
+      "name": "Skydio",
+      "careers_url": "https://www.skydio.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.skydio.com/careers/",
+        "https://www.skydio.com/"
+      ]
+    },
+    {
+      "name": "Anduril Industries",
+      "careers_url": "https://www.anduril.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.anduril.com/careers",
+        "https://www.anduril.com/open-roles/"
+      ]
+    },
+    {
+      "name": "Shield AI",
+      "careers_url": "https://shield.ai/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://shield.ai/careers",
+        "https://shield.ai/"
+      ]
+    },
+    {
+      "name": "Parrot",
+      "careers_url": "https://www.parrot.com/en/jobs",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.parrot.com/en/careers",
+        "https://careers.parrot.com/"
+      ]
+    },
+    {
+      "name": "Quantum-Systems",
+      "careers_url": "https://quantum-systems.com/career/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://quantum-systems.com/careers/",
+        "https://quantum-systems.com/jobs/"
+      ]
+    },
+    {
+      "name": "Wingcopter",
+      "careers_url": "https://wingcopter.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://wingcopter.com/jobs",
+        "https://wingcopter.com/"
+      ]
+    },
+    {
+      "name": "Zipline",
+      "careers_url": "https://www.flyzipline.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.flyzipline.com/careers/",
+        "https://www.flyzipline.com/"
+      ]
+    },
+    {
+      "name": "Matternet",
+      "careers_url": "https://mttr.net/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.matternet.com/careers",
+        "https://www.matternet.com/"
+      ]
+    },
+    {
+      "name": "Waymo",
+      "careers_url": "https://waymo.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://waymo.com/careers",
+        "https://careers.withgoogle.com/jobs"
+      ]
+    },
+    {
+      "name": "Cruise",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "getcruise.com returns 403 to headless browsers; GM wound the robotaxi business down in Dec 2024."
+    },
+    {
+      "name": "Zoox",
+      "careers_url": "https://zoox.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://zoox.com/careers/",
+        "https://www.zoox.com/careers"
+      ]
+    },
+    {
+      "name": "Nuro",
+      "careers_url": "https://www.nuro.ai/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://nuro.ai/careers",
+        "https://www.nuro.ai/"
+      ]
+    },
+    {
+      "name": "Aurora Innovation",
+      "careers_url": "https://aurora.tech/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://aurora.tech/careers/",
+        "https://aurora.tech/"
+      ]
+    },
+    {
+      "name": "Kodiak Robotics",
+      "careers_url": "https://kodiak.ai/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://kodiak.ai/careers/",
+        "https://kodiak.ai/"
+      ]
+    },
+    {
+      "name": "Plus AI",
+      "careers_url": "https://plus.ai/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.plus.ai/careers",
+        "https://plus.ai/"
+      ]
+    },
+    {
+      "name": "TuSimple",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "tusimple.com fails TLS negotiation and 403s over http; the company restructured as CreateAI."
+    },
+    {
+      "name": "Starship Technologies",
+      "careers_url": "https://www.starship.xyz/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.starship.xyz/careers",
+        "https://www.starship.xyz/"
+      ]
+    },
+    {
+      "name": "Kiwibot",
+      "careers_url": "https://www.kiwibot.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.kiwibot.com/careers/",
+        "https://www.kiwibot.com/"
+      ]
+    },
+    {
+      "name": "Bear Robotics",
+      "careers_url": "https://www.bearrobotics.ai/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.bearrobotics.ai/career",
+        "https://www.bearrobotics.ai/"
+      ]
+    },
+    {
+      "name": "Diligent Robotics",
+      "careers_url": "https://www.diligentrobots.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.diligentrobots.com/careers",
+        "https://www.diligentrobots.com/careers/"
+      ]
+    },
+    {
+      "name": "Miso Robotics",
+      "careers_url": "https://misorobotics.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://misorobotics.com/careers",
+        "https://misorobotics.com/"
+      ]
+    },
+    {
+      "name": "Ambi Robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "ambirobotics.com/careers returns 403 to every headless browser request."
+    },
+    {
+      "name": "Path Robotics",
+      "careers_url": "https://www.path-robotics.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.path-robotics.com/careers/",
+        "https://www.path-robotics.com/"
+      ]
+    },
+    {
+      "name": "Machina Labs",
+      "careers_url": "https://machinalabs.ai/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.machinalabs.ai/careers",
+        "https://machinalabs.ai/"
+      ]
+    },
+    {
+      "name": "Micropsi Industries",
+      "careers_url": "https://www.micropsi-industries.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.micropsi-industries.com/careers",
+        "https://www.micropsi-industries.com/jobs"
+      ]
+    },
+    {
+      "name": "Wandelbots",
+      "careers_url": "https://wandelbots.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://wandelbots.com/careers",
+        "https://wandelbots.com/"
+      ]
+    },
+    {
+      "name": "Realtime Robotics",
+      "careers_url": "https://rtr.ai/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://rtr.ai/careers",
+        "https://rtr.ai/"
+      ]
+    },
+    {
+      "name": "OnRobot",
+      "careers_url": "https://onrobot.com/en/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://onrobot.com/en/about-us/careers",
+        "https://onrobot.com/en"
+      ]
+    },
+    {
+      "name": "Robotiq",
+      "careers_url": "https://robotiq.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://robotiq.com/careers",
+        "https://robotiq.com/about-us/careers"
+      ]
+    },
+    {
+      "name": "Schunk",
+      "careers_url": "https://schunk.com/us/en/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://schunk.com/us/en/company/careers",
+        "https://schunk.com/de/en/company/careers"
+      ]
+    },
+    {
+      "name": "Festo",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "festo.com returns 403 to headless browsers and career.festo.com fails TLS."
+    },
+    {
+      "name": "SMC Corporation",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "smcworld.com and smcusa.com have no careers page with job listings."
+    },
+    {
+      "name": "Hiwin Technologies",
+      "careers_url": "https://www.hiwin.de/en/career",
+      "ats_provider": "other",
+      "fallback_urls": [],
+      "note": "hiwin.tw and hiwin.us are unreachable; the German site carries the reachable careers page."
+    },
+    {
+      "name": "THK Co.",
+      "careers_url": "https://www.thk.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.thk.com/?q=eng/node/5077",
+        "https://www.thk.com/"
+      ]
+    },
+    {
+      "name": "Panasonic Robotics",
+      "careers_url": "https://na.panasonic.com/us/careers",
+      "ats_provider": "other",
+      "fallback_urls": [],
+      "note": "Panasonic's global careers host 403s headless browsers; the North America portal is reachable."
+    },
+    {
+      "name": "Delta Electronics",
+      "careers_url": "https://www.deltaww.com/en-US/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.deltaww.com/en/careers",
+        "https://www.deltaww.com/en-US/index"
+      ]
+    },
+    {
+      "name": "Advantech",
+      "careers_url": "https://www.advantech.com/en/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://careers.advantech.com/",
+        "https://www.advantech.com/en"
+      ]
+    },
+    {
+      "name": "Beckhoff Automation",
+      "careers_url": "https://www.beckhoff.com/en-en/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.beckhoff.com/en-en/company/career/",
+        "https://www.beckhoff.com/en-us/company/career/"
+      ]
+    },
+    {
+      "name": "National Instruments",
+      "careers_url": "https://www.ni.com/en/about-ni/careers.html",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.emerson.com/en-us/careers",
+        "https://www.ni.com/en/about-ni/careers"
+      ]
+    },
+    {
+      "name": "Emerson Electric",
+      "careers_url": "https://www.emerson.com/en-us/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://hdesuite.emerson.com/careers",
+        "https://www.emerson.com/en-us/careers/job-search"
+      ]
+    },
+    {
+      "name": "Schneider Electric",
+      "careers_url": "https://www.se.com/ww/en/about-us/careers/overview.jsp",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.se.com/ww/en/about-us/careers/",
+        "https://www.se.com/ww/en/"
+      ]
+    },
+    {
+      "name": "Mitsubishi Heavy Industries",
+      "careers_url": "https://www.mhi.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.mhi.com/careers",
+        "https://www.mhi.com/company/careers"
+      ]
+    },
+    {
+      "name": "SoftBank Robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Every softbankrobotics.com careers path returns 404."
+    },
+    {
+      "name": "Ecovacs Robotics",
+      "careers_url": "https://www.ecovacs.com/global/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.ecovacs.com/global/about/careers",
+        "https://www.ecovacs.com/global"
+      ]
+    },
+    {
+      "name": "Roborock",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "global.roborock.com has no careers page; /pages/careers and /pages/join-us 404."
+    },
+    {
+      "name": "Segway Robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "segway.com has no careers page; careers.segway.com fails TLS."
+    },
+    {
+      "name": "WeRide",
+      "careers_url": "https://www.weride.ai/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.weride.ai/join-us",
+        "https://www.weride.ai/"
+      ]
+    },
+    {
+      "name": "Pony.ai",
+      "careers_url": "https://pony.ai/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://pony.ai/join",
+        "https://pony.ai/"
+      ]
+    },
+    {
+      "name": "Baidu Apollo",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "apollo.auto has no careers page and talent.baidu.com renders without careers wording."
+    },
+    {
+      "name": "Samsung Semiconductor",
+      "careers_url": "https://semiconductor.samsung.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://semiconductor.samsung.com/us/careers/",
+        "https://semiconductor.samsung.com/"
+      ]
+    },
+    {
+      "name": "SK Hynix",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "careers.skhynix.com fails TLS and skhynix.com/careers returns 403."
+    },
+    {
+      "name": "TSMC",
+      "careers_url": "https://careers.tsmc.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.tsmc.com/english/careers",
+        "https://www.tsmc.com/english"
+      ]
+    },
+    {
+      "name": "GlobalFoundries",
+      "careers_url": "https://gf.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://gf.com/careers",
+        "https://globalfoundries.com/careers"
+      ]
+    },
+    {
+      "name": "UMC (United Microelectronics)",
+      "careers_url": "https://www.umc.com/en/Html/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.umc.com/en/Html/recruit",
+        "https://www.umc.com/en"
+      ]
+    },
+    {
+      "name": "Micron Technology",
+      "careers_url": "https://careers.micron.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.micron.com/about/careers",
+        "https://careers.micron.com/careers"
+      ]
+    },
+    {
+      "name": "Cirrus Logic",
+      "careers_url": "https://www.cirrus.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.cirrus.com/careers",
+        "https://www.cirrus.com/"
+      ]
+    },
+    {
+      "name": "onsemi (ON Semiconductor)",
+      "careers_url": "https://www.onsemi.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.onsemi.com/company/careers",
+        "https://www.onsemi.com/"
+      ]
+    },
+    {
+      "name": "Skyworks Solutions",
+      "careers_url": "https://www.skyworksinc.com/Careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.skyworksinc.com/en/Careers",
+        "https://www.skyworksinc.com/"
+      ]
+    },
+    {
+      "name": "Qorvo",
+      "careers_url": "https://www.qorvo.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.qorvo.com/company/careers",
+        "https://www.qorvo.com/"
+      ]
+    },
+    {
+      "name": "Diodes Incorporated",
+      "careers_url": "https://www.diodes.com/about/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.diodes.com/careers/",
+        "https://www.diodes.com/"
+      ]
+    },
+    {
+      "name": "Vishay Intertechnology",
+      "careers_url": "https://jobs.vishay.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.vishay.com/en/careers/",
+        "https://www.vishay.com/"
+      ]
+    },
+    {
+      "name": "Murata Manufacturing",
+      "careers_url": "https://www.murata.com/en-global/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.murata.com/en-global/about/careers",
+        "https://www.murata.com/en-global"
+      ]
+    },
+    {
+      "name": "TDK Corporation",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "tdk.com/careers returns 403 to headless browsers and careers.tdk.com fails TLS."
+    },
+    {
+      "name": "Kyocera",
+      "careers_url": "https://global.kyocera.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://global.kyocera.com/careers/",
+        "https://global.kyocera.com/careers"
+      ]
+    },
+    {
+      "name": "Amphenol",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "amphenol.com returns 403 to headless browsers and its Workday board returns HTTP 500."
+    },
+    {
+      "name": "Littelfuse",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "littelfuse.com returns 403 to headless browsers and its Workday board 404s."
+    },
+    {
+      "name": "Cynlr",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Duplicate of the 'CynLr' entry in this registry."
+    },
+    {
+      "name": "Ati motors",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Duplicate of the 'Ati Motors' entry in this registry."
+    },
+    {
+      "name": "Flo mobility",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Duplicate of the 'Flo Mobility' entry in this registry."
+    },
+    {
+      "name": "Difacto",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Duplicate of the 'DiFACTO Robotics' entry in this registry."
+    },
+    {
+      "name": "Bosch Sensortec",
+      "careers_url": "https://www.bosch-sensortec.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.bosch-sensortec.com/careers/",
+        "https://www.bosch-sensortec.com/careers"
+      ]
+    },
+    {
+      "name": "Melexis",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "melexis.com returns 403 to headless browsers and careers.melexis.com fails TLS."
+    },
+    {
+      "name": "Allegro MicroSystems",
+      "careers_url": "https://www.allegromicro.com/en/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.allegromicro.com/careers",
+        "https://careers.allegromicro.com/"
+      ]
+    },
+    {
+      "name": "Xilinx (AMD)",
+      "careers_url": "https://careers.amd.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.xilinx.com/about/careers.html",
+        "https://www.amd.com/en/corporate/careers.html"
+      ]
+    },
+    {
+      "name": "Altera (Intel)",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "altera.com returns 403 to headless browsers and careers.altera.com fails TLS."
+    },
+    {
+      "name": "Synopsys",
+      "careers_url": "https://www.synopsys.com/careers.html",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://careers.synopsys.com/",
+        "https://www.synopsys.com/careers"
+      ]
+    },
+    {
+      "name": "Cadence Design Systems",
+      "careers_url": "https://www.cadence.com/en_US/home/company/careers.html",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://careers.cadence.com/",
+        "https://www.cadence.com/en_US/home/careers.html"
+      ]
+    },
+    {
+      "name": "Mentor Graphics (Siemens EDA)",
+      "careers_url": "https://jobs.siemens.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://eda.sw.siemens.com/en-US/careers/",
+        "https://eda.sw.siemens.com/en-US/"
+      ]
+    },
+    {
+      "name": "SiFive",
+      "careers_url": "https://www.sifive.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.sifive.com/company/careers",
+        "https://www.sifive.com/"
+      ]
+    },
+    {
+      "name": "Espressif Systems",
+      "careers_url": "https://www.espressif.com/en",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.espressif.com/en/company/careers/hr",
+        "https://www.espressif.com/en/company/careers"
+      ]
+    },
+    {
+      "name": "Realtek Semiconductor",
+      "careers_url": "https://www.realtek.com/en",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.realtek.com/en/careers",
+        "https://www.realtek.com/en/about-realtek/careers"
+      ]
+    },
+    {
+      "name": "Novatek Microelectronics",
+      "careers_url": "https://www.novatek.com.tw/en",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.novatek.com.tw/en/careers",
+        "https://www.novatek.com.tw/en/human-resources"
+      ]
+    },
+    {
+      "name": "Himax Technologies",
+      "careers_url": "https://www.himax.com.tw/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.himax.com.tw/careers",
+        "https://www.himax.com.tw/"
+      ]
+    },
+    {
+      "name": "Ambarella",
+      "careers_url": "https://www.ambarella.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.ambarella.com/careers/",
+        "https://www.ambarella.com/careers"
+      ]
+    },
+    {
+      "name": "CEVA Inc",
+      "careers_url": "https://www.ceva-ip.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.ceva-ip.com/careers/",
+        "https://www.ceva-ip.com/careers"
+      ]
+    },
+    {
+      "name": "Imagination Technologies",
+      "careers_url": "https://www.imaginationtech.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.imaginationtech.com/careers",
+        "https://www.imaginationtech.com/"
+      ]
+    },
+    {
+      "name": "Project Shiva",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "No reachable website found under any projectshiva domain variant."
+    },
+    {
+      "name": "SS Innovations",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "ssinnovations.com careers paths 404 and the international site has no careers wording."
+    },
+    {
+      "name": "Hi-Tech Robotic Systemz",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "hi-techrobotic.com returns 403; the NovusDrive site has no careers page."
+    },
+    {
+      "name": "Milagrow Humantech",
+      "careers_url": "https://www.milagrowhumantech.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://milagrowhumantech.com/pages/careers",
+        "https://www.milagrowhumantech.com/"
+      ]
+    },
+    {
+      "name": "Tata Electronics",
+      "careers_url": "https://www.tataelectronics.co.in/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.tataelectronics.co.in/careers/",
+        "https://www.tataelectronics.co.in/"
+      ]
+    },
+    {
+      "name": "Foxconn India",
+      "careers_url": "https://www.foxconn.com/en-us",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.foxconn.com/en-us/careers",
+        "https://www.foxconn.com/en-us/human-resources"
+      ]
+    },
+    {
+      "name": "Dixon Technologies",
+      "careers_url": "https://www.dixoninfo.com/careers.php",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.dixoninfo.com/careers",
+        "https://www.dixoninfo.com/"
+      ]
+    },
+    {
+      "name": "VVDN Technologies",
+      "careers_url": "https://www.vvdntech.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.vvdntech.com/careers",
+        "https://www.vvdntech.com/"
+      ]
+    },
+    {
+      "name": "Sahasra Electronics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "sahasragroup.com has no careers page with listings."
+    },
+    {
+      "name": "Elin Electronics",
+      "careers_url": "https://www.elinindia.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://elinindia.com/careers/",
+        "https://www.elinindia.com/"
+      ]
+    },
+    {
+      "name": "Amber Enterprises",
+      "careers_url": "https://www.ambergroupindia.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.ambergroupindia.com/careers",
+        "https://www.ambergroupindia.com/"
+      ]
+    },
+    {
+      "name": "eInfochips",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "einfochips.com returns 403 to headless browsers and careers.einfochips.com fails TLS."
+    },
+    {
+      "name": "Bharat Forge",
+      "careers_url": "https://www.bharatforge.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.bharatforge.com/careers",
+        "https://www.bharatforge.com/company/careers"
+      ]
+    },
+    {
+      "name": "Solar Industries India",
+      "careers_url": "https://www.solargroup.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.solargroup.com/careers",
+        "https://www.solargroup.com/career"
+      ]
+    },
+    {
+      "name": "Netweb Technologies",
+      "careers_url": "https://netwebindia.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://netwebindia.com/careers/",
+        "https://netwebindia.com/careers"
+      ]
+    },
+    {
+      "name": "Persistent Systems",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "persistent.com and careers.persistent.com both return ERR_HTTP2_PROTOCOL_ERROR to headless Chromium."
+    },
+    {
+      "name": "Onward Technologies",
+      "careers_url": "https://www.onwardgroup.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.onwardgroup.com/careers",
+        "https://www.onwardgroup.com/"
+      ]
+    },
+    {
+      "name": "Vayavya Labs",
+      "careers_url": "https://vayavyalabs.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://vayavyalabs.com/careers",
+        "https://vayavyalabs.com/"
+      ]
+    },
+    {
+      "name": "Mahindra Defence Systems",
+      "careers_url": "https://www.mahindra.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [],
+      "note": "mahindradefence.com 403s headless browsers; hiring runs through the Mahindra group portal."
+    },
+    {
+      "name": "Larsen & Toubro Defence",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "lntdefence.com fails TLS and larsentoubro.com careers returns 403."
+    },
+    {
+      "name": "Godrej Aerospace",
+      "careers_url": "https://www.godrejenterprises.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.godrejaerospace.com/careers",
+        "https://www.godrejenterprises.com/"
+      ]
+    },
+    {
+      "name": "Reliance Jio Platforms",
+      "careers_url": "https://careers.jio.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.jio.com/careers",
+        "https://careers.ril.com/"
+      ]
+    },
+    {
+      "name": "Signify Innovations India",
+      "careers_url": "https://www.careers.signify.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.signify.com/global/careers",
+        "https://www.signify.com/en-in/careers"
+      ]
+    },
+    {
+      "name": "CG Power and Industrial Solutions",
+      "careers_url": "https://www.cgglobal.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.cgglobal.com/career",
+        "https://www.cgglobal.com/"
+      ]
+    },
+    {
+      "name": "HFCL Limited",
+      "careers_url": "https://www.hfcl.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.hfcl.com/careers",
+        "https://www.hfcl.com/"
+      ]
+    },
+    {
+      "name": "Sterlite Technologies",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "stl.tech has no reachable careers page; every candidate path 404s or fails TLS."
+    },
+    {
+      "name": "C-DAC (Pune/Noida)",
+      "careers_url": "https://www.cdac.in/index.aspx?id=careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://cdac.in/index.aspx?id=careers",
+        "https://www.cdac.in/"
+      ]
+    },
+    {
+      "name": "Vedanta Semiconductors",
+      "careers_url": "https://www.vedantalimited.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.vedantalimited.com/eng/careers.php",
+        "https://www.vedantalimited.com/careers"
+      ]
+    },
+    {
+      "name": "Tata Semiconductor Assembly and Test (Assam)",
+      "careers_url": "https://www.tataelectronics.co.in/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.tataelectronics.co.in/",
+        "https://www.tatasemiconductor.com/careers"
+      ]
+    },
+    {
+      "name": "CG Semi",
+      "careers_url": "https://www.cgglobal.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.cgsemi.com/careers",
+        "https://www.cgsemi.com/"
+      ],
+      "note": "cgsemi.com is not reachable; roles are posted on the CG Power group portal."
+    },
+    {
+      "name": "HCL-Foxconn Semiconductor",
+      "careers_url": "https://careers.hcltech.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.hcltech.com/careers",
+        "https://www.hcltech.com/"
+      ]
+    },
+    {
+      "name": "Kaynes Technology",
+      "careers_url": "https://kaynestechnology.co.in/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://kaynestechnology.co.in/careers/",
+        "https://kaynestechnology.co.in/careers"
+      ]
+    },
+    {
+      "name": "Centum Electronics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "centumelectronics.com times out on every request."
+    },
+    {
+      "name": "Syrma SGS Technology",
+      "careers_url": "https://www.syrmasgs.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.syrmasgs.com/careers/",
+        "https://www.syrmasgs.com/careers"
+      ]
+    },
+    {
+      "name": "Avalon Technologies",
+      "careers_url": "https://www.avalontec.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.avalontec.com/careers/",
+        "https://www.avalontec.com/"
+      ]
+    },
+    {
+      "name": "SFO Technologies (NeST Group)",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "nestgroup.net has no careers page; every careers path 404s."
+    },
+    {
+      "name": "Invento Robotics",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "inventorobotics.com answers every request with HTTP 445."
+    },
+    {
+      "name": "Zetwerk",
+      "careers_url": "https://www.zetwerk.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.zetwerk.com/careers",
+        "https://www.zetwerk.com/"
+      ]
+    },
+    {
+      "name": "Aimtron Electronics",
+      "careers_url": "https://www.aimtron.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://aimtron.in/careers"
+      ]
+    },
+    {
+      "name": "Netradyne",
+      "careers_url": "https://www.netradyne.com/company/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.netradyne.com/careers",
+        "https://www.netradyne.com/"
+      ]
+    },
+    {
+      "name": "Uncanny Vision",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "uncannyvision.com returns 404 on every path - the site appears to be gone."
+    },
+    {
+      "name": "Vikram Sarabhai Space Centre (ISRO-VSSC)",
+      "careers_url": "https://www.vssc.gov.in/careers.html",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.vssc.gov.in/recruitment.html",
+        "https://www.vssc.gov.in/"
+      ]
+    },
+    {
+      "name": "U R Rao Satellite Centre (ISRO)",
+      "careers_url": "https://www.ursc.gov.in/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.ursc.gov.in/careers/",
+        "https://www.ursc.gov.in/careers"
+      ]
+    },
+    {
+      "name": "Hindustan Aeronautics Limited (HAL)",
+      "careers_url": "https://hal-india.co.in/CareerHome",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://hal-india.co.in/Career/",
+        "https://hal-india.co.in/"
+      ],
+      "note": "hal-india.co.in is very slow and often exceeds the 45s navigation timeout; CareerHome does load intermittently."
+    },
+    {
+      "name": "Bharat Electronics Limited (BEL)",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "bel-india.in has no reachable careers page; every candidate path 404s."
+    },
+    {
+      "name": "Zen Technologies",
+      "careers_url": "https://www.zentechnologies.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.zentechnologies.com/careers/",
+        "https://www.zentechnologies.com/"
+      ]
+    },
+    {
+      "name": "Astra Microwave Products",
+      "careers_url": "https://www.astramwp.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.astramwp.com/careers.php",
+        "https://www.astramwp.com/"
+      ]
+    },
+    {
+      "name": "Data Patterns India",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "datapatterns.co.in returns 503/403 and has no reachable careers page."
+    },
+    {
+      "name": "Emertxe Information Technologies",
+      "careers_url": "https://www.emertxe.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.emertxe.com/careers",
+        "https://www.emertxe.com/"
+      ]
+    },
+    {
+      "name": "MulticoreWare",
+      "careers_url": "https://multicorewareinc.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://multicorewareinc.com/careers",
+        "https://multicorewareinc.com/"
+      ]
+    },
+    {
+      "name": "Cosmoserve Space",
+      "careers_url": "https://www.cosmoserve.space/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://cosmoserve.space/careers",
+        "https://cosmoserve.in/careers"
+      ]
+    },
+    {
+      "name": "BlueSemi R&D",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Every bluesemi.in variant fails TLS negotiation."
+    },
+    {
+      "name": "JEH Aerospace",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "jehaerospace.com has no careers page; /careers and /join-us render without careers wording."
+    },
+    {
+      "name": "Pegatron India",
+      "careers_url": "https://www.pegatroncorp.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.pegatroncorp.com/careers",
+        "https://www.pegatroncorp.com/human-resource"
+      ]
+    },
+    {
+      "name": "Malles Automation Robotic Solutions",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "mallesautomation.com has no careers page."
+    },
+    {
+      "name": "ZF Commercial Vehicle Control Systems India (WABCO)",
+      "careers_url": "https://www.zf.com/india/en/careers/careers.html",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.zf.com/careers",
+        "https://www.zf.com/india/en/"
+      ]
+    },
+    {
+      "name": "Redpine Signals",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Acquired by Silicon Labs in 2020; redpinesignals.com only answers over http and looks stale - hiring runs through the Silicon Labs entry in this registry."
+    },
+    {
+      "name": "Saankhya Labs",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "saankhyalabs.com times out on every request; the company was absorbed by Tejas Networks."
+    },
+    {
+      "name": "KLA India",
+      "careers_url": "https://careers.kla.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.kla.com/careers",
+        "https://www.kla.com/careers/"
+      ]
+    },
+    {
+      "name": "Sensegiz Technologies",
+      "careers_url": "https://www.sensegiz.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://sensegiz.com/careers/",
+        "https://www.sensegiz.com/"
+      ]
+    },
+    {
+      "name": "Aeronetics (National Aerospace Corporation)",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "No reachable website found; aeronetics.in fails TLS and nationalaerospace.com 403s."
+    },
+    {
+      "name": "TeamIndus (Axiom Research Labs)",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "teamindus.in has no careers page; /careers and /career 404."
+    },
+    {
+      "name": "Skyroot Aerospace",
+      "careers_url": "https://skyroot.in/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://skyroot.in/careers.html",
+        "https://skyroot.in/"
+      ]
+    },
+    {
+      "name": "Dhruva Space",
+      "careers_url": "https://dhruvaspace.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://dhruvaspace.com/careers",
+        "https://dhruvaspace.com/"
+      ]
+    },
+    {
+      "name": "Bellatrix Aerospace",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "bellatrix.aero has no careers page; /careers and /career 404."
+    },
+    {
+      "name": "Alpha Design Technologies",
+      "careers_url": "https://www.adtl.co.in/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.adtl.co.in/careers.html",
+        "https://www.adtl.co.in/"
+      ]
+    },
+    {
+      "name": "Bharat Dynamics Limited",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "bdl-india.in has no reachable careers page; every candidate path 404s."
+    },
+    {
+      "name": "National Aerospace Laboratories (NAL)",
+      "careers_url": "https://www.nal.res.in/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.nal.res.in/en/careers",
+        "https://www.nal.res.in/en/recruitment"
+      ]
+    },
+    {
+      "name": "MosChip Technologies",
+      "careers_url": "https://moschip.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://moschip.com/careers",
+        "https://moschip.com/"
+      ]
+    },
+    {
+      "name": "Ather Energy",
+      "careers_url": "https://www.atherenergy.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://atherenergy.com/careers",
+        "https://www.atherenergy.com/"
+      ]
+    },
+    {
+      "name": "Ola Electric",
+      "careers_url": "https://olaelectric.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.olaelectric.com/careers",
+        "https://olaelectric.com/"
+      ]
+    },
+    {
+      "name": "TVS Motor Company",
+      "careers_url": "https://www.tvsmotor.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.tvsmotor.com/careers",
+        "https://www.tvsmotor.com/about-us/careers"
+      ]
+    },
+    {
+      "name": "Simple Energy",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "simpleenergy.in has no careers page; /careers 404s."
+    },
+    {
+      "name": "Vinyas Innovative Technologies",
+      "careers_url": "https://www.vinyasit.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.vinyasit.com/careers",
+        "https://www.vinyasit.com/careers/"
+      ]
+    },
+    {
+      "name": "Zoho Corporation",
+      "careers_url": "https://www.zoho.com/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://careers.zohocorp.com/jobs/Careers",
+        "https://www.zoho.com/careers"
+      ]
+    },
+    {
+      "name": "Bosch Rexroth India",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Every boschrexroth.com career path returns 404."
+    },
+    {
+      "name": "Yazaki India",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "yazaki-group.com careers paths 404 and yazaki.co.in fails TLS."
+    },
+    {
+      "name": "Harman International (India)",
+      "careers_url": "https://jobs.harman.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://careers.harman.com/",
+        "https://www.harman.com/careers"
+      ]
+    },
+    {
+      "name": "Titan Engineering & Automation Limited",
+      "careers_url": "https://www.titancompany.in/careers",
+      "ats_provider": "other",
+      "fallback_urls": [],
+      "note": "teal.co.in 403s headless browsers; TEAL roles are posted on the Titan group portal."
+    },
+    {
+      "name": "L&T Precision Engineering & Systems",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "larsentoubro.com careers returns 403 to headless browsers, same as the L&T Defence entry."
+    },
+    {
+      "name": "Robert Bosch Centre for Data Science and AI (RBCDSAI, IIT Madras)",
+      "careers_url": "https://rbcdsai.iitm.ac.in/careers/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://rbcdsai.iitm.ac.in/opportunities/",
+        "https://rbcdsai.iitm.ac.in/"
+      ]
+    },
+    {
+      "name": "Wabtec India",
+      "careers_url": "https://www.wabteccorp.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://careers.wabteccorp.com/",
+        "https://www.wabteccorp.com/"
+      ]
+    },
+    {
+      "name": "Cyient DLM",
+      "careers_url": "https://www.cyientdlm.com/careers",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.cyientdlm.com/careers/",
+        "https://www.cyientdlm.com/"
+      ]
+    },
+    {
+      "name": "Value Point Systems",
+      "careers_url": "https://www.valuepointsystems.com/",
+      "ats_provider": "other",
+      "fallback_urls": [
+        "https://www.valuepointsystems.com/careers/",
+        "https://www.valuepointsystems.com/careers"
+      ]
+    },
+    {
+      "name": "Sensorise Digital Services",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "sensorise.net has no careers page; /careers and /career 404."
+    },
+    {
+      "name": "Miko (Emotix)",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Duplicate of the 'Miko' entry in this registry."
+    },
+    {
+      "name": "Paras Defence and Space Technologies",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Duplicate of the 'Paras Aerospace' entry in this registry."
+    },
+    {
+      "name": "Honeywell Automation India",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Duplicate of the 'Honeywell Robotics' entry in this registry."
+    },
+    {
+      "name": "Siemens Limited (India)",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Duplicate of the 'Siemens' entry in this registry."
+    },
+    {
+      "name": "Schneider Electric India",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Duplicate of the 'Schneider Electric' entry in this registry."
+    },
+    {
+      "name": "Micron India (Sanand)",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Duplicate of the 'Micron Technology' entry in this registry."
+    },
+    {
+      "name": "Wipro PARI (Pari Robotics)",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Duplicate of the 'Wipro PARI' entry in this registry."
+    },
+    {
+      "name": "C-DAC Bangalore/Thiruvananthapuram",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Duplicate of the 'C-DAC (Pune/Noida)' entry in this registry."
+    },
+    {
+      "name": "ABB India",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Duplicate of the 'ABB Robotics' entry in this registry."
+    },
+    {
+      "name": "Gridbots Technologies",
+      "careers_url": null,
+      "ats_provider": null,
+      "fallback_urls": [],
+      "note": "Duplicate of the 'Gridbot Technologies' entry in this registry."
     }
   ]
 }

@@ -14,8 +14,12 @@ skipped rather than failing the run. Results are written to
 data/career_portals_report.json.
 
 Usage:
-    python scripts/verify_portals.py            # verify every company
+    python scripts/verify_portals.py --new      # only companies not yet in the report
+    python scripts/verify_portals.py            # re-verify every company
     python scripts/verify_portals.py CynLr Ati  # verify matching companies only
+
+`--new` merges its results into the existing report instead of replacing it, so
+adding companies to the registry costs one short run rather than a full sweep.
 """
 
 import argparse
@@ -166,16 +170,30 @@ async def verify_company(browser, company: dict, sem: asyncio.Semaphore) -> dict
     }
 
 
-async def main(name_filters: list[str]) -> int:
+def load_previous_report() -> dict[str, dict]:
+    """Previous results keyed by company name, empty if there is no report yet."""
+    if not REPORT_FILE.exists():
+        return {}
+    return {r["name"]: r for r in json.loads(REPORT_FILE.read_text())}
+
+
+async def main(name_filters: list[str], only_new: bool) -> int:
     data = json.loads(PORTALS_FILE.read_text())
     companies = data["companies"]
     if name_filters:
         lowered = [f.lower() for f in name_filters]
         companies = [c for c in companies if any(f in c["name"].lower() for f in lowered)]
 
+    previous = load_previous_report()
+    if only_new:
+        settled = {name for name, r in previous.items() if r["status"] in ("ok", "skipped")}
+        total = len(companies)
+        companies = [c for c in companies if c["name"] not in settled]
+        print(f"--new: {total - len(companies)} already verified, {len(companies)} to check.")
+
     if not companies:
-        print("No companies matched the given filters.")
-        return 1
+        print("Nothing to verify - every company in the registry is already verified.")
+        return 0
 
     print(f"Verifying {len(companies)} career portals...\n")
 
@@ -196,7 +214,9 @@ async def main(name_filters: list[str]) -> int:
     fallbacks = [r for r in results if r["status"] == "use_fallback"]
     skipped = [r for r in results if r["status"] == "skipped"]
 
-    REPORT_FILE.write_text(json.dumps(results, indent=2) + "\n")
+    # A partial run merges into the existing report so earlier results survive.
+    merged = {**previous, **{r["name"]: r for r in results}}
+    REPORT_FILE.write_text(json.dumps(list(merged.values()), indent=2) + "\n")
 
     print(f"\n{'=' * 60}")
     print(f"  ok:           {len(results) - len(unreachable) - len(fallbacks) - len(skipped)}")
@@ -217,5 +237,10 @@ async def main(name_filters: list[str]) -> int:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("names", nargs="*", help="Only verify companies matching these substrings")
+    parser.add_argument(
+        "--new",
+        action="store_true",
+        help="Only verify companies that are not already ok/skipped in the report",
+    )
     args = parser.parse_args()
-    sys.exit(asyncio.run(main(args.names)))
+    sys.exit(asyncio.run(main(args.names, args.new)))

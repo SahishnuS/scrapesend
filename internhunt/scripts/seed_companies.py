@@ -6,9 +6,6 @@ import sys
 # Ensure the backend directory is in the Python path
 sys.path.append(os.path.join(os.path.dirname(__file__), "../backend"))
 
-from app.db.session import AsyncSessionLocal
-from app.models.company import Company
-
 PORTALS_FILE = os.path.join(os.path.dirname(__file__), "../data/career_portals.json")
 
 
@@ -33,6 +30,10 @@ def load_companies() -> list[dict]:
 
 
 async def seed_database():
+    # Imported here so load_companies() stays usable without the DB stack installed.
+    from app.db.session import AsyncSessionLocal
+    from app.models.company import Company
+
     companies_to_seed = load_companies()
     async with AsyncSessionLocal() as db:
         print(f"Seeding {len(companies_to_seed)} companies from career_portals.json...")
