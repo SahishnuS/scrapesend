@@ -59,7 +59,7 @@ class NotificationService:
             log.error("Failed to send Telegram notification", error=str(exc))
             return False
 
-    async def send_email(self, subject: str, body_text: str, recipient_email: str = None) -> bool:
+    async def send_email(self, subject: str, body_text: str, recipient_email: str | None = None) -> bool:
         """
         Send an email via Gmail SMTP using aiosmtplib.
         Returns True if successful, False otherwise.
