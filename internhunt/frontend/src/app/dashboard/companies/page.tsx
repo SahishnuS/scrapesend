@@ -1,6 +1,6 @@
 "use client";
 
-import { Building2, Globe, Clock, Plus, Upload, Download, X, FileText } from "lucide-react";
+import { Building2, Globe, Clock, Plus, Upload, Download, X, FileText, Search } from "lucide-react";
 import { useCompanies, useCreateCompany } from "@/lib/hooks";
 import { timeAgo, capitalize } from "@/lib/utils";
 import { useState, useRef } from "react";
@@ -15,6 +15,7 @@ export default function CompaniesPage() {
   const queryClient = useQueryClient();
 
   const [showPanel, setShowPanel] = useState(false);
+  const [search, setSearch] = useState("");
   const [addMode, setAddMode] = useState<AddMode>("form");
 
   // Form state
@@ -86,6 +87,11 @@ export default function CompaniesPage() {
     window.open("/api/v1/companies/template/csv", "_blank");
   };
 
+  const filtered = companies.filter((c) =>
+    c.name.toLowerCase().includes(search.toLowerCase()) ||
+    (c.careers_url ?? "").toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div className="animate-fade-in space-y-6">
       {/* Header */}
@@ -93,7 +99,9 @@ export default function CompaniesPage() {
         <div>
           <h1 className="text-2xl font-bold tracking-tight">Companies</h1>
           <p className="mt-1 text-sm text-surface-200/70">
-            {companies.length} companies being monitored for internship openings
+            {search
+              ? `${filtered.length} of ${companies.length} companies match "${search}"`
+              : `${companies.length} companies being monitored for internship openings`}
           </p>
         </div>
         <button
@@ -103,6 +111,25 @@ export default function CompaniesPage() {
           <Plus size={16} />
           Add Companies
         </button>
+      </div>
+
+      {/* Search Bar */}
+      <div className="relative">
+        <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-surface-200/40 pointer-events-none" />
+        <input
+          className="input pl-9 w-full sm:max-w-sm"
+          placeholder="Search companies..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        {search && (
+          <button
+            onClick={() => setSearch("")}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-surface-200/40 hover:text-surface-200 transition-colors"
+          >
+            <X size={14} />
+          </button>
+        )}
       </div>
 
       {/* Add Panel */}
@@ -295,9 +322,19 @@ export default function CompaniesPage() {
             No companies added yet. Click &quot;Add Companies&quot; to start monitoring.
           </p>
         </div>
+      ) : filtered.length === 0 ? (
+        <div className="card flex flex-col items-center justify-center py-20 text-center">
+          <Search size={40} className="text-surface-200/20" />
+          <p className="mt-4 text-surface-200/60">
+            No companies found matching &quot;{search}&quot;
+          </p>
+          <button onClick={() => setSearch("")} className="btn-secondary btn-sm mt-4">
+            Clear search
+          </button>
+        </div>
       ) : (
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {companies.map((company) => (
+          {filtered.map((company) => (
             <div key={company.id} className="card-hover p-5">
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3">

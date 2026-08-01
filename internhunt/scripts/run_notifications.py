@@ -44,13 +44,6 @@ async def run_notification_pipeline():
         new_notifications_count = 0
 
         for app, job, company in results:
-            # Check if notification already exists for this job
-            existing_notif = await db.scalar(
-                select(Notification).where(Notification.job_id == job.id)
-            )
-            if existing_notif:
-                continue
-
             match_pct = int((app.match_score or 0) * 100)
             ats_pct = int((app.ats_score or 0) * 100)
 
@@ -79,31 +72,51 @@ async def run_notification_pipeline():
 
             log.info(f"Dispatching notification for: {job.title} at {company.name}")
 
-            # 1. Telegram Dispatch
-            tg_sent = await notifier.send_telegram(telegram_msg)
-            db.add(
-                Notification(
-                    job_id=job.id,
-                    platform="telegram",
-                    message=f"Alert sent for {job.title} at {company.name} (Match: {match_pct}%)",
-                    is_sent=tg_sent,
-                    sent_at=datetime.now(tz=timezone.utc) if tg_sent else None,
+            # 1. Telegram Dispatch — only if not already successfully sent
+            tg_already_sent = await db.scalar(
+                select(Notification).where(
+                    Notification.job_id == job.id,
+                    Notification.platform == "telegram",
+                    Notification.is_sent == True,
                 )
             )
+            if not tg_already_sent:
+                tg_sent = await notifier.send_telegram(telegram_msg)
+                db.add(
+                    Notification(
+                        job_id=job.id,
+                        platform="telegram",
+                        message=f"Alert sent for {job.title} at {company.name} (Match: {match_pct}%)",
+                        is_sent=tg_sent,
+                        sent_at=datetime.now(tz=timezone.utc) if tg_sent else None,
+                    )
+                )
+                new_notifications_count += 1
+            else:
+                log.info(f"Telegram already sent for job {job.id}, skipping.")
 
-            # 2. Email Dispatch
-            email_sent = await notifier.send_email(email_subject, email_body)
-            db.add(
-                Notification(
-                    job_id=job.id,
-                    platform="email",
-                    message=f"Email sent for {job.title} at {company.name} (Match: {match_pct}%)",
-                    is_sent=email_sent,
-                    sent_at=datetime.now(tz=timezone.utc) if email_sent else None,
+            # 2. Email Dispatch — only if not already successfully sent
+            email_already_sent = await db.scalar(
+                select(Notification).where(
+                    Notification.job_id == job.id,
+                    Notification.platform == "email",
+                    Notification.is_sent == True,
                 )
             )
-
-            new_notifications_count += 2
+            if not email_already_sent:
+                email_sent = await notifier.send_email(email_subject, email_body)
+                db.add(
+                    Notification(
+                        job_id=job.id,
+                        platform="email",
+                        message=f"Email sent for {job.title} at {company.name} (Match: {match_pct}%)",
+                        is_sent=email_sent,
+                        sent_at=datetime.now(tz=timezone.utc) if email_sent else None,
+                    )
+                )
+                new_notifications_count += 1
+            else:
+                log.info(f"Email already sent for job {job.id}, skipping.")
 
             # Commit after each job so that if the script is interrupted (e.g., Telegram timeout),
             # we don't rollback the database and send duplicate emails next time.

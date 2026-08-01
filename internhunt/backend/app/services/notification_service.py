@@ -43,8 +43,7 @@ class NotificationService:
 
         try:
             log.info("Connecting to Telegram API... (Timeout set to 3s to prevent hanging)")
-            transport = httpx.AsyncHTTPTransport(local_address="0.0.0.0")
-            async with httpx.AsyncClient(transport=transport, timeout=3.0) as client:
+            async with httpx.AsyncClient(timeout=3.0) as client:
                 response = await client.post(url, json=payload)
                 if response.status_code == 200:
                     log.info("Telegram notification sent successfully.")

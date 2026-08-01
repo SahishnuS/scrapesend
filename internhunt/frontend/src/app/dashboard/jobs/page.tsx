@@ -1,13 +1,14 @@
 "use client";
 
-import { Briefcase, ExternalLink, MapPin, Calendar, X } from "lucide-react";
+import { Briefcase, ExternalLink, MapPin, Calendar, X, Search } from "lucide-react";
 import { useJobs, useUpdateJob } from "@/lib/hooks";
 import { timeAgo, statusBadgeClass, capitalize } from "@/lib/utils";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
 export default function JobsPage() {
-  const [statusFilter, setStatusFilter] = useState<string>("");
+  const [statusFilter, setStatusFilter] = useState<string>("open");
+  const [search, setSearch] = useState("");
   const { data: jobs = [], isLoading } = useJobs(
     statusFilter ? { status: statusFilter } : undefined
   );
@@ -22,30 +23,56 @@ export default function JobsPage() {
     }
   };
 
+  const filtered = jobs.filter((job) => {
+    const q = search.toLowerCase();
+    return (
+      job.title.toLowerCase().includes(q) ||
+      (job.location ?? "").toLowerCase().includes(q)
+    );
+  });
+
   return (
     <div className="animate-fade-in space-y-6">
-      <div className="flex items-center justify-between">
+      {/* Header */}
+      <div className="flex items-center justify-between flex-wrap gap-3">
         <div>
           <h1 className="text-2xl font-bold tracking-tight">Jobs</h1>
           <p className="mt-1 text-sm text-surface-200/70">
-            All discovered internship openings
+            {search
+              ? `${filtered.length} of ${jobs.length} jobs match "${search}"`
+              : `${jobs.length} internship openings`}
           </p>
         </div>
         <div className="flex items-center gap-2">
-          {["", "open", "closed"].map((s) => (
+          {(["open", "closed", ""] as const).map((s) => (
             <button
               key={s}
-              onClick={() => setStatusFilter(s)}
-              className={
-                statusFilter === s
-                  ? "btn-primary btn-sm"
-                  : "btn-secondary btn-sm"
-              }
+              onClick={() => { setStatusFilter(s); setSearch(""); }}
+              className={statusFilter === s ? "btn-primary btn-sm" : "btn-secondary btn-sm"}
             >
               {s === "" ? "All" : capitalize(s)}
             </button>
           ))}
         </div>
+      </div>
+
+      {/* Search Bar */}
+      <div className="relative">
+        <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-surface-200/40 pointer-events-none" />
+        <input
+          className="input pl-9 w-full sm:max-w-sm"
+          placeholder="Search by title or location..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        {search && (
+          <button
+            onClick={() => setSearch("")}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-surface-200/40 hover:text-surface-200 transition-colors"
+          >
+            <X size={14} />
+          </button>
+        )}
       </div>
 
       {isLoading ? (
@@ -61,9 +88,19 @@ export default function JobsPage() {
             No jobs found. Run the crawler to discover openings.
           </p>
         </div>
+      ) : filtered.length === 0 ? (
+        <div className="card flex flex-col items-center justify-center py-20 text-center">
+          <Search size={40} className="text-surface-200/20" />
+          <p className="mt-4 text-surface-200/60">
+            No jobs found matching &quot;{search}&quot;
+          </p>
+          <button onClick={() => setSearch("")} className="btn-secondary btn-sm mt-4">
+            Clear search
+          </button>
+        </div>
       ) : (
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {jobs.map((job) => (
+          {filtered.map((job) => (
             <div key={job.id} className="card-hover group p-5">
               <div className="flex items-start justify-between">
                 <h3 className="font-semibold text-surface-50 group-hover:text-brand-400 transition-colors line-clamp-2">
