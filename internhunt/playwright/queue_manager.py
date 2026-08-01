@@ -137,6 +137,8 @@ async def run_crawler_queue(politeness_delay: float = 3.0) -> dict:
     Returns:
         Summary dict with total_companies, total_new_jobs, errors.
     """
+    from app.core.config import settings
+
     companies = await get_active_companies()
 
     if not companies:
@@ -150,25 +152,35 @@ async def run_crawler_queue(politeness_delay: float = 3.0) -> dict:
 
     total_new = 0
     errors = 0
+    completed = 0
 
-    try:
-        for i, company in enumerate(companies, 1):
+    concurrency = getattr(settings, "CRAWLER_CONCURRENCY", 5)
+    sem = asyncio.Semaphore(concurrency)
+
+    async def _crawl_worker(company):
+        nonlocal total_new, errors, completed
+        async with sem:
             try:
                 new_jobs = await crawl_company(crawler, company)
                 total_new += new_jobs
+                completed += 1
                 log.info(
-                    f"[{i}/{len(companies)}] Done",
+                    f"[{completed}/{len(companies)}] Done",
                     company=company.name,
                     new_jobs=new_jobs,
                 )
             except Exception as exc:
                 errors += 1
+                completed += 1
                 log.error("Error crawling company", company=company.name, error=str(exc))
+            
+            # Politeness delay holding the semaphore limits overall throughput slightly,
+            # which helps avoid sudden CPU spikes or triggering mass bot protections.
+            await asyncio.sleep(politeness_delay)
 
-            # Politeness delay between companies
-            if i < len(companies):
-                await asyncio.sleep(politeness_delay)
-
+    try:
+        tasks = [_crawl_worker(company) for company in companies]
+        await asyncio.gather(*tasks)
     finally:
         await crawler.stop()
 
