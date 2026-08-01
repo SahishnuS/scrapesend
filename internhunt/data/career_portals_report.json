@@ -1,0 +1,3585 @@
+[
+  {
+    "name": "Planys Technologies",
+    "status": "ok",
+    "configured_url": "https://planystech.com/career/",
+    "working_url": "https://planystech.com/career/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://planystech.com/career/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://planystech.com/careers/",
+        "career_signals": [
+          "career",
+          "job"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Solinas Integrity",
+    "status": "ok",
+    "configured_url": "https://www.solinas.in/careers",
+    "working_url": "https://www.solinas.in/careers",
+    "job_links": 2,
+    "intern_links": 0,
+    "sample_titles": [
+      "Swasth AI",
+      "Swasth AI"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.solinas.in/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://solinas.in/careers/",
+        "career_signals": [
+          "career",
+          "job",
+          "open position"
+        ],
+        "job_links": 2,
+        "intern_links": 0,
+        "sample_titles": [
+          "Swasth AI",
+          "Swasth AI"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vividobots",
+    "status": "ok",
+    "configured_url": "https://www.vividobots.com/careers",
+    "working_url": "https://www.vividobots.com/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.vividobots.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.vividobots.com/careers",
+        "career_signals": [
+          "career",
+          "join us"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Surinova",
+    "status": "ok",
+    "configured_url": "https://www.surinova.com/careers/",
+    "working_url": "https://www.surinova.com/careers/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.surinova.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.surinova.com/careers/",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Torus Robotics",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Sakthi Robotics & Automations",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Robonetics Automation Solutions",
+    "status": "ok",
+    "configured_url": "https://roboneticssolutions.com/careers.php",
+    "working_url": "https://roboneticssolutions.com/careers.php",
+    "job_links": 7,
+    "intern_links": 0,
+    "sample_titles": [
+      "Robot Application",
+      "JAKA Ai 3",
+      "JAKA Ai 5",
+      "JAKA Ai 7",
+      "JAKA Ai 12"
+    ],
+    "attempts": [
+      {
+        "url": "https://roboneticssolutions.com/careers.php",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://roboneticssolutions.com/careers.php",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 7,
+        "intern_links": 0,
+        "sample_titles": [
+          "Robot Application",
+          "JAKA Ai 3",
+          "JAKA Ai 5",
+          "JAKA Ai 7",
+          "JAKA Ai 12"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vinata Aeromobility",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "AstroX Aerospace",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "The Team Robotics",
+    "status": "ok",
+    "configured_url": "https://www.theteamrobotics.com/",
+    "working_url": "https://www.theteamrobotics.com/",
+    "job_links": 2,
+    "intern_links": 0,
+    "sample_titles": [
+      "IOT Development",
+      "Niha Ai Version"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.theteamrobotics.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.theteamrobotics.com/",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 2,
+        "intern_links": 0,
+        "sample_titles": [
+          "IOT Development",
+          "Niha Ai Version"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Orange Robotics",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Sastra Robotics",
+    "status": "ok",
+    "configured_url": "https://sastrarobotics.com/tag/robotics-jobs/",
+    "working_url": "https://sastrarobotics.com/tag/robotics-jobs/",
+    "job_links": 27,
+    "intern_links": 0,
+    "sample_titles": [
+      "Robotic Industry Blog",
+      "Five Classic Resume Mistakes Made by Candidates while applying for a Robotics Company",
+      "Robotic Inspection",
+      "Robotics",
+      "Robotics Startup"
+    ],
+    "attempts": [
+      {
+        "url": "https://sastrarobotics.com/tag/robotics-jobs/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://sastrarobotics.com/tag/robotics-jobs/",
+        "career_signals": [
+          "career",
+          "internship",
+          "job"
+        ],
+        "job_links": 27,
+        "intern_links": 0,
+        "sample_titles": [
+          "Robotic Industry Blog",
+          "Five Classic Resume Mistakes Made by Candidates while applying for a Robotics Company",
+          "Robotic Inspection",
+          "Robotics",
+          "Robotics Startup"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Kidobotikz",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Alstrut",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Tespa Robotics",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "iYantras",
+    "status": "ok",
+    "configured_url": "https://www.iyantras.com/careers",
+    "working_url": "https://www.iyantras.com/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.iyantras.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.iyantras.com/careers",
+        "career_signals": [
+          "career",
+          "internship"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "ACK Robotics",
+    "status": "ok",
+    "configured_url": "https://ackrobotics.com/careers",
+    "working_url": "https://ackrobotics.com/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://ackrobotics.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://ackrobotics.com/careers",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Lema Labs",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "KALM Robotics",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Ati Motors",
+    "status": "ok",
+    "configured_url": "https://www.atirobotics.ai/company/careers/",
+    "working_url": "https://www.atirobotics.ai/company/careers/",
+    "job_links": 2,
+    "intern_links": 0,
+    "sample_titles": [
+      "About Ati Robotics \u2192",
+      "Fullstack Engineer"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.atirobotics.ai/company/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.atirobotics.ai/company/careers/",
+        "career_signals": [
+          "career",
+          "job",
+          "opening"
+        ],
+        "job_links": 2,
+        "intern_links": 0,
+        "sample_titles": [
+          "About Ati Robotics \u2192",
+          "Fullstack Engineer"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Flo Mobility",
+    "status": "ok",
+    "configured_url": "https://flomobility.com/careers",
+    "working_url": "https://flomobility.com/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://flomobility.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://flomobility.com/careers",
+        "career_signals": [
+          "apply now",
+          "career",
+          "job",
+          "open position"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Hachidori Robotics",
+    "status": "ok",
+    "configured_url": "https://hachidorirobotics.com/careers/",
+    "working_url": "https://hachidorirobotics.com/careers/",
+    "job_links": 1,
+    "intern_links": 0,
+    "sample_titles": [
+      "Autonomous Pallet Jack"
+    ],
+    "attempts": [
+      {
+        "url": "https://hachidorirobotics.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://hachidorirobotics.com/careers/",
+        "career_signals": [
+          "career",
+          "job",
+          "join our team",
+          "join us",
+          "opening"
+        ],
+        "job_links": 1,
+        "intern_links": 0,
+        "sample_titles": [
+          "Autonomous Pallet Jack"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ANSCER Robotics",
+    "status": "ok",
+    "configured_url": "https://career.anscer.com/jobs/Careers",
+    "working_url": "https://career.anscer.com/jobs/Careers",
+    "job_links": 9,
+    "intern_links": 1,
+    "sample_titles": [
+      "Robotics Software Engineer I",
+      "Applications and Pre-Sales Engineer (Robotics)",
+      "Senior Robotics Software Development Engineer - Mobile Robotics",
+      "Mechanical Design Engineer  -  Mobile Robotics",
+      "Lead Validation & Testing Engineer - Mobile Robotics"
+    ],
+    "attempts": [
+      {
+        "url": "https://career.anscer.com/jobs/Careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://career.anscer.com/jobs/Careers",
+        "career_signals": [
+          "career",
+          "internship",
+          "job",
+          "join us",
+          "opening"
+        ],
+        "job_links": 9,
+        "intern_links": 1,
+        "sample_titles": [
+          "Robotics Software Engineer I",
+          "Applications and Pre-Sales Engineer (Robotics)",
+          "Senior Robotics Software Development Engineer - Mobile Robotics",
+          "Mechanical Design Engineer  -  Mobile Robotics",
+          "Lead Validation & Testing Engineer - Mobile Robotics"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Redwing Labs",
+    "status": "ok",
+    "configured_url": "https://www.redwinglabs.in/contact-4",
+    "working_url": "https://www.redwinglabs.in/contact-4",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.redwinglabs.in/contact-4",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.redwinglabs.in/contact-4",
+        "career_signals": [
+          "join us",
+          "open position"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "CynLr",
+    "status": "ok",
+    "configured_url": "https://cynlr.freshteam.com/jobs",
+    "working_url": "https://cynlr.freshteam.com/jobs",
+    "job_links": 12,
+    "intern_links": 1,
+    "sample_titles": [
+      "Web Developer",
+      "HR Generalist - Entry / Intern",
+      "Design & Development - Robotics",
+      "Design & Research \u2013 HW & Electronics (Lausanne)",
+      "Embedded Product Design Engineer"
+    ],
+    "attempts": [
+      {
+        "url": "https://cynlr.freshteam.com/jobs",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://cynlr.freshteam.com/jobs",
+        "career_signals": [
+          "internship",
+          "job",
+          "join us",
+          "opening"
+        ],
+        "job_links": 12,
+        "intern_links": 1,
+        "sample_titles": [
+          "Web Developer",
+          "HR Generalist - Entry / Intern",
+          "Design & Development - Robotics",
+          "Design & Research \u2013 HW & Electronics (Lausanne)",
+          "Embedded Product Design Engineer"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Systemantics",
+    "status": "ok",
+    "configured_url": "https://www.systemantics.com/careers/",
+    "working_url": "https://www.systemantics.com/careers/",
+    "job_links": 1,
+    "intern_links": 0,
+    "sample_titles": [
+      "Sensible Robotics"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.systemantics.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.systemantics.com/careers/",
+        "career_signals": [
+          "career",
+          "job",
+          "join us"
+        ],
+        "job_links": 1,
+        "intern_links": 0,
+        "sample_titles": [
+          "Sensible Robotics"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "DiFACTO Robotics",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Katidhan",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Fluxlink",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Andromeida",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Puresight Systems",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Botsync",
+    "status": "ok",
+    "configured_url": "https://www.botsync.co/careers",
+    "working_url": "https://www.botsync.co/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.botsync.co/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.botsync.co/careers",
+        "career_signals": [
+          "apply now",
+          "career"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Grazen",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Minus Zero",
+    "status": "ok",
+    "configured_url": "https://minuszero.ai/",
+    "working_url": "https://minuszero.ai/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://minuszero.ai/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://minuszero.ai/",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Unbox Robotics",
+    "status": "ok",
+    "configured_url": "https://unboxrobotics.com/careers/",
+    "working_url": "https://unboxrobotics.com/careers/",
+    "job_links": 1,
+    "intern_links": 0,
+    "sample_titles": [
+      "Unbox Robotics Raises Series B Funding."
+    ],
+    "attempts": [
+      {
+        "url": "https://unboxrobotics.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://unboxrobotics.com/careers/",
+        "career_signals": [
+          "career",
+          "job",
+          "opening"
+        ],
+        "job_links": 1,
+        "intern_links": 0,
+        "sample_titles": [
+          "Unbox Robotics Raises Series B Funding."
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Agnikul Cosmos",
+    "status": "ok",
+    "configured_url": "https://agnikul.in/careers/",
+    "working_url": "https://agnikul.in/careers/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://agnikul.in/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://agnikul.in/careers/",
+        "career_signals": [
+          "career",
+          "job",
+          "join us",
+          "opening"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "CeraTattva InnoTech",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Daloft Aerospace",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Detect Technologies",
+    "status": "ok",
+    "configured_url": "https://detecttechnologies.com/current-openings/",
+    "working_url": "https://detecttechnologies.com/current-openings/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://detecttechnologies.com/current-openings/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://detecttechnologies.com/current-openings/",
+        "career_signals": [
+          "apply now",
+          "career",
+          "job",
+          "opening"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "The ePlane Company",
+    "status": "ok",
+    "configured_url": "https://eplane-team.freshteam.com/jobs",
+    "working_url": "https://eplane-team.freshteam.com/jobs",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://eplane-team.freshteam.com/jobs",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://eplane-team.freshteam.com/jobs",
+        "career_signals": [
+          "career",
+          "job",
+          "open position"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Folium Sensing",
+    "status": "ok",
+    "configured_url": "https://foliumsensing.in/",
+    "working_url": "https://foliumsensing.in/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://foliumsensing.in/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://foliumsensing.in/",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Inbound Aerospace",
+    "status": "ok",
+    "configured_url": "https://inboundaerospace.com/careers",
+    "working_url": "https://inboundaerospace.com/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://inboundaerospace.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://inboundaerospace.com/careers",
+        "career_signals": [
+          "apply now",
+          "career",
+          "open position"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "InCore Semiconductors",
+    "status": "ok",
+    "configured_url": "https://incoresemi.zohorecruit.com/jobs/Careers",
+    "working_url": "https://incoresemi.zohorecruit.com/jobs/Careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://incoresemi.zohorecruit.com/jobs/Careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://incoresemi.zohorecruit.com/jobs/Careers",
+        "career_signals": [
+          "job",
+          "join us",
+          "opening"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Mindgrove Technologies",
+    "status": "ok",
+    "configured_url": "https://www.mindgrovetech.in/careers",
+    "working_url": "https://www.mindgrovetech.in/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.mindgrovetech.in/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://mindgrovetech.zohorecruit.in/jobs/Careers",
+        "career_signals": [
+          "job",
+          "join us",
+          "opening"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Vaan Megam Networks",
+    "status": "ok",
+    "configured_url": "https://www.vaanmegam.net/careers",
+    "working_url": "https://www.vaanmegam.net/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.vaanmegam.net/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.vaanmegam.net/careers",
+        "career_signals": [
+          "career",
+          "join our team"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "DataSwitch",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Crion Versity",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Rudram Dynamics",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "AlgoBotix",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "OrbitAID",
+    "status": "ok",
+    "configured_url": "https://www.orbitaid.com/careers",
+    "working_url": "https://www.orbitaid.com/careers",
+    "job_links": 1,
+    "intern_links": 0,
+    "sample_titles": [
+      "Robotic Arm"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.orbitaid.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.orbitaid.com/careers",
+        "career_signals": [
+          "apply now",
+          "career",
+          "internship"
+        ],
+        "job_links": 1,
+        "intern_links": 0,
+        "sample_titles": [
+          "Robotic Arm"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Simulation & Innovation (S&I) Engineering Solutions",
+    "status": "ok",
+    "configured_url": "https://sandi.co.in/",
+    "working_url": "https://sandi.co.in/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://sandi.co.in/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://sandi.co.in/",
+        "career_signals": [
+          "join us"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Vishvasys Technologies",
+    "status": "ok",
+    "configured_url": "https://vishvasys.in/careers",
+    "working_url": "https://vishvasys.in/careers",
+    "job_links": 1,
+    "intern_links": 0,
+    "sample_titles": [
+      "Unmanned Aerial Vehicles"
+    ],
+    "attempts": [
+      {
+        "url": "https://vishvasys.in/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://vishvasys.in/careers",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 1,
+        "intern_links": 0,
+        "sample_titles": [
+          "Unmanned Aerial Vehicles"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fourie",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "SpaceFields",
+    "status": "ok",
+    "configured_url": "https://spacefields.in/",
+    "working_url": "https://spacefields.in/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://spacefields.in/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://spacefields.in/",
+        "career_signals": [
+          "join us"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Digantara",
+    "status": "ok",
+    "configured_url": "https://digantara.co.in/careers",
+    "working_url": "https://digantara.co.in/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://digantara.co.in/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.digantara.co.in/careers",
+        "career_signals": [
+          "career",
+          "open position"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Direct Electric",
+    "status": "ok",
+    "configured_url": "https://directelectric.com/",
+    "working_url": "https://directelectric.com/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://directelectric.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.directelectric.com/",
+        "career_signals": [
+          "job"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Divisha Innovations",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "AGNIT Semiconductors",
+    "status": "ok",
+    "configured_url": "https://www.agnitsemi.com/work-with-us",
+    "working_url": "https://www.agnitsemi.com/work-with-us",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.agnitsemi.com/work-with-us",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.agnitsemi.com/work-with-us",
+        "career_signals": [
+          "career",
+          "join us"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Botloka",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Dfine Bio-innovations",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Mistral Solutions",
+    "status": "ok",
+    "configured_url": "https://www.mistralsolutions.com/careers/",
+    "working_url": "https://www.mistralsolutions.com/careers/",
+    "job_links": 13,
+    "intern_links": 0,
+    "sample_titles": [
+      "Edge AI-Box",
+      "AI Sensor Fusion Kit Lite",
+      "QIOT2290 IOT Module",
+      "Xherpa \u2013 Heavy Payload Drone",
+      "Kite \u2013 Tethered Drone System"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.mistralsolutions.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://mistralsolutions.com/career/careers-job-listings/",
+        "career_signals": [
+          "career",
+          "job",
+          "opening"
+        ],
+        "job_links": 13,
+        "intern_links": 0,
+        "sample_titles": [
+          "Edge AI-Box",
+          "AI Sensor Fusion Kit Lite",
+          "QIOT2290 IOT Module",
+          "Xherpa \u2013 Heavy Payload Drone",
+          "Kite \u2013 Tethered Drone System"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Iwave Systems",
+    "status": "ok",
+    "configured_url": "https://www.iwavesystems.com/career/",
+    "working_url": "https://www.iwavesystems.com/career/",
+    "job_links": 19,
+    "intern_links": 0,
+    "sample_titles": [
+      "FPGA System on Modules",
+      "FPGA COTS Modules",
+      "Versal AI Edge Gen2: 2VE3858",
+      "Versal AI Core: VC1902",
+      "Versal AI Edge: VE2302"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.iwavesystems.com/career/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.iwavesystems.com/career/",
+        "career_signals": [
+          "apply now",
+          "career",
+          "join our team"
+        ],
+        "job_links": 19,
+        "intern_links": 0,
+        "sample_titles": [
+          "FPGA System on Modules",
+          "FPGA COTS Modules",
+          "Versal AI Edge Gen2: 2VE3858",
+          "Versal AI Core: VC1902",
+          "Versal AI Edge: VE2302"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Allgo Embedded Systems",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Phytec Embedded India",
+    "status": "ok",
+    "configured_url": "https://www.phytec.in/",
+    "working_url": "https://www.phytec.in/",
+    "job_links": 8,
+    "intern_links": 0,
+    "sample_titles": [
+      "embedded solutions",
+      "embedded solutions",
+      "Embedded vision solutions",
+      "Embedded vision",
+      "IOT/Cloud Integration"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.phytec.in/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.phytec.in/en/startseite/",
+        "career_signals": [
+          "job"
+        ],
+        "job_links": 8,
+        "intern_links": 0,
+        "sample_titles": [
+          "embedded solutions",
+          "embedded solutions",
+          "Embedded vision solutions",
+          "Embedded vision",
+          "IOT/Cloud Integration"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fossilshale Embedded Technologies",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Mirror Technologies",
+    "status": "ok",
+    "configured_url": "https://www.mirrortech.in/careers.html",
+    "working_url": "https://www.mirrortech.in/careers.html",
+    "job_links": 1,
+    "intern_links": 0,
+    "sample_titles": [
+      "RTOS..."
+    ],
+    "attempts": [
+      {
+        "url": "https://www.mirrortech.in/careers.html",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.mirrortech.in/careers.html",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 1,
+        "intern_links": 0,
+        "sample_titles": [
+          "RTOS..."
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Brisa Technologies",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "MIMOWAVES",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Onlilo",
+    "status": "ok",
+    "configured_url": "https://onlilo.in/career/",
+    "working_url": "https://onlilo.in/career/",
+    "job_links": 1,
+    "intern_links": 0,
+    "sample_titles": [
+      "IoT Solutions"
+    ],
+    "attempts": [
+      {
+        "url": "https://onlilo.in/career/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://onlilo.in/career/",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 1,
+        "intern_links": 0,
+        "sample_titles": [
+          "IoT Solutions"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Embtech Innova",
+    "status": "ok",
+    "configured_url": "https://embtechinnova.co/careers-2/",
+    "working_url": "https://embtechinnova.co/careers-2/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://embtechinnova.co/careers-2/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://embtechinnova.co/careers-2/",
+        "career_signals": [
+          "career",
+          "opening"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "TES Electronic Solutions",
+    "status": "ok",
+    "configured_url": "https://www.tes-dst.com/",
+    "working_url": "https://www.tes-dst.com/",
+    "job_links": 3,
+    "intern_links": 0,
+    "sample_titles": [
+      "FPGA Design",
+      "Embedded Software Design",
+      "Internship"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.tes-dst.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.tes-dst.com/",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 3,
+        "intern_links": 0,
+        "sample_titles": [
+          "FPGA Design",
+          "Embedded Software Design",
+          "Internship"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tessolve Semiconductor",
+    "status": "ok",
+    "configured_url": "https://www.tessolve.com/careers/",
+    "working_url": "https://www.tessolve.com/careers/",
+    "job_links": 16,
+    "intern_links": 0,
+    "sample_titles": [
+      "FPGA Emulation",
+      "Embedded",
+      "AI Solutions",
+      "Embedded Systems Lab",
+      "Why you should join Tessolve as a fresher?"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.tessolve.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.tessolve.com/careers/",
+        "career_signals": [
+          "career",
+          "job",
+          "open position"
+        ],
+        "job_links": 16,
+        "intern_links": 0,
+        "sample_titles": [
+          "FPGA Emulation",
+          "Embedded",
+          "AI Solutions",
+          "Embedded Systems Lab",
+          "Why you should join Tessolve as a fresher?"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Taal Tech",
+    "status": "ok",
+    "configured_url": "https://www.taaltech.com/careers/",
+    "working_url": "https://www.taaltech.com/careers/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.taaltech.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.taaltech.com/careers/",
+        "career_signals": [
+          "apply now",
+          "career",
+          "job"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Neominds",
+    "status": "ok",
+    "configured_url": "https://neominds.in/careers/",
+    "working_url": "https://neominds.in/careers/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://neominds.in/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://neominds.in/careers/",
+        "career_signals": [
+          "career",
+          "job"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Shalaka Connected Devices",
+    "status": "ok",
+    "configured_url": "https://shalaka.com/career/",
+    "working_url": "https://shalaka.com/career/",
+    "job_links": 4,
+    "intern_links": 0,
+    "sample_titles": [
+      "IoT & IIoT Solutions",
+      "AI Solutions",
+      "Embedded Systems",
+      "Shalaka\u2019s Hrishikesh Kamat Conducts Session at ARAI Academy, Pune on Automotive Embedded Systems"
+    ],
+    "attempts": [
+      {
+        "url": "https://shalaka.com/career/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://shalaka.com/#careers",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 4,
+        "intern_links": 0,
+        "sample_titles": [
+          "IoT & IIoT Solutions",
+          "AI Solutions",
+          "Embedded Systems",
+          "Shalaka\u2019s Hrishikesh Kamat Conducts Session at ARAI Academy, Pune on Automotive Embedded Systems"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lotus Wireless",
+    "status": "ok",
+    "configured_url": "https://www.lotuswireless.com/careers.html",
+    "working_url": "https://www.lotuswireless.com/careers.html",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.lotuswireless.com/careers.html",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.lotuswireless.com/careers.html",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "C2 Silicon Software Solutions",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Brook Technologies India",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Bells Softech",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "ideaForge Technology",
+    "status": "ok",
+    "configured_url": "https://ideaforgetech.com/careers",
+    "working_url": "https://ideaforgetech.com/careers",
+    "job_links": 3,
+    "intern_links": 0,
+    "sample_titles": [
+      "Q6 UAV",
+      "NETRA",
+      "Q4i..."
+    ],
+    "attempts": [
+      {
+        "url": "https://ideaforgetech.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://ideaforgetech.com/careers",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 3,
+        "intern_links": 0,
+        "sample_titles": [
+          "Q6 UAV",
+          "NETRA",
+          "Q4i..."
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Garuda Aerospace",
+    "status": "ok",
+    "configured_url": "https://www.garudaaerospace.com/",
+    "working_url": "https://www.garudaaerospace.com/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.garudaaerospace.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.garudaaerospace.com/",
+        "career_signals": [
+          "career",
+          "job"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Tonbo Imaging",
+    "status": "ok",
+    "configured_url": "https://www.tonboimaging.com/careers",
+    "working_url": "https://www.tonboimaging.com/careers",
+    "job_links": 8,
+    "intern_links": 0,
+    "sample_titles": [
+      "AI Enabled Seekers",
+      "FPGA Engineer | Actively Hiring |",
+      "Computer Vision Engineer | Actively Hiring |",
+      "FPGA Design Engineer | Actively Hiring |",
+      "Embedded Engineer | Actively Hiring |"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.tonboimaging.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://tonboimaging.com/defense/careers/",
+        "career_signals": [
+          "career",
+          "we are hiring"
+        ],
+        "job_links": 8,
+        "intern_links": 0,
+        "sample_titles": [
+          "AI Enabled Seekers",
+          "FPGA Engineer | Actively Hiring |",
+          "Computer Vision Engineer | Actively Hiring |",
+          "FPGA Design Engineer | Actively Hiring |",
+          "Embedded Engineer | Actively Hiring |"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Asteria Aerospace",
+    "status": "ok",
+    "configured_url": "https://www.asteria.co.in/careers",
+    "working_url": "https://www.asteria.co.in/careers",
+    "job_links": 2,
+    "intern_links": 0,
+    "sample_titles": [
+      "Drone-as-a-Service",
+      "Drone Knowledge Cloud"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.asteria.co.in/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://asteria.co.in/careers",
+        "career_signals": [
+          "career",
+          "join us"
+        ],
+        "job_links": 2,
+        "intern_links": 0,
+        "sample_titles": [
+          "Drone-as-a-Service",
+          "Drone Knowledge Cloud"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "General Aeronautics",
+    "status": "ok",
+    "configured_url": "https://www.generalaeronautics.com/career",
+    "working_url": "https://www.generalaeronautics.com/career",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.generalaeronautics.com/career",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://generalaeronautics.com/career-ga/",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "NewSpace Research & Technologies",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "IoTechWorld Avigation",
+    "status": "ok",
+    "configured_url": "https://iotechworld.com/careers/",
+    "working_url": "https://iotechworld.com/careers/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://iotechworld.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://iotechworld.com/careers/",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Dhaksha Unmanned Systems",
+    "status": "ok",
+    "configured_url": "https://dhakshadrones.com/",
+    "working_url": "https://dhakshadrones.com/",
+    "job_links": 1,
+    "intern_links": 0,
+    "sample_titles": [
+      "Farm drone adoption expected to pick up significantly from 2024"
+    ],
+    "attempts": [
+      {
+        "url": "https://dhakshadrones.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://dhakshadrones.com/",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 1,
+        "intern_links": 0,
+        "sample_titles": [
+          "Farm drone adoption expected to pick up significantly from 2024"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Marut Drones",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Throttle Aerospace Systems",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Paras Aerospace",
+    "status": "ok",
+    "configured_url": "https://parasdefence.com/career",
+    "working_url": "https://parasdefence.com/career",
+    "job_links": 3,
+    "intern_links": 0,
+    "sample_titles": [
+      "High-Performance Embedded Computing System",
+      "High-Performance Embedded Computing System",
+      "Data/Video/Image Processing"
+    ],
+    "attempts": [
+      {
+        "url": "https://parasdefence.com/career",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://parasdefence.com/career",
+        "career_signals": [
+          "career",
+          "job"
+        ],
+        "job_links": 3,
+        "intern_links": 0,
+        "sample_titles": [
+          "High-Performance Embedded Computing System",
+          "High-Performance Embedded Computing System",
+          "Data/Video/Image Processing"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sagar Defence Engineering",
+    "status": "ok",
+    "configured_url": "https://sagardefence.com/careers/",
+    "working_url": "https://sagardefence.com/careers/",
+    "job_links": 1,
+    "intern_links": 0,
+    "sample_titles": [
+      "UAV..."
+    ],
+    "attempts": [
+      {
+        "url": "https://sagardefence.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.sagardefence.com/careers/",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 1,
+        "intern_links": 0,
+        "sample_titles": [
+          "UAV..."
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Skylark Drones",
+    "status": "ok",
+    "configured_url": "https://www.skylarkdrones.com/",
+    "working_url": "https://www.skylarkdrones.com/",
+    "job_links": 4,
+    "intern_links": 0,
+    "sample_titles": [
+      "Drone Mission Ops",
+      "Drone Mission Ops",
+      "The Solar Site That Monitors Itself: Why Autonomous Drone Docks Are Becoming Core EPC Infrastructure",
+      "Unlock Survey Accuracy with Ground Control Points (GCPs): A Guide for Drone Pilots and Survey Professionals"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.skylarkdrones.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://skylarkdrones.com/",
+        "career_signals": [
+          "career",
+          "we're hiring"
+        ],
+        "job_links": 4,
+        "intern_links": 0,
+        "sample_titles": [
+          "Drone Mission Ops",
+          "Drone Mission Ops",
+          "The Solar Site That Monitors Itself: Why Autonomous Drone Docks Are Becoming Core EPC Infrastructure",
+          "Unlock Survey Accuracy with Ground Control Points (GCPs): A Guide for Drone Pilots and Survey Professionals"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ZUPPA Geo Navigation Technologies",
+    "status": "ok",
+    "configured_url": "https://zuppa.io/",
+    "working_url": "https://zuppa.io/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://zuppa.io/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://shop.zuppa.io/",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "BonV Aero",
+    "status": "ok",
+    "configured_url": "https://bonvaero.com/company/careers/",
+    "working_url": "https://bonvaero.com/company/careers/",
+    "job_links": 1,
+    "intern_links": 0,
+    "sample_titles": [
+      "Business Development Intern"
+    ],
+    "attempts": [
+      {
+        "url": "https://bonvaero.com/company/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://bonvaero.com/company/careers/",
+        "career_signals": [
+          "apply now",
+          "career",
+          "internship",
+          "job"
+        ],
+        "job_links": 1,
+        "intern_links": 0,
+        "sample_titles": [
+          "Business Development Intern"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "DroneAcharya Aerial Innovations",
+    "status": "ok",
+    "configured_url": "https://droneacharya.com/careers/",
+    "working_url": "https://droneacharya.com/careers/",
+    "job_links": 29,
+    "intern_links": 0,
+    "sample_titles": [
+      "Drone Tech",
+      "Agricultural Drone for Spraying & Training",
+      "FPV Drone",
+      "Tethered Drone",
+      "Warehouse Drone"
+    ],
+    "attempts": [
+      {
+        "url": "https://droneacharya.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://droneacharya.com/careers/",
+        "career_signals": [
+          "career",
+          "job",
+          "join our team",
+          "join us",
+          "open position",
+          "vacanc"
+        ],
+        "job_links": 29,
+        "intern_links": 0,
+        "sample_titles": [
+          "Drone Tech",
+          "Agricultural Drone for Spraying & Training",
+          "FPV Drone",
+          "Tethered Drone",
+          "Warehouse Drone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "IG Drones",
+    "status": "ok",
+    "configured_url": "https://www.igdrones.com/careers",
+    "working_url": "https://www.igdrones.com/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.igdrones.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.igdefence.com/careers",
+        "career_signals": [
+          "apply now",
+          "career",
+          "join our team",
+          "open position"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "UrbanMatrix Technologies",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Aarav Unmanned Systems",
+    "status": "ok",
+    "configured_url": "https://aereo.io/careers",
+    "working_url": "https://aereo.io/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://aereo.io/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://aereo.io/careers/",
+        "career_signals": [
+          "apply now",
+          "career",
+          "internship",
+          "job",
+          "join our team",
+          "opening"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Indrones",
+    "status": "ok",
+    "configured_url": "https://indrones.com/careers-home.html",
+    "working_url": "https://indrones.com/careers-home.html",
+    "job_links": 2,
+    "intern_links": 0,
+    "sample_titles": [
+      "Drone Tech Course",
+      "Drone on Rental"
+    ],
+    "attempts": [
+      {
+        "url": "https://indrones.com/careers-home.html",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://indrones.com/careers-home.html",
+        "career_signals": [
+          "apply now",
+          "career"
+        ],
+        "job_links": 2,
+        "intern_links": 0,
+        "sample_titles": [
+          "Drone Tech Course",
+          "Drone on Rental"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "VTOL Aviation India",
+    "status": "ok",
+    "configured_url": "https://vtolaviations.com/Careers",
+    "working_url": "https://vtolaviations.com/Careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://vtolaviations.com/Careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://vtolaviations.com/Careers",
+        "career_signals": [
+          "career",
+          "job",
+          "join our team"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Hubblefly Technologies",
+    "status": "ok",
+    "configured_url": "https://hubblefly.com/about/",
+    "working_url": "https://hubblefly.com/about/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://hubblefly.com/about/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://hubblefly.com/about/",
+        "career_signals": [
+          "job"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Thanos Technologies",
+    "status": "ok",
+    "configured_url": "https://thanos.in/career.php",
+    "working_url": "https://thanos.in/career.php",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://thanos.in/career.php",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://thanos.in/career.php",
+        "career_signals": [
+          "career",
+          "join our team"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "DroneStark Technologies",
+    "status": "ok",
+    "configured_url": "https://www.dronestark.com/contact",
+    "working_url": "https://www.dronestark.com/contact",
+    "job_links": 2,
+    "intern_links": 0,
+    "sample_titles": [
+      "Drone Services",
+      "Folder:"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.dronestark.com/contact",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.dronestark.com/contact",
+        "career_signals": [
+          "career",
+          "join our team"
+        ],
+        "job_links": 2,
+        "intern_links": 0,
+        "sample_titles": [
+          "Drone Services",
+          "Folder:"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Aurora Integrated Systems",
+    "status": "ok",
+    "configured_url": "https://aurora-is.com/careers/",
+    "working_url": "https://aurora-is.com/careers/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://aurora-is.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://aurora-is.com/careers/",
+        "career_signals": [
+          "opening"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Tata Advanced Systems",
+    "status": "ok",
+    "configured_url": "https://www.tataadvancedsystems.com/careers",
+    "working_url": "https://www.tataadvancedsystems.com/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.tataadvancedsystems.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.tataadvancedsystems.com/careers",
+        "career_signals": [
+          "career",
+          "job",
+          "join us",
+          "open position"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Tata Elxsi",
+    "status": "ok",
+    "configured_url": "https://www.tataelxsi.com/careers",
+    "working_url": "https://www.tataelxsi.com/careers",
+    "job_links": 3,
+    "intern_links": 0,
+    "sample_titles": [
+      "DevStudio.ai",
+      "NEURON",
+      "Generative AI"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.tataelxsi.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.tataelxsi.com/careers",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 3,
+        "intern_links": 0,
+        "sample_titles": [
+          "DevStudio.ai",
+          "NEURON",
+          "Generative AI"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Wipro",
+    "status": "ok",
+    "configured_url": "https://careers.wipro.com/",
+    "working_url": "https://careers.wipro.com/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://careers.wipro.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://careers.wipro.com/",
+        "career_signals": [
+          "career",
+          "job",
+          "join us"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "HCL Technologies",
+    "status": "ok",
+    "configured_url": "https://careers.hcltech.com/",
+    "working_url": "https://careers.hcltech.com/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://careers.hcltech.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://careers.hcltech.com/",
+        "career_signals": [
+          "career",
+          "job",
+          "join us",
+          "opening"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "L&T Technology Services",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Tech Mahindra",
+    "status": "ok",
+    "configured_url": "https://careers.techmahindra.com/",
+    "working_url": "https://careers.techmahindra.com/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://careers.techmahindra.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://careers.techmahindra.com/",
+        "career_signals": [
+          "job",
+          "join us"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Infosys",
+    "status": "ok",
+    "configured_url": "https://career.infosys.com/",
+    "working_url": "https://career.infosys.com/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://career.infosys.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://career.infosys.com/",
+        "career_signals": [
+          "career",
+          "job"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Cyient",
+    "status": "ok",
+    "configured_url": "https://www.cyient.com/careers",
+    "working_url": "https://www.cyient.com/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.cyient.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.cyient.careers/",
+        "career_signals": [
+          "career",
+          "job",
+          "join us",
+          "open position"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "QuEST Global",
+    "status": "ok",
+    "configured_url": "https://www.quest-global.com/careers/",
+    "working_url": "https://www.quest-global.com/careers/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.quest-global.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://careers.quest-global.com/global/en",
+        "career_signals": [
+          "apply now",
+          "career",
+          "job"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "KPIT Technologies",
+    "status": "ok",
+    "configured_url": "https://www.kpit.com/careers/",
+    "working_url": "https://www.kpit.com/careers/",
+    "job_links": 1,
+    "intern_links": 0,
+    "sample_titles": [
+      "Autonomous Driving & ADAS"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.kpit.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.kpit.com/careers-overview/",
+        "career_signals": [
+          "career",
+          "job",
+          "join us",
+          "open position",
+          "opening"
+        ],
+        "job_links": 1,
+        "intern_links": 0,
+        "sample_titles": [
+          "Autonomous Driving & ADAS"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sasken Technologies",
+    "status": "ok",
+    "configured_url": "https://www.sasken.com/careers",
+    "working_url": "https://www.sasken.com/careers",
+    "job_links": 1,
+    "intern_links": 0,
+    "sample_titles": [
+      "Internship Program"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.sasken.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://careers.sasken.com/tb/saskenjobs/",
+        "career_signals": [
+          "career",
+          "internship",
+          "job",
+          "join us",
+          "opening",
+          "vacanc"
+        ],
+        "job_links": 1,
+        "intern_links": 0,
+        "sample_titles": [
+          "Internship Program"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bosch Global Software Technologies",
+    "status": "ok",
+    "configured_url": "https://www.bosch-softwaretechnologies.com/en/",
+    "working_url": "https://www.bosch-softwaretechnologies.com/en/",
+    "job_links": 6,
+    "intern_links": 0,
+    "sample_titles": [
+      "IOT Garage",
+      "AI and Big Data",
+      "Cloud-IoT",
+      "Commercial Management Trainee Program",
+      "Graduate Apprentice"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.bosch-softwaretechnologies.com/en/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.bosch-softwaretechnologies.com/en/",
+        "career_signals": [
+          "career",
+          "join our team"
+        ],
+        "job_links": 6,
+        "intern_links": 0,
+        "sample_titles": [
+          "IOT Garage",
+          "AI and Big Data",
+          "Cloud-IoT",
+          "Commercial Management Trainee Program",
+          "Graduate Apprentice"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Continental India",
+    "status": "ok",
+    "configured_url": "https://www.continental.com/en/career/",
+    "working_url": "https://www.continental.com/en/career/",
+    "job_links": 4,
+    "intern_links": 0,
+    "sample_titles": [
+      "The benefits of autonomous driving are increasingly being seen \u2013 but there are also still reservations",
+      "Autonomous Mobility and Safety",
+      "Students and Graduates",
+      "Merging Shopfloor & Software: My International Journey to Becoming an AI Project Manager"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.continental.com/en/career/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.continental.com/en/career/",
+        "career_signals": [
+          "career",
+          "internship",
+          "job",
+          "vacanc"
+        ],
+        "job_links": 4,
+        "intern_links": 0,
+        "sample_titles": [
+          "The benefits of autonomous driving are increasingly being seen \u2013 but there are also still reservations",
+          "Autonomous Mobility and Safety",
+          "Students and Graduates",
+          "Merging Shopfloor & Software: My International Journey to Becoming an AI Project Manager"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Robert Bosch Engineering and Business Solutions",
+    "status": "ok",
+    "configured_url": "https://www.bosch.in/careers/",
+    "working_url": "https://www.bosch.in/careers/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.bosch.in/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.bosch.in/careers/",
+        "career_signals": [
+          "apply now",
+          "career",
+          "internship",
+          "job",
+          "join us"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Visteon India",
+    "status": "ok",
+    "configured_url": "https://www.visteon.com/careers/",
+    "working_url": "https://www.visteon.com/careers/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.visteon.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.visteon.com/careers/join-us/default.aspx",
+        "career_signals": [
+          "career",
+          "job",
+          "join us",
+          "open position"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Renesas India",
+    "status": "ok",
+    "configured_url": "https://www.renesas.com/en/about/careers",
+    "working_url": "https://www.renesas.com/en/about/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.renesas.com/en/about/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://jobs.renesas.com/",
+        "career_signals": [
+          "career",
+          "internship",
+          "job",
+          "join us"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "NXP India",
+    "status": "ok",
+    "configured_url": "https://www.nxp.com/company/about-nxp/careers:CAREERS",
+    "working_url": "https://www.nxp.com/company/about-nxp/careers:CAREERS",
+    "job_links": 5,
+    "intern_links": 0,
+    "sample_titles": [
+      "Robotics",
+      "AI/ML",
+      "Embedded Board Solutions",
+      "Embedded Software",
+      "The Power of Transformation: NXP in Embedded Systems Education"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.nxp.com/company/about-nxp/careers:CAREERS",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.nxp.com/company/about-nxp/careers:CAREERS",
+        "career_signals": [
+          "career",
+          "job",
+          "join our team"
+        ],
+        "job_links": 5,
+        "intern_links": 0,
+        "sample_titles": [
+          "Robotics",
+          "AI/ML",
+          "Embedded Board Solutions",
+          "Embedded Software",
+          "The Power of Transformation: NXP in Embedded Systems Education"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Texas Instruments India",
+    "status": "ok",
+    "configured_url": "https://careers.ti.com/",
+    "working_url": "https://careers.ti.com/",
+    "job_links": 1,
+    "intern_links": 0,
+    "sample_titles": [
+      "Important AI Notice."
+    ],
+    "attempts": [
+      {
+        "url": "https://careers.ti.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://careers.ti.com/en/sites/CX",
+        "career_signals": [
+          "career",
+          "internship",
+          "job"
+        ],
+        "job_links": 1,
+        "intern_links": 0,
+        "sample_titles": [
+          "Important AI Notice."
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Qualcomm India",
+    "status": "ok",
+    "configured_url": "https://careers.qualcomm.com/careers",
+    "working_url": "https://careers.qualcomm.com/careers",
+    "job_links": 1,
+    "intern_links": 0,
+    "sample_titles": [
+      "Powered by"
+    ],
+    "attempts": [
+      {
+        "url": "https://careers.qualcomm.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://careers.qualcomm.com/careers",
+        "career_signals": [
+          "apply now",
+          "career",
+          "job"
+        ],
+        "job_links": 1,
+        "intern_links": 0,
+        "sample_titles": [
+          "Powered by"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Intel India",
+    "status": "ok",
+    "configured_url": "https://jobs.intel.com/",
+    "working_url": "https://jobs.intel.com/",
+    "job_links": 2,
+    "intern_links": 0,
+    "sample_titles": [
+      "Intel on AI",
+      "Senior AI Software Engineer - Neuromorphic Computing"
+    ],
+    "attempts": [
+      {
+        "url": "https://jobs.intel.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://intel.wd1.myworkdayjobs.com/External/page/6042070b79e01001f04fa9b468070000",
+        "career_signals": [
+          "career",
+          "job",
+          "join us"
+        ],
+        "job_links": 2,
+        "intern_links": 0,
+        "sample_titles": [
+          "Intel on AI",
+          "Senior AI Software Engineer - Neuromorphic Computing"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Arm India",
+    "status": "ok",
+    "configured_url": "https://careers.arm.com/",
+    "working_url": "https://careers.arm.com/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://careers.arm.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://careers.arm.com/",
+        "career_signals": [
+          "career",
+          "job",
+          "join our team"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "NVIDIA",
+    "status": "ok",
+    "configured_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+    "working_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+    "job_links": 71,
+    "intern_links": 0,
+    "sample_titles": [
+      "DGX Cloud",
+      "NVIDIA APIs",
+      "NVIDIA NGC",
+      "DSX Platform",
+      "NVIDIA Broadcast App"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+        "career_signals": [
+          "career",
+          "job",
+          "join our team",
+          "join us",
+          "open position"
+        ],
+        "job_links": 71,
+        "intern_links": 0,
+        "sample_titles": [
+          "DGX Cloud",
+          "NVIDIA APIs",
+          "NVIDIA NGC",
+          "DSX Platform",
+          "NVIDIA Broadcast App"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ABB Robotics",
+    "status": "ok",
+    "configured_url": "https://careers.abb/global/en",
+    "working_url": "https://careers.abb/global/en",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://careers.abb/global/en",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://careers.abb/global/en",
+        "career_signals": [
+          "career",
+          "job"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Fanuc",
+    "status": "ok",
+    "configured_url": "https://www.fanucindia.com/careers",
+    "working_url": "https://www.fanucindia.com/careers",
+    "job_links": 2,
+    "intern_links": 0,
+    "sample_titles": [
+      "ROBOT",
+      "IoT..."
+    ],
+    "attempts": [
+      {
+        "url": "https://www.fanucindia.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.fanucindia.com/careers",
+        "career_signals": [
+          "career",
+          "job",
+          "join us",
+          "opening"
+        ],
+        "job_links": 2,
+        "intern_links": 0,
+        "sample_titles": [
+          "ROBOT",
+          "IoT..."
+        ]
+      }
+    ]
+  },
+  {
+    "name": "KUKA",
+    "status": "ok",
+    "configured_url": "https://www.kuka.com/en-us/company/careers",
+    "working_url": "https://www.kuka.com/en-us/company/careers",
+    "job_links": 3,
+    "intern_links": 0,
+    "sample_titles": [
+      "Robotics Systems",
+      "Autonomous mobile robotics (AMR)",
+      "Robot Guide"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.kuka.com/en-us/company/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.kuka.com/en-us/company/careers",
+        "career_signals": [
+          "career",
+          "job",
+          "join us",
+          "vacanc"
+        ],
+        "job_links": 3,
+        "intern_links": 0,
+        "sample_titles": [
+          "Robotics Systems",
+          "Autonomous mobile robotics (AMR)",
+          "Robot Guide"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Yaskawa Electric",
+    "status": "ok",
+    "configured_url": "https://www.yaskawa.com/about-us/careers",
+    "working_url": "https://www.yaskawa.com/about-us/careers",
+    "job_links": 4,
+    "intern_links": 0,
+    "sample_titles": [
+      "Robotics",
+      "MPiec Robotic Series",
+      "Robotics Training",
+      "Industrial Robotics"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.yaskawa.com/about-us/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.yaskawa.com/about-us/careers",
+        "career_signals": [
+          "career",
+          "job"
+        ],
+        "job_links": 4,
+        "intern_links": 0,
+        "sample_titles": [
+          "Robotics",
+          "MPiec Robotic Series",
+          "Robotics Training",
+          "Industrial Robotics"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Universal Robots",
+    "status": "ok",
+    "configured_url": "https://www.universal-robots.com/careers/",
+    "working_url": "https://www.universal-robots.com/careers/",
+    "job_links": 2,
+    "intern_links": 0,
+    "sample_titles": [
+      "customers.teradyne-robotics.com",
+      "Physical AI"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.universal-robots.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.universal-robots.com/about-us/careers/",
+        "career_signals": [
+          "career",
+          "job"
+        ],
+        "job_links": 2,
+        "intern_links": 0,
+        "sample_titles": [
+          "customers.teradyne-robotics.com",
+          "Physical AI"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Kawasaki Robotics",
+    "status": "ok",
+    "configured_url": "https://robotics.kawasaki.com/en1/",
+    "working_url": "https://robotics.kawasaki.com/en1/",
+    "job_links": 12,
+    "intern_links": 0,
+    "sample_titles": [
+      "Kawasaki Robotics",
+      "Controllers",
+      "Kawasaki Robot K-AddOn Products",
+      "Product Search",
+      "Robot Hub"
+    ],
+    "attempts": [
+      {
+        "url": "https://robotics.kawasaki.com/en1/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://kawasakirobotics.com/",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 12,
+        "intern_links": 0,
+        "sample_titles": [
+          "Kawasaki Robotics",
+          "Controllers",
+          "Kawasaki Robot K-AddOn Products",
+          "Product Search",
+          "Robot Hub"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Denso Robotics",
+    "status": "skipped",
+    "configured_url": null,
+    "working_url": null,
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": []
+  },
+  {
+    "name": "Mitsubishi Electric",
+    "status": "ok",
+    "configured_url": "https://www.mitsubishielectric.com/en/careers/",
+    "working_url": "https://www.mitsubishielectric.com/en/careers/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.mitsubishielectric.com/en/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.mitsubishielectric.com/en/careers/",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Omron",
+    "status": "ok",
+    "configured_url": "https://industrial.omron.eu/en/careers",
+    "working_url": "https://industrial.omron.eu/en/careers",
+    "job_links": 4,
+    "intern_links": 0,
+    "sample_titles": [
+      "Autonomous Mobile Robot",
+      "Robotics Integrated Controller",
+      "Robotics",
+      "Robotic Services"
+    ],
+    "attempts": [
+      {
+        "url": "https://industrial.omron.eu/en/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://industrial.omron.eu/en/careers",
+        "career_signals": [
+          "career",
+          "internship",
+          "job",
+          "vacanc"
+        ],
+        "job_links": 4,
+        "intern_links": 0,
+        "sample_titles": [
+          "Autonomous Mobile Robot",
+          "Robotics Integrated Controller",
+          "Robotics",
+          "Robotic Services"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "St\u00e4ubli",
+    "status": "ok",
+    "configured_url": "https://www.staubli.com/global/en/careers.html",
+    "working_url": "https://www.staubli.com/global/en/careers.html",
+    "job_links": 2,
+    "intern_links": 0,
+    "sample_titles": [
+      "Robotics",
+      "Global Robotics events"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.staubli.com/global/en/careers.html",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.staubli.com/global/en/careers.html",
+        "career_signals": [
+          "career",
+          "job",
+          "open position",
+          "vacanc"
+        ],
+        "job_links": 2,
+        "intern_links": 0,
+        "sample_titles": [
+          "Robotics",
+          "Global Robotics events"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Epson Robots",
+    "status": "ok",
+    "configured_url": "https://epson.com/careers",
+    "working_url": "https://epson.com/careers",
+    "job_links": 1,
+    "intern_links": 0,
+    "sample_titles": [
+      "Find a Robot Expert"
+    ],
+    "attempts": [
+      {
+        "url": "https://epson.com/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://epson.com/careers",
+        "career_signals": [
+          "career"
+        ],
+        "job_links": 1,
+        "intern_links": 0,
+        "sample_titles": [
+          "Find a Robot Expert"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Comau",
+    "status": "ok",
+    "configured_url": "https://www.comau.com/en/careers/",
+    "working_url": "https://www.comau.com/en/careers/",
+    "job_links": 6,
+    "intern_links": 0,
+    "sample_titles": [
+      "Educational Robotics",
+      "Autonomous Mobile Robots",
+      "Robotic Control & Software",
+      "Wearable Robotics/Exoskeletons",
+      "Standard Robotic Solutions"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.comau.com/en/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.comau.com/en/careers/",
+        "career_signals": [
+          "career",
+          "join us"
+        ],
+        "job_links": 6,
+        "intern_links": 0,
+        "sample_titles": [
+          "Educational Robotics",
+          "Autonomous Mobile Robots",
+          "Robotic Control & Software",
+          "Wearable Robotics/Exoskeletons",
+          "Standard Robotic Solutions"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Nachi-Fujikoshi",
+    "status": "ok",
+    "configured_url": "https://www.nachirobotics.com/careers/",
+    "working_url": "https://www.nachirobotics.com/careers/",
+    "job_links": 8,
+    "intern_links": 0,
+    "sample_titles": [
+      "Robotics",
+      "Robot Products",
+      "Robot Search",
+      "Robot Software",
+      "Robot Information"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.nachirobotics.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.nachirobotics.com/contact-us/careers/",
+        "career_signals": [
+          "career",
+          "job",
+          "opening"
+        ],
+        "job_links": 8,
+        "intern_links": 0,
+        "sample_titles": [
+          "Robotics",
+          "Robot Products",
+          "Robot Search",
+          "Robot Software",
+          "Robot Information"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Boston Dynamics",
+    "status": "ok",
+    "configured_url": "https://bostondynamics.com/careers/",
+    "working_url": "https://bostondynamics.com/careers/",
+    "job_links": 6,
+    "intern_links": 0,
+    "sample_titles": [
+      "Spot...",
+      "Visual",
+      "Academia & Education",
+      "Blogs",
+      "Atlas Staff Perception Engineer, Tactile Sensing"
+    ],
+    "attempts": [
+      {
+        "url": "https://bostondynamics.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://bostondynamics.com/careers/",
+        "career_signals": [
+          "career",
+          "internship",
+          "job",
+          "join our team",
+          "open position"
+        ],
+        "job_links": 6,
+        "intern_links": 0,
+        "sample_titles": [
+          "Spot...",
+          "Visual",
+          "Academia & Education",
+          "Blogs",
+          "Atlas Staff Perception Engineer, Tactile Sensing"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Intuitive Surgical",
+    "status": "ok",
+    "configured_url": "https://www.intuitive.com/en-us/about-us/company/careers",
+    "working_url": "https://www.intuitive.com/en-us/about-us/company/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.intuitive.com/en-us/about-us/company/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://careers.intuitive.com/en/",
+        "career_signals": [
+          "career",
+          "internship",
+          "job",
+          "join us",
+          "opening"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "iRobot",
+    "status": "ok",
+    "configured_url": "https://careers.irobot.com/",
+    "working_url": "https://careers.irobot.com/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://careers.irobot.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://careers.irobot.com/",
+        "career_signals": [
+          "career",
+          "internship",
+          "job"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Locus Robotics",
+    "status": "ok",
+    "configured_url": "https://locusrobotics.com/careers/",
+    "working_url": "https://locusrobotics.com/careers/",
+    "job_links": 9,
+    "intern_links": 0,
+    "sample_titles": [
+      "Locus Robotics",
+      "Autonomous Fulfillment",
+      "AI & Business Intelligence",
+      "About Locus Robotics",
+      "The Locus Robotics Foundation"
+    ],
+    "attempts": [
+      {
+        "url": "https://locusrobotics.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://locusrobotics.com/company/careers/job-openings?utm_source=LocusCareers&utm_medium=301",
+        "career_signals": [
+          "career",
+          "job",
+          "opening"
+        ],
+        "job_links": 9,
+        "intern_links": 0,
+        "sample_titles": [
+          "Locus Robotics",
+          "Autonomous Fulfillment",
+          "AI & Business Intelligence",
+          "About Locus Robotics",
+          "The Locus Robotics Foundation"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "DJI",
+    "status": "ok",
+    "configured_url": "https://we.dji.com/",
+    "working_url": "https://we.dji.com/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://we.dji.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://we.dji.com/index_en.html",
+        "career_signals": [
+          "career",
+          "job",
+          "opening"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Rapyuta Robotics",
+    "status": "ok",
+    "configured_url": "https://www.rapyuta-robotics.com/careers/",
+    "working_url": "https://www.rapyuta-robotics.com/careers/",
+    "job_links": 2,
+    "intern_links": 0,
+    "sample_titles": [
+      "Rapyuta MODEX 2026 Lineup: Rapyuta Robotics Unveils High-Performance ASRS and Upgraded AMRs with Live Demos",
+      "The Working at Rapyuta \u201cBuilding the Future of Robotics: Dhananjay Sathe\u2019s\u00a0Journey with\u00a0Rapyuta Robotics\u201d"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.rapyuta-robotics.com/careers/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.rapyuta-robotics.com/careers/",
+        "career_signals": [
+          "career",
+          "open position"
+        ],
+        "job_links": 2,
+        "intern_links": 0,
+        "sample_titles": [
+          "Rapyuta MODEX 2026 Lineup: Rapyuta Robotics Unveils High-Performance ASRS and Upgraded AMRs with Live Demos",
+          "The Working at Rapyuta \u201cBuilding the Future of Robotics: Dhananjay Sathe\u2019s\u00a0Journey with\u00a0Rapyuta Robotics\u201d"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Amazon Robotics",
+    "status": "ok",
+    "configured_url": "https://amazon.jobs/en/teams/amazon-robotics",
+    "working_url": "https://amazon.jobs/en/teams/amazon-robotics",
+    "job_links": 8,
+    "intern_links": 0,
+    "sample_titles": [
+      "Mechatronics Engineer, Amazon Robotics (AR)",
+      "Senior Embedded Software Engineer, Applied Automation Controls/Embedded Software",
+      "Member of Technical Staff - Data Platform Engineer, Frontier AI Robotics",
+      "Learning Experience Designer, Amazon Robotics - Transformative Learning Solutions",
+      "Senior Inventory & Manufacturing Planner, Amazon Robotics"
+    ],
+    "attempts": [
+      {
+        "url": "https://amazon.jobs/en/teams/amazon-robotics",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://amazon.jobs/content/en/teams/ftr/amazon-robotics",
+        "career_signals": [
+          "career",
+          "job"
+        ],
+        "job_links": 8,
+        "intern_links": 0,
+        "sample_titles": [
+          "Mechatronics Engineer, Amazon Robotics (AR)",
+          "Senior Embedded Software Engineer, Applied Automation Controls/Embedded Software",
+          "Member of Technical Staff - Data Platform Engineer, Frontier AI Robotics",
+          "Learning Experience Designer, Amazon Robotics - Transformative Learning Solutions",
+          "Senior Inventory & Manufacturing Planner, Amazon Robotics"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Zebra Technologies (Fetch Robotics)",
+    "status": "ok",
+    "configured_url": "https://careers.zebra.com/",
+    "working_url": "https://careers.zebra.com/",
+    "job_links": 9,
+    "intern_links": 0,
+    "sample_titles": [
+      "AI Software",
+      "Zebra Companion",
+      "Zebra Frontline AI Enablers",
+      "Zebra Frontline AI Blueprints",
+      "Developer Software"
+    ],
+    "attempts": [
+      {
+        "url": "https://careers.zebra.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.zebra.com/us/en/about-zebra/careers.html",
+        "career_signals": [
+          "career",
+          "opening"
+        ],
+        "job_links": 9,
+        "intern_links": 0,
+        "sample_titles": [
+          "AI Software",
+          "Zebra Companion",
+          "Zebra Frontline AI Enablers",
+          "Zebra Frontline AI Blueprints",
+          "Developer Software"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Teradyne",
+    "status": "ok",
+    "configured_url": "https://careers.teradyne.com/",
+    "working_url": "https://careers.teradyne.com/",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://careers.teradyne.com/",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://jobs.teradyne.com/",
+        "career_signals": [
+          "career",
+          "internship",
+          "job",
+          "opening"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Cognex",
+    "status": "ok",
+    "configured_url": "https://www.cognex.com/company/careers",
+    "working_url": "https://www.cognex.com/company/careers",
+    "job_links": 0,
+    "intern_links": 0,
+    "sample_titles": [],
+    "attempts": [
+      {
+        "url": "https://www.cognex.com/company/careers",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.cognex.com/en/company/careers",
+        "career_signals": [
+          "career",
+          "job",
+          "open position"
+        ],
+        "job_links": 0,
+        "intern_links": 0,
+        "sample_titles": []
+      }
+    ]
+  },
+  {
+    "name": "Rockwell Automation",
+    "status": "ok",
+    "configured_url": "https://www.rockwellautomation.com/en-us/company/careers.html",
+    "working_url": "https://www.rockwellautomation.com/en-us/company/careers.html",
+    "job_links": 2,
+    "intern_links": 0,
+    "sample_titles": [
+      "Advanced Motion & Robotics",
+      "Industrial AI"
+    ],
+    "attempts": [
+      {
+        "url": "https://www.rockwellautomation.com/en-us/company/careers.html",
+        "ok": true,
+        "status": 200,
+        "final_url": "https://www.rockwellautomation.com/en-us/careers.html",
+        "career_signals": [
+          "career",
+          "job",
+          "join us"
+        ],
+        "job_links": 2,
+        "intern_links": 0,
+        "sample_titles": [
+          "Advanced Motion & Robotics",
+          "Industrial AI"
+        ]
+      }
+    ]
+  }
+]
