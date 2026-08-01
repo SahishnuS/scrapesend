@@ -96,7 +96,7 @@ async def bulk_upload_companies(
     - 'careers_url' and 'ats_provider' are optional.
     - Duplicate company names are skipped.
     """
-    if not file.filename.endswith(".csv"):
+    if not file.filename or not file.filename.endswith(".csv"):
         raise HTTPException(status_code=400, detail="Only .csv files are accepted.")
 
     content = await file.read()

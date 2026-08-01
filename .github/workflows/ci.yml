@@ -24,7 +24,7 @@ jobs:
       - name: Ruff lint
         run: ruff check backend/
       - name: Mypy type check
-        run: mypy backend/app --ignore-missing-imports
+        run: cd backend && mypy app --config-file mypy.ini
 
   backend-test:
     name: Backend Tests
