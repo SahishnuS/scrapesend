@@ -187,57 +187,78 @@ def job(title, company="Acme", location=None, score=None, url="https://x.test/j"
     )
 
 
-def test_each_alert_names_the_role_and_company_in_the_subject():
-    from run_notifications import render_job_email
+def test_one_email_carries_the_whole_batch_of_openings():
+    """The core promise: 10 openings arrive as ONE email, not ten emails."""
+    from run_notifications import render_digest
 
-    subject, _ = render_job_email(job("Robotics Intern", company="CynLr"))
-    assert subject == "InternHunt: Robotics Intern — CynLr"
+    jobs = [job(f"Intern {i}", url=f"https://x.test/j{i}") for i in range(10)]
+    subject, body = render_digest(jobs)
 
-
-def test_alert_body_carries_the_apply_link():
-    from run_notifications import render_job_email
-
-    _, body = render_job_email(job("Robotics Intern", url="https://cynlr.test/j1"))
-    assert "https://cynlr.test/j1" in body
+    assert subject == "InternHunt: 10 new internship openings"
+    for i in range(10):
+        assert f"https://x.test/j{i}" in body
 
 
-def test_alert_includes_match_score_only_when_scored():
-    from run_notifications import render_job_email
+def test_openings_are_numbered_in_the_email():
+    from run_notifications import render_digest
 
-    _, scored = render_job_email(job("A", score=0.72))
-    _, unscored = render_job_email(job("B"))
+    _, body = render_digest([job("A"), job("B"), job("C")])
+    assert "1. A —" in body and "2. B —" in body and "3. C —" in body
+
+
+def test_subject_is_singular_for_a_single_opening():
+    from run_notifications import render_digest
+
+    subject, _ = render_digest([job("Robotics Intern")])
+    assert subject == "InternHunt: 1 new internship opening"
+
+
+def test_email_lists_role_company_and_apply_link():
+    from run_notifications import render_digest
+
+    _, body = render_digest([job("Robotics Intern", company="CynLr", url="https://cynlr.test/j1")])
+    assert "Robotics Intern — CynLr" in body
+    assert "Apply: https://cynlr.test/j1" in body
+
+
+def test_email_includes_match_score_only_when_scored():
+    from run_notifications import render_digest
+
+    _, scored = render_digest([job("A", score=0.72)])
+    _, unscored = render_digest([job("B")])
     assert "Resume match: 72%" in scored
     assert "Resume match" not in unscored
 
 
-def test_alert_mentions_the_queued_remainder():
-    from run_notifications import render_job_email
+def test_email_tells_you_how_many_openings_are_still_queued():
+    from run_notifications import render_digest
 
-    _, body = render_job_email(job("A"), remaining=37)
-    assert "37 more new posting(s) queued" in body
+    _, body = render_digest([job("A")], remaining=37)
+    assert "37 more opening(s) are queued" in body
 
 
-def test_alert_omits_the_remainder_line_when_the_queue_is_empty():
-    from run_notifications import render_job_email
+def test_email_omits_the_queued_line_when_the_backlog_is_drained():
+    from run_notifications import render_digest
 
-    _, body = render_job_email(job("A"), remaining=0)
+    _, body = render_digest([job("A")], remaining=0)
     assert "queued" not in body
 
 
-def test_only_ten_alerts_are_sent_per_run():
-    """The batching promise: a 200-job backlog must not become 200 emails."""
-    from run_notifications import MAX_EMAILS_PER_RUN
+def test_batch_size_is_ten_openings_per_email():
+    """A 200-job backlog must become 10 openings in one email, not 200 emails."""
+    from run_notifications import MAX_JOBS_PER_EMAIL
 
-    assert MAX_EMAILS_PER_RUN == 10
+    assert MAX_JOBS_PER_EMAIL == 10
 
 
-def test_telegram_alert_mirrors_the_email_content():
-    from run_notifications import render_job_telegram
+def test_telegram_mirrors_the_same_batch():
+    from run_notifications import render_digest_telegram
 
-    text = render_job_telegram(job("Robotics Intern", company="CynLr", location="Bengaluru"))
-    assert "Robotics Intern" in text
+    jobs = [job("Robotics Intern", company="CynLr"), job("Embedded Intern")]
+    text = render_digest_telegram(jobs, remaining=5)
+    assert text.count("•") == 2
     assert "CynLr" in text
-    assert "Bengaluru" in text
+    assert "5 more queued" in text
 
 
 def test_sync_plan_against_the_real_registry_is_all_inserts_on_a_fresh_db():

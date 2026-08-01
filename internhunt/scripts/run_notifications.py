@@ -13,10 +13,10 @@ import structlog
 
 log = structlog.get_logger(__name__)
 
-# How many job alerts leave the mailbox per pipeline run. The pipeline fires
-# every 2 hours, so the rest of the backlog goes out on the following runs
-# rather than arriving as one flood (and staying well inside Gmail's limits).
-MAX_EMAILS_PER_RUN = 10
+# One email per pipeline run, listing at most this many openings. The pipeline
+# fires every 2 hours, so a backlog is drained 10 openings at a time across the
+# following runs rather than arriving as one flood.
+MAX_JOBS_PER_EMAIL = 10
 
 
 def _unnotified_jobs_filter():
@@ -44,7 +44,7 @@ async def count_unnotified_jobs(db) -> int:
     return await db.scalar(select(func.count()).select_from(Job).where(is_open, not_emailed)) or 0
 
 
-async def fetch_unnotified_jobs(db, limit: int = MAX_EMAILS_PER_RUN) -> list:
+async def fetch_unnotified_jobs(db, limit: int = MAX_JOBS_PER_EMAIL) -> list:
     """
     The next batch of jobs to alert on, newest first.
 
@@ -75,51 +75,59 @@ def _best_match_score(job) -> float | None:
     return max(scores) if scores else None
 
 
-def render_job_email(job, remaining: int = 0) -> tuple[str, str]:
-    """Build the (subject, body) for a single new posting."""
-    company = job.company.name if job.company else "Unknown company"
-    subject = f"InternHunt: {job.title} — {company}"
+def _company_of(job) -> str:
+    return job.company.name if job.company else "Unknown company"
+
+
+def render_digest(jobs: list, remaining: int = 0) -> tuple[str, str]:
+    """
+    Build the (subject, body) of one email listing this run's openings.
+
+    `remaining` is how many further openings are still queued behind this
+    batch; they go out on the next scheduled run.
+    """
+    count = len(jobs)
+    subject = f"InternHunt: {count} new internship opening{'s' if count != 1 else ''}"
 
     lines = [
-        "InternHunt found a new internship posting.",
+        f"InternHunt found {count} new internship opening(s).",
         "",
-        f"Role:     {job.title}",
-        f"Company:  {company}",
     ]
-    if job.location:
-        lines.append(f"Location: {job.location}")
 
-    score = _best_match_score(job)
-    if score is not None:
-        lines.append(f"Resume match: {int(score * 100)}%")
-
-    lines += ["", f"Apply here: {job.job_url}", ""]
+    for index, job in enumerate(jobs, start=1):
+        lines.append(f"{index}. {job.title} — {_company_of(job)}")
+        if job.location:
+            lines.append(f"   Location: {job.location}")
+        score = _best_match_score(job)
+        if score is not None:
+            lines.append(f"   Resume match: {int(score * 100)}%")
+        lines.append(f"   Apply: {job.job_url}")
+        lines.append("")
 
     if remaining > 0:
         lines.append(
-            f"({remaining} more new posting(s) queued — they arrive on the next runs.)"
+            f"{remaining} more opening(s) are queued and will arrive in the next email."
         )
 
     return subject, "\n".join(lines)
 
 
-def render_job_telegram(job) -> str:
-    company = job.company.name if job.company else "Unknown company"
-    parts = [f"InternHunt: {job.title}", f"Company: {company}"]
-    if job.location:
-        parts.append(f"Location: {job.location}")
-    score = _best_match_score(job)
-    if score is not None:
-        parts.append(f"Resume match: {int(score * 100)}%")
-    parts.append(job.job_url)
-    return "\n".join(parts)
+def render_digest_telegram(jobs: list, remaining: int = 0) -> str:
+    """Same batch, condensed for Telegram."""
+    lines = [f"InternHunt: {len(jobs)} new internship opening(s)", ""]
+    for job in jobs:
+        lines.append(f"• {job.title} — {_company_of(job)}")
+        lines.append(f"  {job.job_url}")
+    if remaining > 0:
+        lines.append(f"\n{remaining} more queued for the next run.")
+    return "\n".join(lines)
 
 
 async def run_notification_pipeline() -> int:
     """
-    Email up to MAX_EMAILS_PER_RUN new postings, one message per posting, then
-    record each one so it is never sent again. The remainder stays queued for
-    the next scheduled run.
+    Send ONE email listing up to MAX_JOBS_PER_EMAIL new openings, then record
+    those openings so they are never included again. Anything beyond the batch
+    stays queued for the next scheduled run.
 
     Deliberately not gated on the AI matcher: the alert is about new postings. A
     resume match score is included when the matcher has already scored the job,
@@ -132,54 +140,51 @@ async def run_notification_pipeline() -> int:
     async with AsyncSessionLocal() as db:
         backlog = await count_unnotified_jobs(db)
         if backlog == 0:
-            log.info("No new postings to alert on.")
+            log.info("No new openings to alert on.")
             return 0
 
         jobs = await fetch_unnotified_jobs(db)
-        log.info("Sending alerts", backlog=backlog, sending=len(jobs))
+        remaining = backlog - len(jobs)
+        log.info("Sending digest", backlog=backlog, in_this_email=len(jobs), queued=remaining)
 
         notifier = NotificationService()
-        sent = 0
+        subject, body = render_digest(jobs, remaining=remaining)
 
-        for index, job in enumerate(jobs):
-            remaining = backlog - index - 1
-            subject, body = render_job_email(job, remaining=remaining)
+        if not await notifier.send_email(subject, body):
+            # Record nothing, so this batch is retried on the next run instead
+            # of being silently swallowed.
+            log.error("Digest email failed to send; batch stays queued.")
+            return 0
 
-            if not await notifier.send_email(subject, body):
-                # Leave this job unrecorded so the next run retries it, and stop
-                # early rather than hammering a mail server that is refusing us.
-                log.error("Email failed; leaving job queued", job_id=str(job.id))
-                break
+        telegram_sent = await notifier.send_telegram(
+            render_digest_telegram(jobs, remaining=remaining)
+        )
 
-            now = datetime.now(tz=UTC)
+        now = datetime.now(tz=UTC)
+        for job in jobs:
             db.add(
                 Notification(
                     job_id=job.id,
                     platform="email",
-                    message=f"Alert sent for {job.title}",
+                    message=f"Included in digest: {job.title}",
                     is_sent=True,
                     sent_at=now,
                 )
             )
-
-            if await notifier.send_telegram(render_job_telegram(job)):
+            if telegram_sent:
                 db.add(
                     Notification(
                         job_id=job.id,
                         platform="telegram",
-                        message=f"Alert sent for {job.title}",
+                        message=f"Included in digest: {job.title}",
                         is_sent=True,
                         sent_at=now,
                     )
                 )
+        await db.commit()
 
-            # Commit per job: an interruption must not replay alerts that the
-            # user has already received.
-            await db.commit()
-            sent += 1
-
-        log.info("Notification run complete", sent=sent, still_queued=backlog - sent)
-        return sent
+        log.info("Digest sent", openings=len(jobs), still_queued=remaining)
+        return len(jobs)
 
 
 if __name__ == "__main__":
