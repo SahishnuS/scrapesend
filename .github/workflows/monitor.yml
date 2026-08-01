@@ -7,10 +7,18 @@ on:
   workflow_dispatch:
     # Allows manual triggering from the GitHub Actions UI
 
+# A full crawl takes ~25-40 minutes. Without this, a slow run would still be
+# crawling when the next one starts, and two concurrent crawls racing to insert
+# the same job_hash would abort each other's transaction.
+concurrency:
+  group: internhunt-monitor
+  cancel-in-progress: false
+
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 55
+
     defaults:
       run:
         working-directory: internhunt
@@ -30,7 +38,7 @@ jobs:
           cd backend
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          playwright install chromium
+          playwright install chromium --with-deps
 
       - name: Run Master Pipeline
         env:

@@ -1,128 +1,185 @@
 import asyncio
-import sys
 import os
-from datetime import datetime, timezone
+import sys
+from datetime import UTC, datetime
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../backend"))
 
 import structlog
-from sqlalchemy import select
-from app.db.session import AsyncSessionLocal
-from app.models.application import Application
-from app.models.job import Job
-from app.models.company import Company
-from app.models.notification import Notification
-from app.services.notification_service import NotificationService
+
+# The database, model and SMTP imports live inside the functions that need
+# them. That keeps the message-rendering helpers below importable — and unit
+# testable — without a database driver or mail library installed.
 
 log = structlog.get_logger(__name__)
 
+# How many job alerts leave the mailbox per pipeline run. The pipeline fires
+# every 2 hours, so the rest of the backlog goes out on the following runs
+# rather than arriving as one flood (and staying well inside Gmail's limits).
+MAX_EMAILS_PER_RUN = 10
 
-async def run_notification_pipeline():
-    """
-    Finds newly matched applications and sends Telegram / Email alerts.
-    Saves Notification records to the database.
-    """
-    notifier = NotificationService()
 
-    async with AsyncSessionLocal() as db:
-        # Fetch applications with matched status
-        query = (
-            select(Application, Job, Company)
-            .join(Job, Application.job_id == Job.id)
-            .join(Company, Job.company_id == Company.id)
-            .where(Application.status == "matched")
-            .order_by(Application.created_at.desc())
+def _unnotified_jobs_filter():
+    """Jobs that have never had a successful email alert."""
+    from sqlalchemy import select
+
+    from app.models.job import Job
+    from app.models.notification import Notification
+
+    already_emailed = (
+        select(Notification.job_id)
+        .where(Notification.platform == "email")
+        .where(Notification.is_sent.is_(True))
+    )
+    return (Job.status == "open"), Job.id.notin_(already_emailed)
+
+
+async def count_unnotified_jobs(db) -> int:
+    """Size of the alert backlog, used only for logging and the email footer."""
+    from sqlalchemy import func, select
+
+    from app.models.job import Job
+
+    is_open, not_emailed = _unnotified_jobs_filter()
+    return await db.scalar(select(func.count()).select_from(Job).where(is_open, not_emailed)) or 0
+
+
+async def fetch_unnotified_jobs(db, limit: int = MAX_EMAILS_PER_RUN) -> list:
+    """
+    The next batch of jobs to alert on, newest first.
+
+    This is the deduplication boundary for alerting. The crawler already makes a
+    job row unique per (company, url) through job_hash; this query makes sure
+    each of those rows is emailed at most once, no matter how often the pipeline
+    runs. Newest first so the freshest postings reach the inbox soonest.
+    """
+    from sqlalchemy import select
+    from sqlalchemy.orm import selectinload
+
+    from app.models.job import Job
+
+    is_open, not_emailed = _unnotified_jobs_filter()
+    result = await db.execute(
+        select(Job)
+        .options(selectinload(Job.company), selectinload(Job.applications))
+        .where(is_open, not_emailed)
+        .order_by(Job.discovered_at.desc())
+        .limit(limit)
+    )
+    return list(result.scalars().all())
+
+
+def _best_match_score(job) -> float | None:
+    """Highest resume match score for this job, if it has been scored at all."""
+    scores = [app.match_score for app in job.applications if app.match_score is not None]
+    return max(scores) if scores else None
+
+
+def render_job_email(job, remaining: int = 0) -> tuple[str, str]:
+    """Build the (subject, body) for a single new posting."""
+    company = job.company.name if job.company else "Unknown company"
+    subject = f"InternHunt: {job.title} — {company}"
+
+    lines = [
+        "InternHunt found a new internship posting.",
+        "",
+        f"Role:     {job.title}",
+        f"Company:  {company}",
+    ]
+    if job.location:
+        lines.append(f"Location: {job.location}")
+
+    score = _best_match_score(job)
+    if score is not None:
+        lines.append(f"Resume match: {int(score * 100)}%")
+
+    lines += ["", f"Apply here: {job.job_url}", ""]
+
+    if remaining > 0:
+        lines.append(
+            f"({remaining} more new posting(s) queued — they arrive on the next runs.)"
         )
 
-        results = (await db.execute(query)).all()
+    return subject, "\n".join(lines)
 
-        if not results:
-            log.info("No matched applications found to notify.")
-            return
 
-        log.info(f"Found {len(results)} matched applications. Checking for pending notifications...")
-        new_notifications_count = 0
+def render_job_telegram(job) -> str:
+    company = job.company.name if job.company else "Unknown company"
+    parts = [f"InternHunt: {job.title}", f"Company: {company}"]
+    if job.location:
+        parts.append(f"Location: {job.location}")
+    score = _best_match_score(job)
+    if score is not None:
+        parts.append(f"Resume match: {int(score * 100)}%")
+    parts.append(job.job_url)
+    return "\n".join(parts)
 
-        for app, job, company in results:
-            match_pct = int((app.match_score or 0) * 100)
-            ats_pct = int((app.ats_score or 0) * 100)
 
-            # Format Telegram Message (Markdown)
-            telegram_msg = (
-                f"InternHunt Alert\n\n"
-                f"Company: {company.name}\n"
-                f"Role: {job.title}\n"
-                f"Location: {job.location or 'Remote'}\n"
-                f"AI Match Score: {match_pct}%\n"
-                f"ATS Match Score: {ats_pct}%\n\n"
-                f"Link: {job.job_url}"
-            )
+async def run_notification_pipeline() -> int:
+    """
+    Email up to MAX_EMAILS_PER_RUN new postings, one message per posting, then
+    record each one so it is never sent again. The remainder stays queued for
+    the next scheduled run.
 
-            # Format Email Subject & Body
-            email_subject = f"InternHunt Match: {job.title} at {company.name} ({match_pct}%)"
-            email_body = (
-                f"InternHunt discovered a matching internship.\n\n"
-                f"Company: {company.name}\n"
-                f"Role: {job.title}\n"
-                f"Location: {job.location or 'Remote'}\n"
-                f"Match Score: {match_pct}%\n"
-                f"ATS Score: {ats_pct}%\n\n"
-                f"Apply here: {job.job_url}\n"
-            )
+    Deliberately not gated on the AI matcher: the alert is about new postings. A
+    resume match score is included when the matcher has already scored the job,
+    but a missing resume must not mean silence.
+    """
+    from app.db.session import AsyncSessionLocal
+    from app.models.notification import Notification
+    from app.services.notification_service import NotificationService
 
-            log.info(f"Dispatching notification for: {job.title} at {company.name}")
+    async with AsyncSessionLocal() as db:
+        backlog = await count_unnotified_jobs(db)
+        if backlog == 0:
+            log.info("No new postings to alert on.")
+            return 0
 
-            # 1. Telegram Dispatch — only if not already successfully sent
-            tg_already_sent = await db.scalar(
-                select(Notification).where(
-                    Notification.job_id == job.id,
-                    Notification.platform == "telegram",
-                    Notification.is_sent == True,
+        jobs = await fetch_unnotified_jobs(db)
+        log.info("Sending alerts", backlog=backlog, sending=len(jobs))
+
+        notifier = NotificationService()
+        sent = 0
+
+        for index, job in enumerate(jobs):
+            remaining = backlog - index - 1
+            subject, body = render_job_email(job, remaining=remaining)
+
+            if not await notifier.send_email(subject, body):
+                # Leave this job unrecorded so the next run retries it, and stop
+                # early rather than hammering a mail server that is refusing us.
+                log.error("Email failed; leaving job queued", job_id=str(job.id))
+                break
+
+            now = datetime.now(tz=UTC)
+            db.add(
+                Notification(
+                    job_id=job.id,
+                    platform="email",
+                    message=f"Alert sent for {job.title}",
+                    is_sent=True,
+                    sent_at=now,
                 )
             )
-            if not tg_already_sent:
-                tg_sent = await notifier.send_telegram(telegram_msg)
+
+            if await notifier.send_telegram(render_job_telegram(job)):
                 db.add(
                     Notification(
                         job_id=job.id,
                         platform="telegram",
-                        message=f"Alert sent for {job.title} at {company.name} (Match: {match_pct}%)",
-                        is_sent=tg_sent,
-                        sent_at=datetime.now(tz=timezone.utc) if tg_sent else None,
+                        message=f"Alert sent for {job.title}",
+                        is_sent=True,
+                        sent_at=now,
                     )
                 )
-                new_notifications_count += 1
-            else:
-                log.info(f"Telegram already sent for job {job.id}, skipping.")
 
-            # 2. Email Dispatch — only if not already successfully sent
-            email_already_sent = await db.scalar(
-                select(Notification).where(
-                    Notification.job_id == job.id,
-                    Notification.platform == "email",
-                    Notification.is_sent == True,
-                )
-            )
-            if not email_already_sent:
-                email_sent = await notifier.send_email(email_subject, email_body)
-                db.add(
-                    Notification(
-                        job_id=job.id,
-                        platform="email",
-                        message=f"Email sent for {job.title} at {company.name} (Match: {match_pct}%)",
-                        is_sent=email_sent,
-                        sent_at=datetime.now(tz=timezone.utc) if email_sent else None,
-                    )
-                )
-                new_notifications_count += 1
-            else:
-                log.info(f"Email already sent for job {job.id}, skipping.")
-
-            # Commit after each job so that if the script is interrupted (e.g., Telegram timeout),
-            # we don't rollback the database and send duplicate emails next time.
+            # Commit per job: an interruption must not replay alerts that the
+            # user has already received.
             await db.commit()
+            sent += 1
 
-        log.info(f"Notification pipeline complete. Recorded {new_notifications_count} notifications.")
+        log.info("Notification run complete", sent=sent, still_queued=backlog - sent)
+        return sent
 
 
 if __name__ == "__main__":

@@ -27,7 +27,7 @@ from crawler_base import BaseCrawler
 from ats.greenhouse import GreenhouseHandler
 from ats.lever import LeverHandler
 from ats.generic import GenericHandler
-from ats.filters import filter_listings
+from ats.filters import is_relevant_internship, looks_like_early_career
 
 log = structlog.get_logger(__name__)
 
@@ -37,6 +37,10 @@ ATS_HANDLER_MAP = {
     "lever": LeverHandler(),
 }
 GENERIC_HANDLER = GenericHandler()
+
+# Upper bound on job-detail pages fetched per company. Career pages routinely
+# list 30-70 roles; without a cap one company could dominate the crawl window.
+MAX_DETAIL_FETCHES = 15
 
 
 def _make_job_hash(company_id: str, job_url: str) -> str:
@@ -55,6 +59,62 @@ def _get_handler(ats_provider: str | None):
     return GENERIC_HANDLER
 
 
+async def resolve_internships(
+    crawler: BaseCrawler, listings: list, company_name: str
+) -> list:
+    """
+    Decide which extracted listings are relevant internships.
+
+    Two stages, because a careers page usually gives us nothing but the link
+    text:
+      1. Listings that already prove themselves from the title alone are kept
+         without any extra network cost.
+      2. Listings that look like an internship but don't name a domain (cards
+         reading just "Intern" or "Graduate Trainee") get their job-detail page
+         fetched so the filter can judge them on the real description.
+
+    Everything else is dropped without a fetch.
+    """
+    confirmed = [listing for listing in listings if is_relevant_internship(listing)]
+    confirmed_urls = {listing.job_url for listing in confirmed}
+
+    candidates = [
+        listing
+        for listing in listings
+        if listing.job_url not in confirmed_urls and looks_like_early_career(listing)
+    ]
+
+    if not candidates:
+        return confirmed
+
+    budget = candidates[:MAX_DETAIL_FETCHES]
+    if len(candidates) > MAX_DETAIL_FETCHES:
+        log.info(
+            "Capping job-detail fetches",
+            company=company_name,
+            candidates=len(candidates),
+            fetching=MAX_DETAIL_FETCHES,
+        )
+
+    enriched = 0
+    for listing in budget:
+        detail = await crawler.fetch_detail_text(listing.job_url)
+        if not detail:
+            continue
+        listing.description = detail
+        if is_relevant_internship(listing):
+            confirmed.append(listing)
+            enriched += 1
+
+    log.info(
+        "Job-detail enrichment complete",
+        company=company_name,
+        fetched=len(budget),
+        newly_confirmed=enriched,
+    )
+    return confirmed
+
+
 async def crawl_company(crawler: BaseCrawler, company: Company) -> int:
     """
     Crawl a single company and persist any new jobs found.
@@ -69,7 +129,7 @@ async def crawl_company(crawler: BaseCrawler, company: Company) -> int:
 
     handler = _get_handler(company.ats_provider)
     raw_listings = handler.extract(html, base_url=company.careers_url)
-    listings = filter_listings(raw_listings)
+    listings = await resolve_internships(crawler, raw_listings, company.name)
     log.info(
         "Listings after relevance filter",
         company=company.name,
