@@ -8,14 +8,14 @@ Keep this file minimal — business logic belongs in services.
 from fastapi import APIRouter
 
 from app.api.v1.endpoints import (
+    applications,
     categories,
     companies,
-    jobs,
-    resumes,
-    applications,
-    notifications,
-    logs,
     health,
+    jobs,
+    logs,
+    notifications,
+    resumes,
 )
 
 api_router = APIRouter()

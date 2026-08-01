@@ -8,19 +8,21 @@ Supports both online (connected) and offline (SQL generation) modes.
 import asyncio
 import os
 from logging.config import fileConfig
+
 from dotenv import load_dotenv
 
 # Load environment variables from the project root .env
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
 
-from alembic import context
 from sqlalchemy import pool
 from sqlalchemy.engine import Connection
 from sqlalchemy.ext.asyncio import async_engine_from_config
 
-# Import all models so Alembic autogenerate can detect changes
-from app.db.base import Base  # noqa: F401
 import app.models  # noqa: F401 — registers all model classes
+from alembic import context
+
+# Import all models so Alembic autogenerate can detect changes
+from app.db.base import Base
 
 config = context.config
 

@@ -2,14 +2,14 @@
 
 import uuid
 from datetime import datetime
-from typing import Optional
-from pydantic import BaseModel, ConfigDict, HttpUrl
+
+from pydantic import BaseModel, ConfigDict
 
 
 class CompanyBase(BaseModel):
     name: str
-    careers_url: Optional[str] = None
-    ats_provider: Optional[str] = None
+    careers_url: str | None = None
+    ats_provider: str | None = None
     is_active: bool = True
 
 
@@ -18,16 +18,16 @@ class CompanyCreate(CompanyBase):
 
 
 class CompanyUpdate(BaseModel):
-    name: Optional[str] = None
-    careers_url: Optional[str] = None
-    ats_provider: Optional[str] = None
-    is_active: Optional[bool] = None
+    name: str | None = None
+    careers_url: str | None = None
+    ats_provider: str | None = None
+    is_active: bool | None = None
 
 
 class CompanyRead(CompanyBase):
     model_config = ConfigDict(from_attributes=True)
 
     id: uuid.UUID
-    last_crawled_at: Optional[datetime] = None
+    last_crawled_at: datetime | None = None
     created_at: datetime
     updated_at: datetime

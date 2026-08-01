@@ -13,10 +13,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.responses import JSONResponse
 
+from app.api.v1.router import api_router
 from app.core.config import settings
 from app.core.logging import configure_logging
-from app.api.v1.router import api_router
-from app.db.session import engine
 
 log = structlog.get_logger(__name__)
 

@@ -1,10 +1,13 @@
-from sqlalchemy import String, Text, DateTime
-from sqlalchemy.dialects.postgresql import JSONB
-from sqlalchemy.sql import func
-from sqlalchemy.orm import Mapped, mapped_column
-from app.db.base import Base
 import uuid
 from datetime import datetime
+
+from sqlalchemy import DateTime, String, Text
+from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.sql import func
+
+from app.db.base import Base
+
 
 class Log(Base):
     __tablename__ = "logs"
@@ -14,5 +17,5 @@ class Log(Base):
     module: Mapped[str] = mapped_column(String(100)) # e.g. crawler, ai_matcher
     message: Mapped[str] = mapped_column(Text)
     details: Mapped[dict | None] = mapped_column(JSONB)
-    
+
     timestamp: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), index=True)

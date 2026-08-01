@@ -4,10 +4,9 @@ File upload is handled via multipart form; text extraction uses pdfplumber.
 """
 
 import uuid
-from typing import List
 
 import pdfplumber
-from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile, status
+from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, status
 from sqlalchemy import select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -30,7 +29,7 @@ def _extract_text(file_bytes: bytes) -> str:
     return "\n".join(text_parts)
 
 
-@router.get("/", response_model=List[ResumeRead], summary="List all resumes")
+@router.get("/", response_model=list[ResumeRead], summary="List all resumes")
 async def list_resumes(db: AsyncSession = Depends(get_db)):
     result = await db.execute(select(Resume).order_by(Resume.created_at.desc()))
     return result.scalars().all()

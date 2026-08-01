@@ -2,7 +2,8 @@
 
 import uuid
 from datetime import datetime
-from typing import Optional, Any
+from typing import Any
+
 from pydantic import BaseModel, ConfigDict
 
 
@@ -10,11 +11,11 @@ class ApplicationBase(BaseModel):
     job_id: uuid.UUID
     resume_id: uuid.UUID
     status: str = "matched"
-    match_score: Optional[float] = None
-    ats_score: Optional[float] = None
-    ats_keywords_matched: Optional[Any] = None
-    applied_at: Optional[datetime] = None
-    notes: Optional[str] = None
+    match_score: float | None = None
+    ats_score: float | None = None
+    ats_keywords_matched: Any | None = None
+    applied_at: datetime | None = None
+    notes: str | None = None
 
 
 class ApplicationCreate(ApplicationBase):
@@ -22,12 +23,12 @@ class ApplicationCreate(ApplicationBase):
 
 
 class ApplicationUpdate(BaseModel):
-    status: Optional[str] = None
-    match_score: Optional[float] = None
-    ats_score: Optional[float] = None
-    ats_keywords_matched: Optional[Any] = None
-    applied_at: Optional[datetime] = None
-    notes: Optional[str] = None
+    status: str | None = None
+    match_score: float | None = None
+    ats_score: float | None = None
+    ats_keywords_matched: Any | None = None
+    applied_at: datetime | None = None
+    notes: str | None = None
 
 
 class ApplicationRead(ApplicationBase):

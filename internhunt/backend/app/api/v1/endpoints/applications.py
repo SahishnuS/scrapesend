@@ -1,7 +1,6 @@
 """Applications CRUD endpoints with ATS score tracking."""
 
 import uuid
-from typing import List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy import select
@@ -9,17 +8,17 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.session import get_db
 from app.models.application import Application
-from app.schemas.application import ApplicationCreate, ApplicationUpdate, ApplicationRead
+from app.schemas.application import ApplicationCreate, ApplicationRead, ApplicationUpdate
 
 router = APIRouter()
 
 VALID_STATUSES = {"matched", "applied", "interviewing", "offer", "rejected"}
 
 
-@router.get("/", response_model=List[ApplicationRead], summary="List applications")
+@router.get("/", response_model=list[ApplicationRead], summary="List applications")
 async def list_applications(
-    status: Optional[str] = Query(None, description="Filter by status"),
-    job_id: Optional[uuid.UUID] = Query(None),
+    status: str | None = Query(None, description="Filter by status"),
+    job_id: uuid.UUID | None = Query(None),
     skip: int = Query(0, ge=0),
     limit: int = Query(50, ge=1, le=200),
     db: AsyncSession = Depends(get_db),

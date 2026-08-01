@@ -1,7 +1,6 @@
 """Logs endpoints — read-only (writes happen internally)."""
 
 import uuid
-from typing import List, Optional
 
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy import select
@@ -14,10 +13,10 @@ from app.schemas.log import LogCreate, LogRead
 router = APIRouter()
 
 
-@router.get("/", response_model=List[LogRead], summary="List system logs")
+@router.get("/", response_model=list[LogRead], summary="List system logs")
 async def list_logs(
-    level: Optional[str] = Query(None, description="Filter by level: INFO, WARNING, ERROR"),
-    module: Optional[str] = Query(None),
+    level: str | None = Query(None, description="Filter by level: INFO, WARNING, ERROR"),
+    module: str | None = Query(None),
     skip: int = Query(0, ge=0),
     limit: int = Query(100, ge=1, le=500),
     db: AsyncSession = Depends(get_db),

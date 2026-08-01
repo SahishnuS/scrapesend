@@ -2,17 +2,17 @@
 
 import uuid
 from datetime import datetime
-from typing import Optional
+
 from pydantic import BaseModel, ConfigDict
 
 
 class JobBase(BaseModel):
     company_id: uuid.UUID
-    category_id: Optional[uuid.UUID] = None
+    category_id: uuid.UUID | None = None
     title: str
     job_url: str
-    location: Optional[str] = None
-    description: Optional[str] = None
+    location: str | None = None
+    description: str | None = None
     job_hash: str
     status: str = "open"
 
@@ -22,12 +22,12 @@ class JobCreate(JobBase):
 
 
 class JobUpdate(BaseModel):
-    category_id: Optional[uuid.UUID] = None
-    title: Optional[str] = None
-    job_url: Optional[str] = None
-    location: Optional[str] = None
-    description: Optional[str] = None
-    status: Optional[str] = None
+    category_id: uuid.UUID | None = None
+    title: str | None = None
+    job_url: str | None = None
+    location: str | None = None
+    description: str | None = None
+    status: str | None = None
 
 
 class JobRead(JobBase):

@@ -1,7 +1,6 @@
 """Categories CRUD endpoints."""
 
 import uuid
-from typing import List
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import select
@@ -9,12 +8,12 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.session import get_db
 from app.models.category import Category
-from app.schemas.category import CategoryCreate, CategoryUpdate, CategoryRead
+from app.schemas.category import CategoryCreate, CategoryRead, CategoryUpdate
 
 router = APIRouter()
 
 
-@router.get("/", response_model=List[CategoryRead], summary="List all categories")
+@router.get("/", response_model=list[CategoryRead], summary="List all categories")
 async def list_categories(db: AsyncSession = Depends(get_db)):
     result = await db.execute(select(Category).order_by(Category.name))
     return result.scalars().all()

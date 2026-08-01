@@ -5,7 +5,7 @@ Uses asyncpg driver for high-performance async PostgreSQL access.
 The session is managed via FastAPI's dependency injection system.
 """
 
-from typing import AsyncGenerator
+from collections.abc import AsyncGenerator
 
 import structlog
 from sqlalchemy.ext.asyncio import (

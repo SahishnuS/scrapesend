@@ -3,24 +3,23 @@
 import csv
 import io
 import uuid
-from typing import List, Optional
 
-from fastapi import APIRouter, Depends, HTTPException, Query, UploadFile, File, status
+from fastapi import APIRouter, Depends, File, HTTPException, Query, UploadFile, status
 from fastapi.responses import StreamingResponse
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.session import get_db
 from app.models.company import Company
-from app.schemas.company import CompanyCreate, CompanyUpdate, CompanyRead
+from app.schemas.company import CompanyCreate, CompanyRead, CompanyUpdate
 
 router = APIRouter()
 
 
-@router.get("/", response_model=List[CompanyRead], summary="List all companies")
+@router.get("/", response_model=list[CompanyRead], summary="List all companies")
 async def list_companies(
-    is_active: Optional[bool] = Query(None, description="Filter by active status"),
-    ats_provider: Optional[str] = Query(None, description="Filter by ATS provider"),
+    is_active: bool | None = Query(None, description="Filter by active status"),
+    ats_provider: str | None = Query(None, description="Filter by ATS provider"),
     db: AsyncSession = Depends(get_db),
 ):
     stmt = select(Company).order_by(Company.name)

@@ -1,4 +1,5 @@
 import re
+
 import structlog
 from sentence_transformers import SentenceTransformer, util
 
@@ -23,7 +24,7 @@ class AIMatcher:
     Uses SentenceTransformers for semantic similarity (Match Score)
     and heuristic keyword overlap (ATS Score).
     """
-    
+
     def __init__(self):
         # We use a very lightweight, fast, and highly capable model for semantic matching.
         # It will be downloaded and cached automatically the first time this is initialized.
@@ -38,10 +39,10 @@ class AIMatcher:
         """
         if not resume_text or not job_text:
             return 0.0
-            
+
         # Truncate to avoid memory issues on massive texts; the model handles ~256-512 tokens best.
         # But for all-MiniLM, it truncates internally. Still, good practice.
-        resume_slice = resume_text[:3000] 
+        resume_slice = resume_text[:3000]
         job_slice = job_text[:3000]
 
         # Compute embeddings
@@ -50,10 +51,10 @@ class AIMatcher:
 
         # Compute cosine similarity
         cosine_scores = util.cos_sim(resume_embedding, job_embedding)
-        
+
         # Convert tensor result to standard float
         score = float(cosine_scores[0][0])
-        
+
         # Clamp between 0.0 and 1.0 (sometimes cosine sim can be slightly negative)
         return max(0.0, min(1.0, score))
 
@@ -71,21 +72,21 @@ class AIMatcher:
 
         resume_lower = resume_text.lower()
         job_lower = job_text.lower()
-        
+
         required_keywords = []
         for kw in CORE_KEYWORDS:
             # Simple word boundary regex to avoid partial matches (e.g., "c" in "cat")
             pattern = r'\b' + re.escape(kw) + r'\b'
             if re.search(pattern, job_lower):
                 required_keywords.append(kw)
-                
+
         if not required_keywords:
             # If the job description has none of our core keywords, we can't reliably score it this way.
             return 1.0, {} # Default to perfect to not penalize
-            
+
         matched_dict = {}
         matched_count = 0
-        
+
         for kw in required_keywords:
             pattern = r'\b' + re.escape(kw) + r'\b'
             if re.search(pattern, resume_lower):
@@ -93,7 +94,7 @@ class AIMatcher:
                 matched_count += 1
             else:
                 matched_dict[kw] = False
-                
+
         ats_score = matched_count / len(required_keywords)
-        
+
         return ats_score, matched_dict

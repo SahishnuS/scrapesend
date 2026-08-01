@@ -2,16 +2,16 @@
 
 import uuid
 from datetime import datetime
-from typing import Optional
+
 from pydantic import BaseModel, ConfigDict
 
 
 class NotificationBase(BaseModel):
-    job_id: Optional[uuid.UUID] = None
+    job_id: uuid.UUID | None = None
     platform: str  # telegram, email
     message: str
     is_sent: bool = False
-    sent_at: Optional[datetime] = None
+    sent_at: datetime | None = None
 
 
 class NotificationCreate(NotificationBase):

@@ -2,7 +2,8 @@
 
 import uuid
 from datetime import datetime
-from typing import Optional, Any
+from typing import Any
+
 from pydantic import BaseModel, ConfigDict
 
 
@@ -10,7 +11,7 @@ class LogBase(BaseModel):
     level: str  # INFO, WARNING, ERROR
     module: str
     message: str
-    details: Optional[Any] = None
+    details: Any | None = None
 
 
 class LogCreate(LogBase):

@@ -1,24 +1,23 @@
 """Jobs CRUD endpoints."""
 
 import uuid
-from typing import List, Optional
 
-from fastapi import APIRouter, Depends, HTTPException, Query, status
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.session import get_db
 from app.models.job import Job
-from app.schemas.job import JobCreate, JobUpdate, JobRead
+from app.schemas.job import JobCreate, JobRead, JobUpdate
 
 router = APIRouter()
 
 
-@router.get("/", response_model=List[JobRead], summary="List jobs")
+@router.get("/", response_model=list[JobRead], summary="List jobs")
 async def list_jobs(
-    status: Optional[str] = Query(None, description="Filter by status (open/closed)"),
-    company_id: Optional[uuid.UUID] = Query(None),
-    category_id: Optional[uuid.UUID] = Query(None),
+    status: str | None = Query(None, description="Filter by status (open/closed)"),
+    company_id: uuid.UUID | None = Query(None),
+    category_id: uuid.UUID | None = Query(None),
     skip: int = Query(0, ge=0),
     limit: int = Query(50, ge=1, le=200),
     db: AsyncSession = Depends(get_db),

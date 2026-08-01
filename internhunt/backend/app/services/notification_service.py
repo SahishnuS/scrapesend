@@ -1,8 +1,10 @@
-import email.mime.text
 import email.mime.multipart
+import email.mime.text
+
 import aiosmtplib
 import httpx
 import structlog
+
 from app.core.config import settings
 
 log = structlog.get_logger(__name__)

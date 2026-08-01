@@ -1,7 +1,6 @@
 """Notifications endpoints."""
 
 import uuid
-from typing import List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import select
@@ -14,10 +13,10 @@ from app.schemas.notification import NotificationCreate, NotificationRead
 router = APIRouter()
 
 
-@router.get("/", response_model=List[NotificationRead], summary="List notifications")
+@router.get("/", response_model=list[NotificationRead], summary="List notifications")
 async def list_notifications(
-    is_sent: Optional[bool] = Query(None),
-    platform: Optional[str] = Query(None),
+    is_sent: bool | None = Query(None),
+    platform: str | None = Query(None),
     skip: int = Query(0, ge=0),
     limit: int = Query(50, ge=1, le=200),
     db: AsyncSession = Depends(get_db),
