@@ -5,6 +5,7 @@ Reads DATABASE_URL from environment variables (never hardcoded).
 Supports both online (connected) and offline (SQL generation) modes.
 """
 
+# ruff: noqa: E402
 import asyncio
 import os
 from logging.config import fileConfig

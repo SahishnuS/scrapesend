@@ -26,12 +26,14 @@ def configure_logging() -> None:
     ]
 
     if settings.ENVIRONMENT == "production":
-        processors = shared_processors + [
+        processors = [
+            *shared_processors,
             structlog.processors.dict_tracebacks,
             structlog.processors.JSONRenderer(),
         ]
     else:
-        processors = shared_processors + [
+        processors = [
+            *shared_processors,
             structlog.dev.ConsoleRenderer(colors=True),
         ]
 

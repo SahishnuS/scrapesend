@@ -39,7 +39,7 @@ def create_application() -> FastAPI:
         title="InternHunt",
         description=(
             "AI-powered internship monitoring and application management platform. "
-            "Monitors companies 24×7, matches jobs against your resume, sends "
+            "Monitors companies 24x7, matches jobs against your resume, sends "
             "instant notifications, and tracks every application."
         ),
         version=settings.APP_VERSION,

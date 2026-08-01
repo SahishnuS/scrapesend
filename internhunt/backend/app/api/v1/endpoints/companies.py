@@ -102,8 +102,8 @@ async def bulk_upload_companies(
     content = await file.read()
     try:
         text = content.decode("utf-8-sig")  # utf-8-sig handles BOM from Excel exports
-    except UnicodeDecodeError:
-        raise HTTPException(status_code=400, detail="File encoding must be UTF-8.")
+    except UnicodeDecodeError as e:
+        raise HTTPException(status_code=400, detail="File encoding must be UTF-8.") from e
 
     reader = csv.DictReader(io.StringIO(text))
 

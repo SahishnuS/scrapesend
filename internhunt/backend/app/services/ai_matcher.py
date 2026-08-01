@@ -62,7 +62,7 @@ class AIMatcher:
         """
         Simulate an ATS system by extracting required keywords from the job description
         and checking if they exist in the resume.
-        
+
         Returns:
             - ats_score: Float between 0.0 and 1.0
             - matched_keywords: Dict of keyword -> boolean (found in resume)
