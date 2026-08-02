@@ -1,56 +1,43 @@
 [
   {
     "name": "Planys Technologies",
-    "status": "ok",
+    "status": "unreachable",
     "configured_url": "https://planystech.com/career/",
-    "working_url": "https://planystech.com/career/",
+    "working_url": null,
     "job_links": 0,
     "intern_links": 0,
     "sample_titles": [],
     "attempts": [
       {
         "url": "https://planystech.com/career/",
-        "ok": true,
-        "status": 200,
-        "final_url": "https://planystech.com/careers/",
-        "career_signals": [
-          "career",
-          "job"
-        ],
-        "job_links": 0,
-        "intern_links": 0,
-        "sample_titles": []
+        "ok": false,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://planystech.com/career/\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "url": "https://www.planystech.com/careers/",
+        "ok": false,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.planystech.com/careers/\", waiting until \"domcontentloaded\"\n"
       }
     ]
   },
   {
     "name": "Solinas Integrity",
-    "status": "ok",
+    "status": "unreachable",
     "configured_url": "https://www.solinas.in/careers",
-    "working_url": "https://www.solinas.in/careers",
-    "job_links": 2,
+    "working_url": null,
+    "job_links": 0,
     "intern_links": 0,
-    "sample_titles": [
-      "Swasth AI",
-      "Swasth AI"
-    ],
+    "sample_titles": [],
     "attempts": [
       {
         "url": "https://www.solinas.in/careers",
-        "ok": true,
-        "status": 200,
-        "final_url": "https://solinas.in/careers/",
-        "career_signals": [
-          "career",
-          "job",
-          "open position"
-        ],
-        "job_links": 2,
-        "intern_links": 0,
-        "sample_titles": [
-          "Swasth AI",
-          "Swasth AI"
-        ]
+        "ok": false,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.solinas.in/careers\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "url": "https://www.solinas.in/career",
+        "ok": false,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.solinas.in/career\", waiting until \"domcontentloaded\"\n"
       }
     ]
   },

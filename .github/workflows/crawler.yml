@@ -1,9 +1,15 @@
-name: "🤖 RoboHunter — Hourly Crawler"
+name: "🤖 RoboHunter — Crawler (manual only)"
 
+# DISABLED SCHEDULE.
+# This workflow runs scheduler/run_scheduler.py, which is still a stub: it logs
+# and exits without crawling anything. It was firing hourly and burning Actions
+# minutes while monitor.yml did the real work every 2 hours, and two crawlers on
+# different schedules would race each other's inserts.
+# The live pipeline is .github/workflows/monitor.yml. Re-enable the cron below
+# once run_scheduler.py actually does something distinct from monitor.py.
 on:
-  schedule:
-    # Every hour, every day
-    - cron: "0 * * * *"
+  # schedule:
+  #   - cron: "0 * * * *"
   workflow_dispatch:
     inputs:
       dry_run:
