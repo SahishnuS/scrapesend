@@ -27,7 +27,7 @@ from crawler_base import BaseCrawler
 from ats.greenhouse import GreenhouseHandler
 from ats.lever import LeverHandler
 from ats.generic import GenericHandler
-from ats.filters import is_relevant_internship, looks_like_early_career
+from ats.filters import improve_title, is_relevant_internship, looks_like_early_career
 
 log = structlog.get_logger(__name__)
 
@@ -103,6 +103,9 @@ async def resolve_internships(
             continue
         listing.description = detail
         if is_relevant_internship(listing):
+            # The card that got us here often had a useless label ("Boisbriand"),
+            # so give it a readable title before it reaches an alert email.
+            improve_title(listing)
             confirmed.append(listing)
             enriched += 1
 

@@ -17,9 +17,11 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from ats.base import JobListing  # noqa: E402
 from ats.filters import (  # noqa: E402
     filter_listings,
+    improve_title,
     is_editorial,
     is_relevant_internship,
     looks_like_early_career,
+    title_from_url,
 )
 from sync_companies import plan_sync  # noqa: E402
 
@@ -111,6 +113,45 @@ def test_filter_listings_keeps_only_relevant_entries():
         listing("Embedded Systems Intern"),
     ]
     assert len(filter_listings(listings)) == 2
+
+
+# ── Title recovery ────────────────────────────────────────────────────────────
+
+def test_useless_title_is_replaced_from_the_url_slug():
+    """Observed live: Kinova's board labelled a real internship 'Boisbriand'."""
+    entry = listing("Boisbriand", url="https://www.kinovarobotics.com/job/test-developer-intern")
+    improve_title(entry)
+    assert entry.title == "Test Developer Intern"
+
+
+def test_a_real_title_is_never_overwritten():
+    entry = listing("Robotics Software Intern", url="https://x.test/job/some-other-slug-intern")
+    improve_title(entry)
+    assert entry.title == "Robotics Software Intern"
+
+
+def test_title_is_left_alone_when_the_slug_says_nothing_useful():
+    entry = listing("Boisbriand", url="https://x.test/job/12345")
+    improve_title(entry)
+    assert entry.title == "Boisbriand"
+
+
+@pytest.mark.parametrize(
+    "url,expected",
+    [
+        ("https://x.test/careers/robotics-intern-2026", "Robotics Intern 2026"),
+        ("https://x.test/jobs/embedded_systems_intern.html", "Embedded Systems Intern"),
+        ("https://x.test/job/ml-intern-4471", "Ml Intern"),
+        ("https://x.test/job/perception-intern/", "Perception Intern"),
+    ],
+)
+def test_title_from_url_reads_common_slug_shapes(url, expected):
+    assert title_from_url(url) == expected
+
+
+@pytest.mark.parametrize("url", ["", "https://x.test/", "https://x.test/careers"])
+def test_title_from_url_gives_up_on_uninformative_paths(url):
+    assert title_from_url(url) is None
 
 
 # ── Registry -> database sync ─────────────────────────────────────────────────

@@ -12,6 +12,8 @@ target technical domains:
 """
 
 import re
+from urllib.parse import unquote, urlparse
+
 from .base import JobListing
 
 # ── Internship Indicator Terms ────────────────────────────────────────────────
@@ -147,6 +149,59 @@ def is_relevant_internship(listing: JobListing) -> bool:
 def filter_listings(listings: list[JobListing]) -> list[JobListing]:
     """Filter a list of JobListings, keeping only relevant internships."""
     return [l for l in listings if is_relevant_internship(l)]
+
+
+def title_from_url(url: str) -> str | None:
+    """
+    Derive a readable job title from a URL slug.
+
+    Job cards sometimes yield a useless title — Kinova's board produced
+    "Boisbriand" (the town) for /job/test-developer-intern. When the scraped
+    title says nothing about the role, the slug usually does.
+
+    Returns None when the slug carries no usable words.
+    """
+    path = urlparse(url or "").path.rstrip("/")
+    if not path:
+        return None
+
+    slug = path.rsplit("/", 1)[-1]
+    slug = re.sub(r"\.(html?|php|aspx?)$", "", slug, flags=re.IGNORECASE)
+    # Drop trailing requisition ids ("...-4471", "...-2f8c1a90") but keep a
+    # trailing year, which is part of the role ("Robotics Intern 2026").
+    slug = re.sub(
+        r"[-_](?!(?:19|20)\d{2}$)(?:[0-9]{3,}|[0-9a-f]{8,})$", "", slug, flags=re.IGNORECASE
+    )
+
+    # Numbers are dropped as noise, except a year, which belongs in the title.
+    words = [
+        w
+        for w in re.split(r"[-_+\s]+", unquote(slug))
+        if w and (not w.isdigit() or re.fullmatch(r"(?:19|20)\d{2}", w))
+    ]
+    if len(words) < 2:
+        return None
+
+    title = " ".join(words).strip()
+    if not (2 < len(title) <= 200):
+        return None
+    return title.title()
+
+
+def improve_title(listing: JobListing) -> None:
+    """
+    Replace an uninformative title in place with one derived from the URL.
+
+    Only fires when the scraped title mentions neither the role type nor the
+    domain, so a genuine title is never overwritten.
+    """
+    title = listing.title or ""
+    if INTERN_PATTERN.search(title) or DOMAIN_PATTERN.search(title):
+        return
+
+    candidate = title_from_url(listing.job_url)
+    if candidate and INTERN_PATTERN.search(candidate):
+        listing.title = candidate
 
 
 def looks_like_early_career(listing: JobListing) -> bool:
