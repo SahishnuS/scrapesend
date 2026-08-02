@@ -17,10 +17,14 @@ class NotificationService:
     """
 
     def __init__(self):
-        self.telegram_token = settings.TELEGRAM_BOT_TOKEN
-        self.telegram_chat_id = settings.TELEGRAM_CHAT_ID
-        self.smtp_email = settings.SMTP_EMAIL
-        self.smtp_password = (settings.SMTP_APP_PASSWORD or "").replace(" ", "")
+        # Every value is stripped: secrets pasted into GitHub Actions very often
+        # carry a trailing newline, and a newline inside SMTP_EMAIL makes the
+        # "From:" header illegal ("folded header contains newline"), which fails
+        # every send with an error that points nowhere near the real cause.
+        self.telegram_token = (settings.TELEGRAM_BOT_TOKEN or "").strip()
+        self.telegram_chat_id = str(settings.TELEGRAM_CHAT_ID or "").strip()
+        self.smtp_email = (settings.SMTP_EMAIL or "").strip()
+        self.smtp_password = (settings.SMTP_APP_PASSWORD or "").replace(" ", "").strip()
 
     async def send_telegram(self, message: str) -> bool:
         """
@@ -74,7 +78,7 @@ class NotificationService:
             log.warning("SMTP_APP_PASSWORD not set or placeholder. Skipping Email send.")
             return False
 
-        target = recipient_email or self.smtp_email
+        target = (recipient_email or self.smtp_email).strip()
 
         msg = email.mime.multipart.MIMEMultipart("alternative")
         msg["Subject"] = subject
